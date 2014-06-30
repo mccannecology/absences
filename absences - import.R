@@ -144,20 +144,55 @@ data<-subset(data, !(waterbody == "West Lake" & year != "comb"))
 # West Side Pond    
 data<-subset(data, !(waterbody == "West Side Pond" & year != "comb"))
 
+#########################################
+# Remove extra variables                # 
+# Remove water bodies w/ missing values #
+#########################################
+# remove sample size (n) and SEs 
+drops <- c("TOTP_n","TOTP_SE","PH_n","PH_SE","COND_n","COND_SE","DO_n","DO_SE","TEMP_n","TEMP_SE","ALK_n","ALK_SE","secchi_n","secchi_SE")
+data <- data[,!(names(data) %in% drops)]
+
+# remove DO and TEMP (they will be highly-dependent on survey date)
+data <- data[,-34]
+data <- data[,-34]
+
+# Remove rows with missing varaibles - 8 water bodies
+# Beeslick, Eagleville, Granniss, Quassapang, Slopers, Talmadge, Williamson, Wyler
+data <- data[complete.cases(data),]
+
+# Remove any columns where all values are 0
+drops <- c("potamogeton_vase","potamogeton_frie","nymphoides_pelt","nymphaea_odor_odor",
+           "ludwigia_lac","ludwigia_dub","elatine_triandra","ellocharis_parv","callitriche_verna")
+data <- data[,!(names(data) %in% drops)]
+
+# remove 4H camp - no plants were present 
+data <- data[-1,]
+
+# Write this to a .csv so I can see what I did 
 write.csv(data,"data-cleanedup.csv",row.names=FALSE)
+
 
 ########################################
 # Create species, environment matrices #
 ########################################
+colnames(data)
 
-dataSPECIES <- 
+dataSPACE <- data[,5:6]
 
-dataFP 
+dataENV <- cbind(data[,10:12], data[,31:35])
 
-dataNONFP
+dataFP <- data[,18:27]
+dataFP <- dataFP[,-5] # remove Lemna valdiviana & Riccia sp. (only occur in my surveys)
+dataFP <- dataFP[,-5]
+dataFP$wolffia <- dataFP$wolffia + dataFP$wolffia_borealis + dataFP$wolffia_brasiliensis # combine the wolffias 
+dataFP <- dataFP[,-7]
+dataFP <- dataFP[,-7]
 
-dataENV
+dataNONFP <- data[,36:ncol(data)]
 
- 
+dataSPECIES <- cbind(dataFP,dataNONFP)
+
+
+
 
 
