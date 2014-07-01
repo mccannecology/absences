@@ -177,20 +177,30 @@ write.csv(data,"data-cleanedup.csv",row.names=FALSE)
 ########################################
 colnames(data)
 
+# matrix of latitude and longitudes 
 dataSPACE <- data[,5:6]
+write.csv(dataSPACE,"dataSPACE.csv",row.names=FALSE)
 
+# matrix of environmental variables 
 dataENV <- cbind(data[,10:12], data[,31:35])
+write.csv(dataENV,"dataENV.csv",row.names=FALSE)
 
+# matrix of floating plant species presence/absence
 dataFP <- data[,18:27]
 dataFP <- dataFP[,-5] # remove Lemna valdiviana & Riccia sp. (only occur in my surveys)
 dataFP <- dataFP[,-5]
 dataFP$wolffia <- dataFP$wolffia + dataFP$wolffia_borealis + dataFP$wolffia_brasiliensis # combine the wolffias 
 dataFP <- dataFP[,-7]
 dataFP <- dataFP[,-7]
+write.csv(dataFP,"dataFP.csv",row.names=FALSE)
 
+# matrix of non-floating plant species presence/absence 
 dataNONFP <- data[,36:ncol(data)]
+write.csv(dataNONFP,"dataNONFP.csv",row.names=FALSE)
 
+# matrix of both floating and non-floating plant species presence/absence 
 dataSPECIES <- cbind(dataFP,dataNONFP)
+write.csv(dataSPECIES,"dataSPECIES.csv",row.names=FALSE)
 
 
 
