@@ -1,5 +1,6 @@
 library(ggplot2)
 library(reshape2)
+library(plyr)
 
 # data frames available 
 dataSPACE 
@@ -48,6 +49,15 @@ hist_NONFP_rich <- hist_NONFP_rich + ylab("Frequency")
 hist_NONFP_rich <- hist_NONFP_rich + theme_classic(base_size=18)
 hist_NONFP_rich
 ggsave("hist_NONFP_rich.jpg",hist_NONFP_rich,height=8,width=11)
+
+############################
+# Table of FP compositions # 
+############################
+table_dataFP_comp <- ddply(dataFP,.(azolla,eichhornia_crassipes,lemna_minor,lemna_trisulca,spirodela_polyrhiza,wolffia),nrow)
+colnames(table_dataFP_comp)[7]<-"frequency"
+table_dataFP_comp
+
+# Copy & paste this into Excel for further formatting
 
 
 #########################
