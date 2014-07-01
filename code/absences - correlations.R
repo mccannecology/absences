@@ -1,3 +1,5 @@
+library(Hmisc)
+
 # data frames available 
 dataSPACE 
 dataENV 
@@ -5,11 +7,17 @@ dataFP
 dataNONFP
 dataSPECIES
 
+# Basic correlation matrices 
 cor(dataENV)
 cor(log(dataENV))
 
-pairs(dataENV)
-pairs(dataENV,log="xy")
+############################
+# Correlation matrix       #
+# with significance levels #
+############################
+library(Hmisc)
+rcorr(as.matrix(dataENV), type="pearson") # type can be pearson or spearman
+rcorr(as.matrix(log(dataENV)), type="pearson") # type can be pearson or spearman
 
 ##################################
 # Correlation scattefplot matrix #
