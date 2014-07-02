@@ -9,6 +9,11 @@ dataFP
 dataNONFP
 dataSPECIES
 
+################
+# Scatterplots #
+################
+plot(data$TOTP_avg,data$FPrichness,log="x",ylab="Floating plant species richness",xlab="Total P(mg/L)")
+
 #############################
 # Histogram of sp. richness #
 # Floating plants           #
