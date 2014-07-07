@@ -55,6 +55,22 @@ hist_NONFP_rich <- hist_NONFP_rich + theme_classic(base_size=18)
 hist_NONFP_rich
 ggsave("hist_NONFP_rich.jpg",hist_NONFP_rich,height=8,width=11)
 
+#################################
+# Histogram of # of waterbodies #
+# each species is found in      #
+#################################
+head(dataSPECIES_freq)
+                                          
+sp_freq_plot <- ggplot(dataSPECIES_freq,aes(x=species,y=frequency))
+sp_freq_plot <- sp_freq_plot + geom_bar(stat="identity",fill = I("grey50"))
+sp_freq_plot <- sp_freq_plot + theme_classic(base_size=10)
+sp_freq_plot <- sp_freq_plot + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+sp_freq_plot <- sp_freq_plot + xlab("Species")
+sp_freq_plot <- sp_freq_plot + ylab("# of waterbodies found in")
+sp_freq_plot
+
+ggsave("sp_freq_plot.jpg",sp_freq_plot,height=8,width=11)
+
 ############################
 # Table of FP compositions # 
 ############################
@@ -63,7 +79,6 @@ colnames(table_dataFP_comp)[7]<-"frequency"
 table_dataFP_comp
 
 # Copy & paste this into Excel for further formatting
-
 
 #########################
 # Histograms of dataENV #

@@ -145,7 +145,8 @@ data<-subset(data, !(waterbody == "West Lake" & year != "comb"))
 data<-subset(data, !(waterbody == "West Side Pond" & year != "comb"))
 
 #########################################
-# Remove extra variables                # 
+# Remove extra variables
+# i.e., sample size # 
 # Remove water bodies w/ missing values #
 #########################################
 # remove sample size (n) and SEs 
@@ -202,7 +203,17 @@ write.csv(dataNONFP,"dataNONFP.csv",row.names=FALSE)
 dataSPECIES <- cbind(dataFP,dataNONFP)
 write.csv(dataSPECIES,"dataSPECIES.csv",row.names=FALSE)
 
-
-
+# matrix of species and the # of water bodies they are found in 
+temp<-colSums(dataSPECIES) # add up to get frequency of occurence
+temp2<-colnames(dataSPECIES) # save names of species 
+dataSPECIES_freq <-cbind(temp2,as.data.frame(temp)) # combine names of species and frequency of occurence 
+rm(temp) # remove unwanted objects 
+rm(temp2) # remove unwanted objects
+colnames(dataSPECIES_freq)<-c("species","frequency") # re-name the columns
+row.names(dataSPECIES_freq)<-1:nrow(dataSPECIES_freq) # re-name the rows
+dataSPECIES_freq <- dataSPECIES_freq[order(dataSPECIES_freq[,2],decreasing=TRUE),] # re-order (decreasing frequency)
+dataSPECIES_freq <- within(dataSPECIES_freq,species <- factor(species,levels=species)) # re-order so it will plot w/ decreasing bar height
+dataSPECIES_freq
+write.csv(dataSPECIES_freq,"dataSPECIES_freq.csv",row.names=FALSE)
 
 
