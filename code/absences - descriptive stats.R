@@ -60,6 +60,10 @@ ggsave("hist_NONFP_rich.jpg",hist_NONFP_rich,height=8,width=11)
 # each species is found in      #
 #################################
 head(dataSPECIES_freq)
+
+# if you want this plot with species listed alphabetically,
+# re-do dataSPECIES_freq in "absences - import.R" 
+# and leave out ordering the species as a factor of frequency 
                                           
 sp_freq_plot <- ggplot(dataSPECIES_freq,aes(x=species,y=frequency))
 sp_freq_plot <- sp_freq_plot + geom_bar(stat="identity",fill = I("grey50"))
