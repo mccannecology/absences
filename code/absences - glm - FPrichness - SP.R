@@ -15,6 +15,9 @@ dataSPECIES
 
 head(data)
 
+# number of water bodies with SP present 
+sum(data$spirodela_polyrhiza)
+
 ######################################
 # Define a full model                #
 # not included: depth_max_m, ALK_avg #
@@ -30,35 +33,26 @@ summary(glm_binomial_SP_full)
 ##################
 require(MuMIn)
 best_SP <- dredge(glm_binomial_SP_full)
+best_SP
 numb_models <- nrow(best_SP)
 write.csv(best_SP[1:numb_models],file="best_SP.csv",na="NA")
 
 #'Best' model (lowest AIC)
 get.models(best_SP, 1)
 
-# print all model outputs
-get.models(best_SP)
-
 # Visualize the model selection table:
 plot(best_SP)
 
-# Model average models with delta AICc < 4
-avg_SP <- model.avg(best_SP, subset = delta < 4)
+# Model average models with delta AICc < 2
+avg_SP <- model.avg(best_SP, subset = delta < 2)
 summary(avg_SP)
 avg_SP
 
-# or as a 95% confidence set:
-avg_SP_95p <- model.avg(best_SP, subset = cumsum(weight) <= .95) 
-confint(avg_SP_95p)
-
-# returns standarzed coefficients 
-model.avg(best_SP, subset = delta < 4, beta = TRUE)
+# Alternatively, return standarzed coefficients 
+model.avg(best_SP, subset = delta < 2, beta = TRUE)
 
 # returns coefficients 
 coef(avg_SP)
-
-# can only predict from 'averaging' object created with a model list
-predict(avg_SP)
 
 # Relative importance values 
 # Sum of ‘Akaike weights’ over all models including the explanatory variable

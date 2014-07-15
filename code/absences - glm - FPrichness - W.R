@@ -34,41 +34,32 @@ summary(glm_binomial_W_full)
 ##################
 require(MuMIn)
 best_W <- dredge(glm_binomial_W_full)
+best_W
+
 numb_models <- nrow(best_W)
 write.csv(best_W[1:numb_models],file="best_W.csv",na="NA")
 
 #'Best' model (lowest AIC)
 get.models(best_W, 1)
 
-# print all model outputs
-get.models(best_W)
-
 # Visualize the model selection table:
 plot(best_W)
 
-# Model average models with delta AICc < 4
-avg_W <- model.avg(best_W, subset = delta < 4)
+# Model average models with delta AICc < 2
+avg_W <- model.avg(best_W, subset = delta < 2)
 summary(avg_W)
 avg_W
 
-# or as a 95% confidence set:
-avg_W_95p <- model.avg(best_W, subset = cumsum(weight) <= .95) 
-confint(avg_W_95p)
-
-# returns standarzed coefficients 
-model.avg(best_W, subset = delta < 4, beta = TRUE)
+# Alternatively, return standarzed coefficients 
+model.avg(best_W, subset = delta < 2, beta = TRUE)
 
 # returns coefficients 
 coef(avg_W)
-
-# can only predict from 'averaging' object created with a model list
-predict(avg_W)
 
 # Relative importance values 
 # Sum of ‘Akaike weights’ over all models including the explanatory variable
 # These don't sum up to one (across all variables)
 importance(best_W)
-
 
 #################
 # Plot          #  
