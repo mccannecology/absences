@@ -1,0 +1,912 @@
+<?xml version="1.0"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com) by HOWIE STERNBERG (Connecticut DEP) -->
+<!--<!DOCTYPE metadata SYSTEM "http://www.esri.com/metadata/esriprof80.dtd">-->
+<metadata xml:lang="en">
+	<Esri>
+		<CreaDate>20090115</CreaDate>
+		<CreaTime>08200100</CreaTime>
+		<SyncOnce>FALSE</SyncOnce>
+		<SyncDate>20120126</SyncDate>
+		<SyncTime>15572700</SyncTime>
+		<ModDate>20120126</ModDate>
+		<ModTime>15572700</ModTime>
+		<DataProperties>
+			<lineage>
+				<Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Clip" Date="20081020" Time="095233">Clip "Database Connections\10.18.8.94.depgis@depview_91dc.sde\depgis.DEP.Northeast_State_Line" Y:\Archive\Political\Political_24k\shapes\CT_Vicinity.shp Y:\Archive\Political\Political_24k\shapes\CT_Vicinity_State_Line.shp #</Process>
+				<Process Name="CopyFeatures_6" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20081020" Time="112324">CopyFeatures Y:\Archive\Political\Political_24k\shapes\CT_Vicinity_State_Line.shp Y:\Archive\Political\Political_24k\geodatabase\CT_Vicinity.mdb\CT_Vicinity_State_Line # 0 0 0</Process>
+				<Process Name="CopyFeatures_20" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20081020" Time="113521">CopyFeatures Y:\Archive\Political\Political_24k\geodatabase\CT_Vicinity.mdb\CT_Vicinity_State_Line "Database Connections\10.18.8.94.depgis@DEP_Direct.sde\depgis.DEP.CT_Vicinity_State_Line" DEPVECTORSTATIC 10000 0 0</Process>
+				<Process Name="CopyFeatures_34" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20081215" Time="154851">CopyFeatures "Database Connections\10.18.8.94.depgis@DEP.sde\depgis.DEP.CT_VICINITY_STATE_LINE" "Database Connections\062174-svr.depgis@DEP.sde\depgis.DEP.CT_VICINITY_STATE_LINE" DEPFEATURESTATIC 0 0 0</Process>
+				<Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20120126" Time="155728">CopyFeatures "Database Connections\10.18.8.60.depgis@DEP_92dc.sde\depgis.DEP.CT_VICINITY_STATE_LINE" Y:\GIS_Warehouse\public_data\Shapefile_format\Political\Political_Vicinity\CT_VICINITY_STATE_LINE.shp # 0 0 0</Process></lineage>
+			<itemProps><itemName Sync="TRUE">CT_VICINITY_STATE_LINE</itemName><imsContentType Sync="TRUE">002</imsContentType><itemSize Sync="TRUE">0.000</itemSize><itemLocation><linkage Sync="TRUE">file://\\depnb100\GISDATA\GIS_Warehouse\public_data\Shapefile_format\Political\Political_Vicinity\CT_VICINITY_STATE_LINE.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><coordRef><type Sync="TRUE">Projected</type><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits><projcsn Sync="TRUE">NAD_1983_StatePlane_Connecticut_FIPS_0600_Feet</projcsn><peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.0'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_StatePlane_Connecticut_FIPS_0600_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,999999.999996],PARAMETER[&amp;quot;False_Northing&amp;quot;,499999.999998],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-72.75],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,41.2],PARAMETER[&amp;quot;Standard_Parallel_2&amp;quot;,41.86666666666667],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,40.83333333333334],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;EPSG&amp;quot;,2234]]&lt;/WKT&gt;&lt;XOrigin&gt;-119756300&lt;/XOrigin&gt;&lt;YOrigin&gt;-96342500&lt;/YOrigin&gt;&lt;XYScale&gt;37294945.500735737&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333335&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;2234&lt;/WKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml></coordRef></DataProperties>
+		<MetaID>{E7E2237D-B04F-4E05-8F9B-7A7D92B0085E}</MetaID></Esri>
+	<idinfo>
+		<native>These data are maintained by the State of Connecticut using ArcGIS software developed by Environmental Systems Research Institute (ESRI) in a Microsoft Windows operating system environment.</native>
+		<descript>
+			<langdata Sync="TRUE">en</langdata>
+			<abstract>Connecticut and Vicinity State Boundary Line includes State for Connecticut and nearby portions of Massachusetts, New Jersey, New York and Rhode Island. The data layer was created by extracting boundary line features and polygon attribute information from the individual 1:24,000-scale or 1:25,000-scale data sources produced by the respective State governments. These state-level data sources were either based directly on Digital Line Graph (DLG) files produced by the U.S. Geological Survey or created by State governmental agencies that digitized and attributed town boundaries published on the 1:24,000-scale USGS topographic quadrangle maps. This information does not depict official state established by the respective state and municipal governments. It may contain some boundary line errors.</abstract>
+			<purpose>Connecticut and Vicinity State Boundary data are intended for geographic display of state boundaries at statewide and regional levels. Use it to map and label states on a map. These data are derived from Northeastern United States Political Boundary Master layer.
+
+This information should be displayed and analyzed at scales appropriate for 1:24,000-scale data. The State of Connecticut, Department of Environmental Protection (CTDEP) assembled this regional data layer using data from other states in order to create a single, seamless representation of political boundaries within the vicinity of Connecticut that could be easily incorporated into mapping applications as background information. More accurate and up-to-date information may be available from individual State government Geographic Information System (GIS) offices. Not intended for maps printed at map scales greater or more detailed than 1:24,000 scale (1 inch = 2,000 feet.)</purpose>
+			<supplinf>In 2006, the State of Connecticut, Department of Environmental Protection developed automated procedures to systematically maintain feature topology and attribute integrity for a set of related political boundary data for Northeastern United States in ArcInfo coverage format. These data layers include the following ArcInfo coverages: Northeastern United States Political Boundary Master (NORTHEASTM), Northeastern United States State Boundaries (NORTHEASTSTAT), Northeastern United States County Boundaries, (NORTHEASTCNTY), and Northeastern United States Town Boundaries (NORTHEASTTOWN). Automated procedures were developed using ArcInfo Workstation 9.1 software and the Arc Macro Language (AML) as a scripting environment to programmatically derive all layers from the Northeastern United States Political Boundary Master layer (NORTHEASTM) by merging adjacent polygon features as a result of dissolving adjacent features based on similar attribute values. For example, the Northeastern United States State Boundaries (NORTHEASTSTAT) is a produced as a result of first deleting polygon attributes from a copy of the Northeastern United States Political Boundary Master (NORTHEASTM) that do not describe state level information (such as TOWN_COD and CNTY_COD) and subsequently dissolving these polygon features on the remaining attributes (such as STATE_COD). This results in merging all adjacent town polygon features that are members of the same State into single polygon features for the states of Connecticut, Maine, Massachusetts, New Hampshire, New York, New Jersey, Rhode Island, and Vermont.</supplinf>
+		</descript>
+		<citation>
+			<citeinfo>
+				<pubdate>20081020</pubdate>
+				<ftname Sync="TRUE">depgis.DEP.CT_VICINITY_STATE_LINE</ftname>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink>http://www.ct.gov/deep</onlink>
+				<pubinfo>
+					<pubplace>Hartford, Connecticut, USA</pubplace>
+					<publish>State of Connecticut, Department of Environmental Protection</publish>
+				</pubinfo>
+				<title>Connecticut and Vicinity State Boundary Line</title>
+				<origin>State of Connecticut, Department of Environmental Protection (data compiler, editor and publisher)</origin>
+				<origin>U.S. Geological Survey, National Mapping Program (data compiler)</origin>
+				<origin>MassGIS (data compiler and publisher)</origin>
+				<origin>New Jersey Department of Environmental Protection (data compiler and publisher)</origin>
+				<origin>State of New York (data compiler and publisher)</origin>
+				<origin>Rhode Island Geograhic Information System (data compiler and publisher)</origin>
+			</citeinfo>
+		</citation>
+		<timeperd>
+			<current>publication date</current>
+			<timeinfo>
+				<sngdate>
+					<caldate>2006</caldate>
+				</sngdate>
+			</timeinfo>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>None planned</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-74.122391</westbc>
+				<eastbc Sync="TRUE">-71.125590</eastbc>
+				<northbc Sync="TRUE">42.614413</northbc>
+				<southbc Sync="TRUE">40.540858</southbc>
+			</bounding>
+			<lboundng>
+				<leftbc Sync="TRUE">630476.568000</leftbc>
+				<rightbc Sync="TRUE">1437395.589000</rightbc>
+				<bottombc Sync="TRUE">397415.407000</bottombc>
+				<topbc Sync="TRUE">1149035.908000</topbc>
+			</lboundng>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>ISO 19115 Topic Category</themekt>
+				<themekey>boundaries</themekey>
+			</theme>
+			<place>
+				<placekt>U.S. Department of Commerce, 1987, Codes for the Identification of the States, the District of Columbia and the Outlying Areas of The United States, and Associated Areas (Federal Information Processing Standard 5-2):  Washington, DC, National Institute of Standards and Technology.</placekt>
+				<placekey>Connecticut</placekey>
+				<placekey>Massachusetts</placekey>
+				<placekey>New Jersey</placekey>
+				<placekey>New York</placekey>
+				<placekey>Rhode Island</placekey>
+				<placekey>CT</placekey>
+				<placekey>MA</placekey>
+				<placekey>NJ</placekey>
+				<placekey>NY</placekey>
+				<placekey>RI</placekey>
+			</place>
+			<place><placekey>United States of America</placekey><placekt>U.S. Department of Commerce, 1995, Countries, Dependencies, Areas of Special Sovereignty, and Their Principal Administrative Divisions (Federal Information Processing Standard (FIPS) 10-4): Washington, D.C., National Institute of Standards and Technology.</placekt><placekey>USA</placekey></place></keywords>
+		<accconst>None. The data is in the public domain and may be redistributed.</accconst>
+		<useconst>No restrictions or legal prerequisites for using the data. The data is suitable for use at appropriate scale, and is not intended for maps printed at scales greater or more detailed than 1:24,000 scale (1 inch = 2,000 feet). Although this data set  has been used by the State of Connecticut, Department of Environmental Protection, no warranty, expressed or implied, is made by the State of Connecticut, Department of Environmental Protection as to the accuracy of the data and or related materials.  The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the State of Connecticut, Department of Environmental Protection in the use of these data or related materials. The user assumes the entire risk related to the use of these data. Once the data is distributed to the user, modifications made to the data by the user should be noted in the metadata. When printing this data on a map or using it in a software application, analysis, or report, please acknowledge the State of Connecticut, Department of Environmental Protection as the data publisher. For example, include the following data source description when printing this layer on a map: Political Boundaries - From the Northeastern United States State Boundary layer, published by CT DEP. Source map scale is 1:24,000.</useconst>
+		<natvform Sync="TRUE">SDE Feature Class</natvform>
+		<ptcontac>
+			<cntinfo>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>79 Elm Street</address>
+					<city>Hartford</city>
+					<state>Connecticut</state>
+					<postal>06106-5127</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>860-424-3540</cntvoice>
+				<cntfax>860-424-4058</cntfax>
+				<cntemail>dep.gisdata@ct.gov</cntemail>
+				<hours>Monday to Friday, 08:30 to 16:30 Eastern Standard Time</hours>
+				<cntorgp>
+					<cntorg>State of Connecticut, Department of Environmental Protection</cntorg>
+					<cntper>Howie Sternberg</cntper>
+				</cntorgp>
+			</cntinfo>
+		</ptcontac>
+		<browse><browsen>http://www.cteco.uconn.edu/metadata/dep/browsegraphic/connecticutvicinitystatefullview.gif</browsen><browsed>Full view of Connecticut and Vicinity State Boundary polygon features</browsed><browset>GIF</browset></browse><browse><browsen>http://www.cteco.uconn.edu/metadata/dep/browsegraphic/connecticutvicinitystatectview.gif</browsen><browsed>View of Connecticut and Vicinity State Boundary polygon and line features for greater Connecticut area</browsed><browset>GIF</browset></browse></idinfo>
+	<dataIdInfo>
+		<envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcGIS 10.0.3.3600</envirDesc>
+		<dataLang>
+			<languageCode Sync="TRUE" value="en"/>
+			<countryCode value="US" Sync="TRUE"></countryCode></dataLang>
+		<idCitation>
+			<resTitle Sync="TRUE">CT_VICINITY_STATE_LINE</resTitle>
+			<presForm>
+				<PresFormCd Sync="TRUE" value="005"/>
+			</presForm>
+		</idCitation>
+		<spatRpType>
+			<SpatRepTypCd Sync="TRUE" value="001"/>
+		</spatRpType>
+		<dataExt>
+			<geoEle>
+				<GeoBndBox esriExtentType="native">
+					<westBL Sync="TRUE">630476.568</westBL>
+					<eastBL Sync="TRUE">1437395.589</eastBL>
+					<northBL Sync="TRUE">1149035.908</northBL>
+					<southBL Sync="TRUE">397415.407</southBL>
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+				</GeoBndBox>
+			</geoEle>
+		</dataExt>
+		<geoBox esriExtentType="decdegrees">
+			<westBL Sync="TRUE">-74.122391</westBL>
+			<eastBL Sync="TRUE">-71.12559</eastBL>
+			<northBL Sync="TRUE">42.614413</northBL>
+			<southBL Sync="TRUE">40.540858</southBL>
+			<exTypeCode Sync="TRUE">1</exTypeCode>
+		</geoBox>
+	</dataIdInfo>
+	<metainfo>
+		<langmeta Sync="TRUE">en</langmeta>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metc>
+			<cntinfo>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<city>Hartford</city>
+					<state>Connecticut</state>
+					<postal>06106-5127</postal>
+					<address>79 Elm Street</address>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>860-424-3540</cntvoice>
+				<cntfax>860-424-4058</cntfax>
+				<cntemail>dep.gisdata@ct.gov</cntemail>
+				<hours>Monday to Friday, 08:30 to 16:30 Eastern Standard Time</hours>
+				<cntorgp>
+					<cntorg>State of Connecticut, Department of Environmental Protection</cntorg>
+					<cntper>Howie Sternberg</cntper>
+				</cntorgp>
+			</cntinfo>
+		</metc>
+		<metd Sync="TRUE">20111207</metd>
+	</metainfo>
+	<mdLang>
+		<languageCode Sync="TRUE" value="en"/>
+		<countryCode value="US" Sync="TRUE"></countryCode></mdLang>
+	<mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName>
+	<mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer>
+	<mdChar>
+		<CharSetCd Sync="TRUE" value="004"/>
+	</mdChar>
+	<mdHrLv>
+		<ScopeCd Sync="TRUE" value="005"/>
+	</mdHrLv>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<distinfo>
+		<stdorder>
+			<fees>An online copy of the data may be accessed without charge.</fees>
+			<digform>
+				<digtinfo>
+					<formname>Shapefile, Feature Class</formname>
+					<formvern>ArcGIS</formvern>
+					<filedec>Zip file</filedec>
+				</digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://www.ct.gov/deep</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+		</stdorder>
+		<distrib>
+			<cntinfo>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>79 Elm Street</address>
+					<city>Hartford</city>
+					<state>Connecticut</state>
+					<postal>06106-5127</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>860-424-3540</cntvoice>
+				<cntfax>860-424-4058</cntfax>
+				<cntemail>dep.gisdata@ct.gov</cntemail>
+				<cntorgp>
+					<cntorg>State of Connecticut, Department of Enviromental Protection</cntorg>
+				</cntorgp>
+				<hours>Monday to Friday, 08:30 to 16:30 Eastern Standard Time</hours>
+			</cntinfo>
+		</distrib>
+		<custom>The data distributor does not provide custom GIS analysis or mapping services. Data is available in a standard format and may be converted to other formats, projections, coordinate systems, or selected for specific geographic regions by the party receiving the data.</custom>
+		<techpreq>Geographic information sytem (GIS), computer-aided drawing or other mapping software is necessary to display, view and access the information.</techpreq>
+		<resdesc>Connecticut and Vicinity State Boundary Line</resdesc>
+		<distliab>Although this data set  has been used by the State of Connecticut, Department of Environmental Protection, no warranty, expressed or implied, is made by the State of Connecticut, Department of Environmental Protection as to the accuracy of the data and or related materials.  The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the State of Connecticut, Department of Environmental Protection in the use of these data or related materials. The user assumes the entire risk related to the use of these data. Once the data is distributed to the user, modifications made to the data by the user should be noted in the metadata.</distliab>
+	</distinfo>
+	<distInfo>
+		<distributor>
+			<distorTran>
+				<onLineSrc>
+					<orDesc Sync="TRUE">002</orDesc>
+					<linkage Sync="TRUE">Server=10.18.8.60; Service=sde92:sqlserver:10.18.8.60; Database=depgis; User=dep; Version=sde.DEFAULT</linkage>
+					<protocol Sync="TRUE">ArcSDE Connection</protocol>
+				</onLineSrc>
+				<transSize Sync="TRUE">0.000</transSize>
+			</distorTran>
+			<distorFormat>
+				<formatName Sync="TRUE">SDE Feature Class</formatName>
+			</distorFormat>
+		</distributor>
+		<distFormat><formatName Sync="TRUE">Shapefile</formatName></distFormat><distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<indspref>Includes State code, State name, County code, and County name for the States of Connecticut, Massachusetts, New Jersey, New York, and Rhode Island.</indspref>
+		<ptvctinf><esriterm><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="3" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<spref>
+		<horizsys>
+			<cordsysn>
+				<geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+				<projcsn Sync="TRUE">NAD_1983_StatePlane_Connecticut_FIPS_0600_Feet</projcsn>
+			</cordsysn>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<plandu Sync="TRUE">survey feet</plandu>
+					<coordrep>
+						<absres Sync="TRUE">0.000250</absres>
+						<ordres Sync="TRUE">0.000250</ordres>
+					</coordrep>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn Sync="TRUE">North American Datum of 1983</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+		</horizsys>
+		<vertdef>
+			<altsys>
+				<altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc>
+				<altres Sync="TRUE">1.000000</altres>
+			</altsys>
+		</vertdef>
+	</spref>
+	<refSysInfo>
+		<RefSystem>
+			<refSysID>
+				<identCode Sync="TRUE" value="2234">NAD_1983_StatePlane_Connecticut_FIPS_0600_Feet</identCode>
+				<idCodeSpace Sync="TRUE">EPSG</idCodeSpace><idVersion Sync="TRUE">7.4.1</idVersion></refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep><geometObjs Name="CT_VICINITY_STATE_LINE"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">0</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo>
+	<eainfo>
+		<detailed Name="CT_VICINITY_STATE_LINE">
+			<enttyp>
+				<enttypl>Connecticut and Vicinity State Boundary Line</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+				<enttypc Sync="TRUE">0</enttypc>
+				<enttypds>State of Connecticut, Department of Environmental Protection</enttypds>
+				<enttypd>Includes line features representing State and county boundaries; the shoreline; island shorelines; and lines enclosing open water areas along the outer limits of the data extent.</enttypd>
+			</enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr>
+				<attrlabl Sync="TRUE">BOUNDARY</attrlabl>
+				<attwidth Sync="TRUE">20</attwidth>
+				<atoutwid Sync="TRUE">20</atoutwid>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attrdef>Boundary - Type of Political Boundary</attrdef>
+				<attrdefs>State of Connecticut, Department of Environmental Protection</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>Closure Line</edomv>
+						<edomvd>Closure Line - Encloses water polygon features along the outer limits of data extent. Not a political boundary.</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+					<edom>
+						<edomv>County</edomv>
+						<edomvd>County Boundary - Political boundary between adjacent counties in the same state</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+					<edom>
+						<edomv>Shoreline</edomv>
+						<edomvd>Shoreline - Outlines water polygon features. Not a political boundary.</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+					<edom>
+						<edomv>State</edomv>
+						<edomvd>State Boundary - Political boundary between adjacent states</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">BOUNDARY</attalias>
+				<atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">DATA_SRC</attrlabl>
+				<attwidth Sync="TRUE">2</attwidth>
+				<atoutwid Sync="TRUE">2</atoutwid>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attrdef>Data Source - Identifies the data source used to define the geometry (shape) of the line feature. Refer to list of Data Sources included in this Metadata for detailed description of State data sources used.</attrdef>
+				<attrdefs>State of Connecticut, Department of Environmental Protection</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>'blank'</edomv>
+						<edomvd>No data source</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+					<edom>
+						<edomv>CT</edomv>
+						<edomvd>Line feature based on data from Connecticut</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+					<edom>
+						<edomv>MA</edomv>
+						<edomvd>Line feature based on data from Massachusetts</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+					<edom>
+						<edomv>NJ</edomv>
+						<edomvd>Line feature based on data from New Jersey</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+					<edom>
+						<edomv>NY</edomv>
+						<edomvd>Line feature based on data from New York</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+					<edom>
+						<edomv>RI</edomv>
+						<edomvd>Line feature based on data from Rhode Island</edomvd>
+						<edomvds>CT DEP</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">DATA_SRC</attalias>
+				<atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">SHAPE</attrlabl>
+				<attalias Sync="TRUE">Shape</attalias>
+				<attrtype Sync="TRUE">Geometry</attrtype>
+				<attwidth Sync="TRUE">0</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr><attrlabl Sync="TRUE">SHAPE_len</attrlabl><attalias Sync="TRUE">SHAPE_len</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed>
+		<overview>
+			<eaover>Attributes identify and describe the geographic areas and state boundaries for the States of Connecticut, Massachusetts, New Jersey, New York, and Rhode Island. Use the BOUNDARY line feature attribute to cartographically represent state boundary lines. Use the LAND_CLASS polygon feature attribute to cartographically distinguish land from water polygon features. Use the STATE_COD, STATE_NAME or MAP_LABEL attributes to label polygon features with state abbreviations or names. Use the LABEL_FLAG attribute to identify polygons large enough to label with state names at larger scales using the MAP_LABEL attribute. Or use the CT_LABEL_Y and CT_LABEL_N attributes to label just the state of Connecticut or all states but Connecticut without querying for the appropriate features and labeling them with the MAP_LABEL values, which is a slower technique. Use the CT_LEGEND polygon attribute to classify and highlight features in Connecticut different from the other states. This dataset includes a large water polygon feature that may impact polygon drawing performance. To improve drawing performance, exclude all water features by using the following expression in a layer definition query: LAND_CLASS = "Land"</eaover>
+			<eadetcit>For additional information describing the data source for Connecticut refer to metadata available for the Connecticut Towns layer at http://www.ct.gov/deep.</eadetcit>
+			<eadetcit>For additional information describing the data source for Massachussetts refer to metadata available for the Communtity Boundaries (Towns) layer at http://www.mass.gov/mgis/</eadetcit>
+			<eadetcit>For additional information describing the data source for New Jersey refer to metadata available for the NJDEP Municipality Boundaries for the State of New Jersey (Clipped to Coast) layer at http://www.nj.gov/dep/gis/</eadetcit>
+			<eadetcit>For additional information describing the data source for New York refer to metadata available for the New York State Municipalities layer at http://giswww.westchestergov.com/</eadetcit>
+			<eadetcit>For additional information describing the data source for Rhode Island refer to metadata available for the esri-state-ritownp layer at http://www.edc.uri.edu/rigis/</eadetcit>
+		</overview>
+	</eainfo>
+	<mdDateSt Sync="TRUE">20120126</mdDateSt>
+	<dataqual>
+		<posacc>
+			<horizpa>
+				<horizpar>The horizontal positional accuracy of this data is assumed to approximate the United States National Map Accuracy Standards for 1:24,000 scale maps. According to this standard, not more than 10 percent of the locations tested are to be in error by more than 1/50 inch (40 feet) measured on the publication scale of a USGS 7.5 minute topographic quadrangle map.
+
+However, while appending the data sources together from the respective states, the compiler noticed variations in feature content definition within each data source (most notably along the coastline) and diffenences in digitizing quality of features along the boundaries between different states where such comparisons could be made. Some state boundaries were not as coincident as expected and some were more smoothy digitized than others, refecting differences in their data sources and automation procedures. For example, some states based town boundary information on 1:24,000-Scale Digital Line Graphs and Quadrangle Map files from the USGS and others digitized this information directly from unstable paper copies of USGS 1:24,000-scale Topographic quadrangle maps.</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 1 - TOWN (Connecticut)</srccitea>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>1969</begdate>
+							<enddate>1986</enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>Publication dates of the USGS 7.5 minute topographic quadrangle maps for the State of Connecticut through 1984.</srccurr>
+				</srctime>
+				<srccite>
+					<citeinfo>
+						<origin>State of Connecticut, Department of Environmental Protection (data editor and publisher)</origin>
+						<title>Connecticut Towns</title>
+						<pubinfo>
+							<publish>State of Connecticut, Department of Environmental Protection</publish>
+							<pubplace>Hartford, Connecticut, USA</pubplace>
+						</pubinfo>
+						<geoform>vector digital data</geoform>
+						<pubdate>19940101</pubdate>
+						<origin>U.S. Geological Survey, National Mapping Program (data compiler)</origin>
+						<edition>2005</edition>
+						<othercit>The USGS is the collector of the data (compiler). The State of Connecticut, Department of Environmental Protection is the creator and maintainer of the data layer (editor) and producer (publisher) of this information for use. The 2005 Edition essentially includes the same set of geographic features published in 1994. However, the 2005 Edition differs from information published in 1994 primarily as a result of minor corrections and improvements to feature geometry and feature attribute information. Some feature attribute information (data fields) have been slightly modified and made easier to use. This layer includes information that is relatively static and does not change over time. Data is not updated. Data compiled at 1:24,000 scale.</othercit>
+						<onlink>http://www.ct.gov/deep</onlink>
+					</citeinfo>
+				</srccite>
+				<srccontr>Town is a 1:24,000-scale, polygon and line feature-based layer that includes state, county and town (municipal) boundary features depicted on the U.S. Geological Survey (USGS) 7.5 minute topographic quadrangle maps for the State of Connecticut. This layer only includes information for Connecticut. Line features include State, county, and town (municipal) boundaries. Polygon features depict the geographic areas for individual towns (municipalities). Data is in ArcInfo coverage format in the Connecticut State Plane Coordinate System of 1983 (NAD 83). Map units are in feet.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 2 - METWP24_06302005 (Maine)</srccitea>
+				<srccontr>METWP24 depicts political boundaries, common town names, and geocodes for Maine at 1:24,000 scale. The coverage was created from USGS, 7.5 minute map series, town boundaries. The Maine GIS base layer COAST, which contains Maine's coastal Mean High Water (MHW) mark and Maine islands, was used in the development of METWP24. Polygon data was originally obtained in ESRI Shapefile format in Universal Transverse Mercator 1983, Zone 19, map units meters. The name of the shapefile is metwp24p_06302005.shp.</srccontr>
+				<srccite>
+					<citeinfo>
+						<origin>Maine Office of Geographic Information Systems (MEGIS)</origin>
+						<pubdate>20050622</pubdate>
+						<title>metwp24_06302005</title>
+						<pubinfo>
+							<pubplace>Augusta ME</pubplace>
+							<publish>Maine Office of Geographic Information Systems (MEGIS)</publish>
+						</pubinfo>
+						<geoform>vector digital data</geoform>
+						<onlink>http://megis.maine.gov/catalog/</onlink>
+					</citeinfo>
+				</srccite>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>19480101</begdate>
+							<enddate>20050622</enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>source dates</srccurr>
+				</srctime>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<title>Communtity Boundaries (Towns)</title>
+						<origin>MassGIS</origin>
+						<pubdate>2002</pubdate>
+						<pubinfo>
+							<pubplace>Boston, Massachussets, USA</pubplace>
+							<publish>MassGIS</publish>
+						</pubinfo>
+						<onlink>http://www.mass.gov/mgis/</onlink>
+						<geoform>vector digital data</geoform>
+					</citeinfo>
+				</srccite>
+				<srcscale>25000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 3 - TOWNS.E00 (Massachusetts)</srccitea>
+				<srccontr>The political boundary datalayer is a 1:25,000 scale datalayer containing the boundaries of the 351 communities (cities and towns) in Massachusetts. The seaward boundary of coastal communities has been defined at mean high water in this datalayer. Data is in ArcInfo coverage format in the Massachusetts State Plane Coordinate System of 1983 (NAD 83). Map units are in meters.</srccontr>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>2002</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<title>New Hampshire Political Boundaries at 1:24,000 Scale</title>
+						<origin>Complex Systems Research Center, University of New Hampshire </origin>
+						<pubdate>19920101</pubdate>
+						<edition>One</edition>
+						<pubinfo>
+							<pubplace>Durham, New Hampshire, USA</pubplace>
+							<publish>Systems Research Center, University of New Hampshire</publish>
+						</pubinfo>
+						<othercit>None</othercit>
+						<onlink>http://www.granit.sr.unh.edu/</onlink>
+					</citeinfo>
+				</srccite>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>19530101</begdate>
+							<enddate>19900101 </enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+				<srccitea>Source 4 - PB.E00 (New Hampshire)</srccitea>
+				<srccontr>The New Hampshire Political Boundaries (PB) coverage provides a digital representation of corporate boundaries at the town, county, and state level. It was derived from the 1:24,000-scale USGS Digital Line Graphs (DLGs). Data is in ArcInfo coverage format in the New Hampshire State Plane Coordinate System of 1983 (NAD 83). Map units are in feet.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<title>NJDEP Municipality Boundaries for the State of New Jersey (Clipped to Coast)</title>
+						<origin>NJ Department of Environmental Protection (NJDEP)</origin>
+						<origin>Office of Information Resources Management (OIRM)</origin>
+						<origin>Bureau of Geographic Information Systems (BGIS)</origin>
+						<pubdate>20050817</pubdate>
+						<edition>20050817 </edition>
+						<pubinfo>
+							<pubplace>Trenton, New Jersey, USA</pubplace>
+							<publish>New Jersey Department of Environmental Protection (NJDEP) </publish>
+						</pubinfo>
+						<onlink>http://www.nj.gov/dep/gis/</onlink>
+					</citeinfo>
+				</srccite>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>2004032</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>Source 5 - MUNCOAST.SHP (New Jersey)</srccitea>
+				<srccontr>Municipal boundaries in New Jersey were gathered from USGS topoquads and other sources in 1987. Since that time, updates to the data have been limited to noting consolidations of boundaries. The scale of the original data varies, relying primarily on 1:24,000 topoquads. Polygon feature data is in ESRI Shapefile format in the State Plane Coordinate System, North American Datum of 1983 (NAD 83), Zone 2900. Map units are in feet.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 6 - NYSMUN.E00 (New York)</srccitea>
+				<srccite>
+					<citeinfo>
+						<title>New York State Municipalities</title>
+						<origin>Unknown</origin>
+						<pubdate>Unknown</pubdate>
+						<pubinfo>
+							<pubplace>Unknown</pubplace>
+							<publish>Unknown</publish>
+						</pubinfo>
+						<onlink>http://giswww.westchestergov.com/</onlink>
+					</citeinfo>
+				</srccite>
+				<srccontr>The GIS program for Westchester County, New York provided this data file in response to an inquiry for a 1:24,000-scale town boundary layer for the State of New York. No metadata included with the nysmun.e00 data source. Includes state, county, city, town, and village political boundaries. Data is assumed to be 1:24,000-scale. The SWIS Code identitified polygon features down to the village level. Data is in ArcInfo coverage format in the New York State Plane Coordinate System of 1983 (NAD 83), Zone 4801. Map units are in feet. 
+</srccontr>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>20060703</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>Unknown</srccurr>
+				</srctime>
+			</srcinfo>
+			<srcinfo>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 7 - S44BTP88.E00 (Rhode Island)</srccitea>
+				<srccite>
+					<citeinfo>
+						<title>esri-state-ritownp</title>
+						<origin>Rhode Island Geograhic Information System (RIGIS)</origin>
+						<pubinfo>
+							<pubplace>Providence, Rhode Island, 02908-5872, USA</pubplace>
+							<publish>Rhode Island Geograhic Information System (RIGIS)</publish>
+						</pubinfo>
+						<pubdate>1989</pubdate>
+						<geoform>vector digital data</geoform>
+						<onlink>http://www.edc.uri.edu/rigis/</onlink>
+					</citeinfo>
+				</srccite>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>19890701</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+				<srccontr>State, county, city,and town political boundarie for Rhode Island with name and id coded attributes and city and town name annotation.  Data is in ArcInfo coverage format in the Rhode Island State Plane Coordinate System of 1983 (NAD 83), Zone 5176. Map units are in feet.</srccontr>
+			</srcinfo>
+			<srcinfo>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 8 - BNDHASH.E00 (Vermont)</srccitea>
+				<srccite>
+					<citeinfo>
+						<title>BoundaryOther_BNDHASH </title>
+						<pubdate>20051117</pubdate>
+						<geoform>vector digital data</geoform>
+						<serinfo>
+							<sername>Vermont village, town, county, state and RPC boundaries, from best available sources </sername>
+							<issue>2005A</issue>
+						</serinfo>
+						<pubinfo>
+							<pubplace>Waterbury, Vermont, 05676, USA </pubplace>
+							<publish>Vermont Center for Geograhic Information, GIS Database Administrator</publish>
+						</pubinfo>
+						<origin>Vermont Center for Geograhic Information (VGI)</origin>
+						<onlink>http://www.vcgi.org</onlink>
+					</citeinfo>
+				</srccite>
+				<srccontr>The BNDHASH data layer depicts Vermont villages, towns, counties, Regional Planning Commissions (RPC), State administrative, and LEPC (Local Emergency Planning Committee) boundaries. It is a mosaic of generally 'best available' boundaries from various data sources. Data is in ArcInfo coverage format in the Vermont State Plane Coordinate System of 1983 (NAD 83). Map units are in meters. BNDHASH includes the ArcInfo coverage region subclasses. The REGION.TOWNS subclass includes Vermont towns and was used as the data source for Vermont.</srccontr>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>20051117</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+			</srcinfo>
+			<srcinfo>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 9 - NORTHEASTM (Northeastern United States Political Boundary Master)</srccitea>
+				<srccite>
+					<citeinfo>
+						<title>Northeastern United States Political Boundary Master</title>
+						<origin>State of Connecticut, Department of Environmental Protection (data compiler, editor and publisher)</origin>
+						<pubdate>2006</pubdate>
+						<geoform>vector digital data</geoform>
+						<pubinfo>
+							<pubplace>Hartford, Connecticut, USA</pubplace>
+							<publish>State of Connecticut, Department of Environmentmental Protection</publish>
+						</pubinfo>
+						<onlink>http://www.ct.gov/deep</onlink>
+						<origin>U.S. Geological Survey, National Mapping Program (data compiler)</origin>
+						<origin>MassGIS (data compiler and publisher)</origin>
+						<origin>Maine Office of Geographic Information Systems (data compiler and publisher)</origin>
+						<origin>Complex Systems Research Center, University of New Hampshire (data compiler and publisher)</origin>
+						<origin>New Jersey Department of Environmental Protection (data compiler and publisher)</origin>
+						<origin>State of New York (data compiler and publisher)</origin>
+						<origin>Rhode Island Geograhic Information System (data compiler and publisher)</origin>
+						<origin>Vermont Center for Geograhic Information (data compiler and publisher)</origin>
+					</citeinfo>
+				</srccite>
+				<srccontr>NORTHEASTM is a 1:24,000-scale, polygon and line feature-based layer that includes state, county, town (municipal), and some village boundary features for the States of Connecticut, Massachusetts, Maine, New Hampshire, New Jersey, New York, Rhode Island, and Vermont. Line features include state, county, town (municipal), and village  boundaries (primarily for New York). Polygon features are intended to depict the geographic areas for individual towns (municipalities) so that they can be aggregated up and combined to form county and state polygon features in derived data sets. Data is in ArcInfo coverage format in the Connecticut State Plane Coordinate System of 1983 (NAD 83). Map units are in feet. This information does not depict official state, county and town boundaries established by the respective state and municipal governments.</srccontr>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>20060703</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+			</srcinfo>
+			<srcinfo>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 10 - NORTHEASTSTAT (Northeastern United States State Boundary)</srccitea>
+				<srccite>
+					<citeinfo>
+						<title>Northeastern United States State Boundary</title>
+						<origin>State of Connecticut, Department of Environmental Protection (data compiler, editor and publisher)</origin>
+						<pubdate>2006</pubdate>
+						<geoform>vector digital data</geoform>
+						<pubinfo>
+							<pubplace>Hartford, Connecticut, USA</pubplace>
+							<publish>State of Connecticut, Department of Environmentmental Protection</publish>
+						</pubinfo>
+						<onlink>http://www.ct.gov/deep</onlink>
+						<origin>U.S. Geological Survey, National Mapping Program (data compiler)</origin>
+						<origin>MassGIS (data compiler and publisher)</origin>
+						<origin>Maine Office of Geographic Information Systems (data compiler and publisher)</origin>
+						<origin>Complex Systems Research Center, University of New Hampshire (data compiler and publisher)</origin>
+						<origin>New Jersey Department of Environmental Protection (data compiler and publisher)</origin>
+						<origin>State of New York (data compiler and publisher)</origin>
+						<origin>Rhode Island Geograhic Information System (data compiler and publisher)</origin>
+						<origin>Vermont Center for Geograhic Information (data compiler and publisher)</origin>
+					</citeinfo>
+				</srccite>
+				<srccontr>NORTHEASTSTAT is a 1:24,000-scale, polygon and line feature-based layer that includes state boundary features for the States of Connecticut, Massachusetts, Maine, New Hampshire, New Jersey, New York, Rhode Island, and Vermont. Line features include state boundaries. Polygon features are intended to depict the geographic areas and state boundaries for display as background information on a map or in an interactive mapping application. Data is in ArcInfo coverage format in the Connecticut State Plane Coordinate System of 1983 (NAD 83). Map units are in feet. This information does not depict official state boundaries established by the respective state governments.</srccontr>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>20060703</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+			</srcinfo>
+			<procstep>
+				<srcused>Source 1 - TOWN (Connecticut)</srcused>
+				<srcused>Source 2 - METWP24_06302005 (Maine)</srcused>
+				<srcused>Source 3 - TOWNS.E00 (Massachusetts)</srcused>
+				<srcused>Source 4 - PB.E00 (New Hampshire)</srcused>
+				<srcused>Source 5 - MUNCOAST.SHP (New Jersey)</srcused>
+				<srcused>Source 6 - NYSMUN.E00 (New York)</srcused>
+				<srcused>Source 7 - S44BTP88.E00 (Rhode Island)</srcused>
+				<srcused>Source 8 - BNDHASH.E00 (Vermont)</srcused>
+				<srcprod>Source 9 - NORTHEASTM (Northeastern United States Political Boundary Master)</srcprod>
+				<procsv>ArcGIS Workstation 9.1, ArcGIS 9.1</procsv>
+				<procdate>20060703</procdate>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>State of Connecticut, Department of Environmental Protection</cntorg>
+							<cntper>Howie Sternberg</cntper>
+						</cntorgp>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>79 Elm Street</address>
+							<city>Hartford</city>
+							<state>Connecticut</state>
+							<postal>06106</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntvoice>860-424-3540</cntvoice>
+					</cntinfo>
+				</proccont>
+				<procdesc>Create NORTHEASTM (Northeast United States Political Boundary Master) - The following steps describe how an ArcInfo Coverage named NORTHEASTM was created using data sources from the states of Connecticut, Maine, Massachusetts, New York, New Jersey, Rhode Island and Vermont. All data sources were downloaded directly from State GIS Web sites with the exception of data for the State of New York, which was provide by the GIS Program for Westchester County, New York. Each data source included town (municipal or township) boundary line features compiled at 1:24,000 scale (1 inch = 2,000 feet) with the exception of data from Massachusetts, which was compiled at 1:25,000 scale. Enclosing town polygon features along the shoreline, coastline features were connected to town boundary line features in each state data source.
+
+1.  Convert Data Sources to Connecticut State Coordinate System - All data sources were converted to ArcInfo Coverage format, if necessary. Each state data source was subsequently projected to the Connecticut State Plane Coordinate System, North American Datum of 1983 (NAD 83), with map units set to feet. Following the projection, polygon and line ArcInfo Coverage feature topology was created for each state data source using the ArcInfo BUILD command. When necessary to successfully complete the ArcInfo Coverage BUILD process, the ArcInfo CLEAN command was used with DANGLE and FUZZY tolerances of 10 and 4 feet, respectively.
+
+2. Edit Geometry of State Data Source Line Features - Line features from each state data source were copied to a separate ArcInfo Coverage for each state. Line feature geometry in each line feature state data source was visually inspected and political boundary line features extending into the waters of the Atlantic Ocean, Long Island Sound, and Gulf of Maine were deleted. Coastline features that enclosed towns along the coast and offshore islands were retained. The compiler observed inconsistencies between the individual state data sources relative to the inclusion of small coastal islands and the extent to which the coastline was defined by the (upstream) shorelines of small double line streams that flow into coastal waters. Some states included all islands along the coast or incorporated a hydrography-based shoreline that continued further upstream than in other states. These unique characteristics were preserved in each state data source with the exception of portions of the New York and Rhode Island shoreline data adjacent to Connecticut that were replaced with more accurate and complete line feature geometry from Connecticut. Otherwise, the compiler did not re-digitize or redefine coastline or island shoreline features in order to add all missing island features or apply a consistent shoreline definition across all states, for example. Each line feature data source was further visually inspected and, where necessary, feature overshoots, undershoots, and duplicates were corrected in order to ensure that all line features would properly connect to form town polygon feature boundaries in a step 8.  These polygons would form land-based town areas and islands along the coast that are parts to these towns.
+
+3. Edit Attributes of State Data Source Line Features - An attribute named  DATA_SRC was added (and populated with values of  "CT", "ME", "MA", "NJ", "NY", "RI", and "VT") to all features in each line feature state data source in order to retain the source of the geometry of each line feature once all state data sources combined in step 8. All other line feature attributes were deleted in each state data source. Once all state data sources are combined in step 8, a consistent attribution of state, county and town boundaries is later established in step 9.
+
+4. Edit Geometry of State Data Source Label Points - Polygon label point features from each state data source were copied to a separate ArcInfo Coverage for each state. In each label point state data source, the location of label points was visually compared to the line features in the corresponding line feature state data source produced in step 2. Any label point that was not located inside a set of enclosing line features (to be used to form town polygon features) was deleted. These label points will be used to attribute the polygon features in step 8. In general, label points were deleted from the Connecticut and Maine data sources where political boundary line features extending into coastal waters were deleted in step 2. These label points were removed because they described areas of water associated with individual towns along the coast. Label points inside the shorelines of coastal islands were retained. Other visual checks were performed to ensure that only one label point was located within each set of enclosing line features, including islands along the coast. Each label point included town and county information as attributed by the individual state.
+
+5. Edit Attributes of State Data Source Label Points - An attribute named  STATE_COD was added (and populated with values of  "CT", "ME", "MA", "NJ", "NY", "RI", and "VT") to each label point state data source in order to distinguish between States once all state data sources are combined in step 8. All label point state data sources included attributes corresponding to town (or village) numbers and town names. The compiler considered attributing the town polygon features using the FIPS55 codes available at http://geonames.usgs.gov/fips55.html, but FIPS55 code values could not be easily matched to the town numbers and names in all of the state data sources so this idea was dropped. Consequently, the compiler established an alternative approach to encoding town and county designations by mapping (transferring) original attribute values included with individual state data sources to a set common data fields. The compiler added the following common fields to each label point state data source: CNTY_FIELD, CNTY_COD, CNTY_NAME, TOWN_FIELD, TOWN_COD, and TOWN_NAME. These attributes record the field names and values used by the different states for attributing counties and towns. They establish a cross reference back to the attribution in the original data sources. For example, The TOWN_FIELD stores the name of the field used by the state to encode a town, municipality or township number. So for Connecticut, Maine, Massachusetts, New Jersey, New York, New Hampshire, and Vermont, this field is populated with the following strings: "TOWN_NO", "GEOCODENUM", "TOWN-ID", "FIPS", "KEY", "SWIS", "OSP", and "FIPS6". The TOWN_COD field was subsequently populated with the numeric values stored in these fields. And the TOWN_NAME attribute was populated from text values stored in the field used by the state to encode a town, municipality or township name. For example, the attributes for the label point for the town of Andover, Connecticut are STATE_COD="CT", TOWN_FIELD="TOWN_NO", TOWN_COD=1, and TOWN_NAME="Andover"; attributes for the town of Ansonia, Connecticut are STATE_COD="CT", TOWN_FIELD="TOWN_NO", TOWN_COD=2, and TOWN_NAME="Ansonia"; attributes for the town of Abington, Massachusetts are STATE_COD="MA", TOWN_FIELD="TOWN-ID", TOWN_COD=1, and TOWN_NAME="Abington"; attributes for the town of Barrington, Rhode Island are STATE_COD="RI", TOWN_FIELD="OSP", TOWN_COD=1, and TOWN_NAME="Barrington"; and so on. CNTY_FIELD, CNTY_COD, and CNTY_NAME attributes were similarly populated. The VILLAGE attribute was added to preserve the names of villages and borough features included with data from New York. Once these state, county and town attribute values were transferred to the set of common fields, all other attributes in each label point state data source were deleted, resulting in an identical attribute schema for all label point state data sources.
+
+6. Append Line Feature State Data Sources - Depending on the individual state, town boundary feature geometry was either based on 1:24,000-Scale Digital Line Graphs (DLG) and Quadrangle Map files from the USGS or digitized by states from either stable-base Mylar or unstable paper copies of USGS 1:24,000-scale (or 1:25,000-scale) Topographic Quadrangle maps. Consequently, line feature spatial accuracy varies from state to state and does always closely match along state boundaries. In order to append line feature data from seven states together, it was necessary to establish rules for determining which state boundary to use. First, all data would be matched to Connecticut for two reasons - (1) it is based on 1:24,000-scale DLG data from the USGS, the best digital data source for 1:24,000-scale political boundaries, and (2) Connecticut DEP desired a regional data that with boundary information for Connecticut that was consistent with information currently in use. It was also decided that the state boundary line geometry between all other state boundaries was to be based on a complete set of line features from the most accurate state data source. The state boundaries to preserve (i.e. match or snap to) were decided upon after reviewing the data source metadata and visually comparing state data source line feature geometry along state boundaries and choosing the more accurate line work. Beginning with a copy of  the data from Connecticut, individual line feature data state data sources were appended (loaded) one at time and matched to the adjacent state according to the following feature matching rules - Massachusetts was matched to Connecticut, Massachusetts was matched to Rhode Island, Massachusetts was matched to New Hampshire, Massachusetts was matched to New York, New Hampshire was matched to Maine, New York was matched to Connecticut, New York was matched to New Jersey, Rhode Island was matched to Connecticut, Vermont was matched to Massachusetts, Vermont was matched to New York, and Vermont was matched to New Hampshire. For example, when Massachusetts was matched to Connecticut, all line features from the Connecticut data source were preserved, line features from the Massachusetts data source defining the CT-MA state boundary were deleted, and all (dangling and overshooting) municipal boundary line features from the Massachusetts data source extending towards Connecticut were connected to CT-MA state boundary line features from the Connecticut data source. Note, symbolizing line features on the DATA_SRC attribute visually depicts the results of matching the seven state data sources together. Once all line feature state data sources were loaded into a single ArcInfo Coverage, they were ready to form town polygon feature boundaries for the entire region in step 8.
+
+7. Append Label Point Feature State Data Sources - All label point state data sources were appended into a single ArcInfo, ready to be used for attributing town polygon features for the entire region in step 8.
+
+8. Combine Data Source Line and Label Point Features - Line features and label points in the two ArcInfo Coverages created in steps 6 and 7 were combined into a third ArcInfo Coverage. ArcInfo Coverage polygon and line feature topology was established using the ArcInfo CLEAN command with DANGLE and FUZZY tolerances of 10 and 4 feet, respectively. This process generated polygon features from the line features and attributed each polygon with information from the (one) label point feature located inside each polygon. For cartographic purposes, an additional attribute named LAND_CLASS was added to polygon features and populated with values of either "Land" or "Water" to distinguish between areas of land and water both on and offshore. Note, some state data sources included a few miscellaneous polygon features representing lakes, ponds, bays and coves. An additional polygon feature was manually added (digitized) to depict a large area of water off the coast of Connecticut, Maine, Massachusetts, New Jersey, New York, and Rhode Island. For map labeling purposes, an attribute named LABEL_FLAG was added to polygon features to flag town polygon features considered large and significant enough in size to be labeled on a map with town names. Polygons designated for labeling were assigned LABEL_FLAG values equal to "True", whereas small island polygons along coast, not typically labeled with town names, were assigned LABEL_FLAG values equal to "False".
+
+9. Attribute Line Features -  For cartographic purposes, a line feature attribute named BOUNDARY was added and attributed with values of "State", "County", "Town", "Village", "Shoreline" and "Closure Line" using a combination of polygon and line feature topology relationships and manual editing techniques to populate the field. State, and County boundaries were programmatically identified and attributed by comparing the ArcInfo Coverage topological relationships of adjacent polygon attributes. For example, a single line feature between (on the left and right side of the line of) two town poygon features in different states is encoded as a state boundary line feature. A line feature that is not a state boundary line feature between two town polygon features in different counties is encoded as a county boundary feature, and so on.</procdesc>
+			</procstep>
+			<procstep>
+				<srcused>Source 9 - NORTHEASTM (Northeastern United States Political Boundary Master)</srcused>
+				<srcprod>Source 10 - NORTHEASTSTAT (Northeastern United States State Boundary)</srcprod>
+				<procsv>ArcGIS Workstation 9.1, ArcGIS 9.1</procsv>
+				<procdate>20060627</procdate>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>State of Connecticut, Department of Environmental Protection</cntorg>
+							<cntper>Howie Sternberg</cntper>
+						</cntorgp>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>79 Elm Street</address>
+							<city>Hartford</city>
+							<state>Connecticut</state>
+							<postal>06106</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntvoice>860-424-3540</cntvoice>
+					</cntinfo>
+				</proccont>
+				<procdesc>Create NORTHEASTSTAT (Northeastern United States State Boundary - The automated process for creating (deriving) the Northeastern United States State Boundary layer from the Northeastern United States Political Boundary Master layer is documented in an Arc Macro Language (AML) script named MAKENORTHEASTCOVER.AML for the political and administrative boundary category of data for the State of Connecticut, Department of Environmental Protection. The MAKENORTHEASTCOVER.AML creates the Northeastern United States State Boundary layer by extracting and processing the necessary features from the Northeastern United States Political Boundary Master layer. The following describes the steps undertake by the automated process to create the NORTHEASTSTAT ArcInfo Coverage. First, the following polygon attributes were deleted from a copy of the NORTHEASTM ArcInfo Coverage so that all remaining attributes only described state-level information: CNTY_FIELD, CNTY_COD, CNTY_NAME, TOWN_FIELD, TOWN_COD, TOWN_NAME, VILLAGE, and UNIQUEID. Second, polygon and line features were merged (dissolved and unsplit) based on similar attribute values using the ArcInfo Dissolve command with the NET option (argument). As a result, previously adjacent (town) polygons were combined to form larger state polygon features. Third, the following polygon feature attributes were added and populated with values for classifying, highlighting and differentiating polygon features in one state differently from all other states: CT_LEGEND, MA_LEGEND, ME_LEGEND, NH_LEGEND, NJ_LEGEND NY_LEGEND, RI_LEGEND, and VT_LEGEND. These attributes were added for cartographic purposes. Fourth, the STATE_NAME field, which stores state names, was added and populated to complement the STATE_COD attribute. Fifth, added the CT_LABEL_Y and CT_LABEL_N polygon attributes in order to easily label Connecticut or all states but Connecticut without using the LABEL_FLAG field to query for the appropriate features to label with MAP_LABEL attribute values, which is a slower technique. The name of the resulting ArcInfo Coverage created by this automated process is NORTHEASTAT.</procdesc>
+			</procstep>
+			<srcinfo>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 11 - Northeast_State_Line.shp</srccitea>
+				<srccite>
+					<citeinfo>
+						<title>Northeastern United States State Boundary Line</title>
+						<origin>State of Connecticut, Department of Environmental Protection (data compiler, editor and publisher)</origin>
+						<pubdate>20060703</pubdate>
+						<geoform>vector digital data</geoform>
+						<pubinfo>
+							<pubplace>Hartford, Connecticut, USA</pubplace>
+							<publish>State of Connecticut, Department of Environmentmental Protection</publish>
+						</pubinfo>
+						<onlink>http://www.ct.gov/deep</onlink>
+						<origin>U.S. Geological Survey, National Mapping Program (data compiler)</origin>
+						<origin>MassGIS (data compiler and publisher)</origin>
+						<origin>Maine Office of Geographic Information Systems (data compiler and publisher)</origin>
+						<origin>Complex Systems Research Center, University of New Hampshire (data compiler and publisher)</origin>
+						<origin>New Jersey Department of Environmental Protection (data compiler and publisher)</origin>
+						<origin>State of New York (data compiler and publisher)</origin>
+						<origin>Rhode Island Geograhic Information System (data compiler and publisher)</origin>
+						<origin>Vermont Center for Geograhic Information (data compiler and publisher)</origin>
+					</citeinfo>
+				</srccite>
+				<srccontr>Northeast_State_Line.shp is a 1:24,000-scale line feature-based layer that includes state boundary information for the States of Connecticut, Massachusetts, Maine, New Hampshire, New Jersey, New York, Rhode Island, and Vermont. Northeast_State_Line.shp is in Shapefile format.</srccontr>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>20060703</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+			</srcinfo>
+			<procstep>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>State of Connecticut, Department of Environmental Protections</cntorg>
+							<cntper>Howie Sternberg</cntper>
+						</cntorgp>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>79 Elm Street</address>
+							<city>Hartford</city>
+							<state>Connecticut</state>
+							<postal>06106</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntvoice>860-424-3540</cntvoice>
+					</cntinfo>
+				</proccont>
+				<procdesc>Export to Shapefile format - Converted line feature data from an ArcInfo coverage named NORTEASTSTAT to a Shapefile named Northeast_State_Line.shp. Excluded the FNODE#, TNODE#, LPOLY#, RPOLY#, LENGTH, NORTHEASTSTAT#, NORTHEASTSTAT-ID attributes from the Shapefile because their values are only maintained by ArcInfo software with spatial data that is ArcInfo coverage format. Excludes line features that outlined open water areas encoded with BOUNDARY = "Closure Line".</procdesc>
+				<procsv>ArcGIS 9.1</procsv>
+				<procdate>20060627</procdate>
+				<srcused>Source 10 - NORTHEASTSTAT (Northeastern United States State Boundary)</srcused>
+				<srcprod>Source 11 - Northeast_State_Line</srcprod>
+			</procstep>
+			<srcinfo>
+				<srcscale>24000</srcscale>
+				<typesrc>disc</typesrc>
+				<srccitea>Source 12 - Northeast_State_Line</srccitea>
+				<srccite>
+					<citeinfo>
+						<title>Northeastern United States State Boundary Line</title>
+						<origin>State of Connecticut, Department of Environmental Protection (data compiler, editor and publisher)</origin>
+						<pubdate>20060703</pubdate>
+						<geoform>vector digital data</geoform>
+						<pubinfo>
+							<pubplace>Hartford, Connecticut, USA</pubplace>
+							<publish>State of Connecticut, Department of Environmentmental Protection</publish>
+						</pubinfo>
+						<onlink>http://www.ct.gov/deep</onlink>
+						<origin>U.S. Geological Survey, National Mapping Program (data compiler)</origin>
+						<origin>MassGIS (data compiler and publisher)</origin>
+						<origin>Maine Office of Geographic Information Systems (data compiler and publisher)</origin>
+						<origin>Complex Systems Research Center, University of New Hampshire (data compiler and publisher)</origin>
+						<origin>New Jersey Department of Environmental Protection (data compiler and publisher)</origin>
+						<origin>State of New York (data compiler and publisher)</origin>
+						<origin>Rhode Island Geograhic Information System (data compiler and publisher)</origin>
+						<origin>Vermont Center for Geograhic Information (data compiler and publisher)</origin>
+					</citeinfo>
+				</srccite>
+				<srccontr>Northeast_State_Line is a 1:24,000-scale line feature-based layer that includes state boundary information for the States of Connecticut, Massachusetts, Maine, New Hampshire, New Jersey, New York, Rhode Island, and Vermont. Northeast_State_Line is in GeoDatabase Feature Class format.</srccontr>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>20060703</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+			</srcinfo>
+			<procstep>
+				<procdesc>Convert to GeoDatabase Feature Class format - Defined new Feature Class named Northeast_State_Line; and imported the attribute definitions, loaded features and imported metadata from Northeast_State_Line.shp shapefile. 
+
+Spatial Reference Properties for Feature Class:
+
+Coordinate System: NAD_1983_StatePlane_Connecticut_FIPS_0600_Feet
+XY Domain MinX: -1337538.17925; MaxX: 2957429.11075
+XY Domain MinY: -772494.257375; MaxY: 3522473.032625
+Precision: 500</procdesc>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>State of Connecticut, Department of Environmental Protection</cntorg>
+							<cntper>Howie Sternberg</cntper>
+						</cntorgp>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>79 Elm Street</address>
+							<city>Hartford</city>
+							<state>Connecticut</state>
+							<postal>06106</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntvoice>860-424-3540</cntvoice>
+					</cntinfo>
+				</proccont>
+				<procsv>ArcGIS 9.1</procsv>
+				<srcused>Source 11 - Northeast_State_Line.shp</srcused>
+				<procdate>20060703</procdate>
+				<srcprod>Source 12 - Northeast_State_Line</srcprod>
+			</procstep>
+		</lineage>
+		<complete>This map layer includes boundaries for Connecticut, Massachusetts, Maine, New Hampshire, New Jersey, New York, Rhode Island, and Vermont. Data completeness reflected by the content of the original data sources.</complete>
+		<logic>Polygon features conform to the following topological rules. Polygons are single part. There are no duplicate polygons. Polygons do not self overlap. Polygons do not overlap other polygons. Polygons are bound by lines. Line features conform to the following topological rules. Lines are single part. There are no duplicate lines. Lines do not self overlap. Lines do not overlap other lines. Lines intersect only at nodes, and nodes anchor the ends of all lines. Lines do not overshoot or undershoot other lines they are supposed to meet and intersect. The tests of logical consistency were performed by the State of Connecticut using ESRI ArcInfo software to maintain feature topology in ArcInfo coverage format. The data is topologically clean. The ArcInfo Clean function was repeatedly used following edits to verify topology and enforce a minimum distance between vertices of 4 feet (fuzzy tolerance) and a minimum allowed overshoot length of 10 feet (dangle length).</logic>
+		<attracc>
+			<attraccr>All attributes have valid values. These attribute values are directly based on or derived from attribute and or spatial (feature location) information supplied by the respective data sources. This information does not depict official boundaries established by the respective state and municipal governments. It may contain some state boundary line errors for all states.</attraccr>
+		</attracc>
+	</dataqual>
+</metadata>
