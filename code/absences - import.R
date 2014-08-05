@@ -28,6 +28,10 @@ drops <- c("dateNUTR","off_season","surfaceaarea_sqm","perimeter_m","depth_avg_m
            "wbrasiliensis_cover_prop","wborealis_cover_prop","PO4_n","PO4_avg","PO4_SE","TOTN_n","TOTN_avg","TOTN_SE",
            "NO3_n","NO3_avg","NO3_SE","NH4_n","NH4_avg","NH4_SE","totNtotP_n","totNtotP_avg","totNtotP_SE","notes")
 data <- data[,!(names(data) %in% drops)]
+rm(drops)
+
+# check out if the variables look correct (e.g., factors vs. numeric)
+str(data)
 
 ######################################################### 
 # Water bodies w/ 2 surveys & one was in 2004           #
@@ -75,7 +79,7 @@ data<-subset(data, !(waterbody == "Dayton Pond" & year == "comb"))
 # Lucky Pond (Galko Farm Pond)
 data<-subset(data, !(waterbody == "Lucky Pond (Galko Farm Pond)" & year == "comb"))
 # Mackenzie Reservoir - 2 - small
-data<-subset(data, !(waterbody == "Mackenzie Reservoir  2  small" & year == "comb")) 
+data<-subset(data, !(waterbody == "Mackenzie Reservoir - 2 - small" & year == "comb")) 
 # Mill Pond Park
 data<-subset(data, !(waterbody == "Mill Pond Park" & year == "comb"))
 # Mills Pond, Lower
@@ -169,9 +173,15 @@ data <- data[,!(names(data) %in% drops)]
 # remove 4H camp - no plants were present 
 data <- data[-1,]
 
+rm(drops)
+
 # Write this to a .csv so I can see what I did 
 write.csv(data,"data-cleanedup.csv",row.names=FALSE)
 
+####################################
+# Add variables extracted from GIS # 
+####################################
+data <- read.csv("data-cleanedup.csv")
 
 ########################################
 # Create species, environment matrices #
@@ -183,7 +193,7 @@ dataSPACE <- data[,5:6]
 write.csv(dataSPACE,"dataSPACE.csv",row.names=FALSE)
 
 # matrix of environmental variables 
-dataENV <- cbind(data[,10:12], data[,31:35])
+dataENV <- cbind(data[,10:12], data[,31:35],data[,153:157])
 write.csv(dataENV,"dataENV.csv",row.names=FALSE)
 
 # matrix of floating plant species presence/absence
@@ -193,10 +203,11 @@ dataFP <- dataFP[,-5]
 dataFP$wolffia <- dataFP$wolffia + dataFP$wolffia_borealis + dataFP$wolffia_brasiliensis # combine the wolffias 
 dataFP <- dataFP[,-7]
 dataFP <- dataFP[,-7]
+colnames(dataFP)
 write.csv(dataFP,"dataFP.csv",row.names=FALSE)
 
 # matrix of non-floating plant species presence/absence 
-dataNONFP <- data[,36:ncol(data)]
+dataNONFP <- data[,36:152]
 write.csv(dataNONFP,"dataNONFP.csv",row.names=FALSE)
 
 # matrix of both floating and non-floating plant species presence/absence 
@@ -215,5 +226,9 @@ dataSPECIES_freq <- dataSPECIES_freq[order(dataSPECIES_freq[,2],decreasing=TRUE)
 dataSPECIES_freq <- within(dataSPECIES_freq,species <- factor(species,levels=species)) # re-order so it will plot w/ decreasing bar height
 dataSPECIES_freq
 write.csv(dataSPECIES_freq,"dataSPECIES_freq.csv",row.names=FALSE)
+
+# add wolffia_sp. to data 
+data$wolffia_sp <- data$wolffia + data$wolffia_borealis + data$wolffia_brasiliensis # combine the wolffias 
+colnames(data)
 
 
