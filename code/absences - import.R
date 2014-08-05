@@ -181,7 +181,7 @@ write.csv(data,"data-cleanedup.csv",row.names=FALSE)
 ####################################
 # Add variables extracted from GIS # 
 ####################################
-data <- read.csv("data-cleanedup.csv")
+data <- read.csv("data-with_GIS_variables.csv")
 
 ########################################
 # Create species, environment matrices #

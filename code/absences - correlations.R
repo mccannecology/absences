@@ -17,7 +17,7 @@ cor(log(dataENV))
 ############################
 library(Hmisc)
 rcorr(as.matrix(dataENV), type="pearson") # type can be pearson or spearman
-rcorr(as.matrix(log(dataENV)), type="pearson") # type can be pearson or spearman
+rcorr(as.matrix(log(dataENV+0.1)), type="pearson") # type can be pearson or spearman
 
 ##################################
 # Correlation scattefplot matrix #
@@ -50,13 +50,15 @@ pairs(dataENV,
       upper.panel = panel.cor)
 
 # save the file 
-jpeg("corrl_dataENV.jpg",height=8,width=11,units="in",res=600)
+jpeg("corrl_dataENV.jpg",height=8,width=11,units="in",res=300)
 pairs(dataENV, 
       cex = 1.5, 
       diag.panel = panel.hist, cex.labels = 1, font.labels = 1,
       upper.panel = panel.cor)
 dev.off()
 
+rm(panel.hist)
+rm(panel.cor)
 
 ##################################
 # Correlation scattefplot matrix #
@@ -65,6 +67,6 @@ dev.off()
 pairs(dataENV, log="xy")
 
 # save the file 
-jpeg("corrl_log_dataENV.jpg",height=8,width=11,units="in",res=600)
+jpeg("corrl_log_dataENV.jpg",height=8,width=11,units="in",res=300)
 pairs(dataENV, log="xy")
 dev.off()

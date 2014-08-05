@@ -14,13 +14,19 @@ dataSPACE
 dataSPECIES
 
 head(data)
+colnames(data)
 
 ######################################
 # Define a full model                #
 # All pairwise interactions          #
 # excluded: depth_max_m, ALK_avg     #
+# excluded: waterbodies_5km          #
 ######################################
 formula <- FP_species_richness ~ surfacearea_ha + shoreline_development + nonFP_species_richness + TOTP_avg + PH_avg + COND_avg + secchi_avg +
+  waterbodies_1km +
+  waterbodies_10km + 
+  boatlaunch + 
+  dist_waterfowl + 
   surfacearea_ha:shoreline_development                 +                                           
   surfacearea_ha:nonFP_species_richness                +                                           
   shoreline_development:nonFP_species_richness         +                                           
@@ -41,7 +47,32 @@ formula <- FP_species_richness ~ surfacearea_ha + shoreline_development + nonFP_
   nonFP_species_richness:secchi_avg                    +                                           
   TOTP_avg:secchi_avg                                  +                                           
   PH_avg:secchi_avg                                    +                                           
-  COND_avg:secchi_avg                                  
+  COND_avg:secchi_avg                                  +
+  surfacearea_ha:waterbodies_1km                       + 
+  shoreline_development:waterbodies_1km                + 
+  nonFP_species_richness:waterbodies_1km               + 
+  TOTP_avg + PH_avg:waterbodies_1km                    + 
+  COND_avg:waterbodies_1km                             + 
+  secchi_avg:waterbodies_1km                           +
+  surfacearea_ha:waterbodies_10km                      + 
+  shoreline_development:waterbodies_10km               + 
+  nonFP_species_richness:waterbodies_10km              + 
+  TOTP_avg + PH_avg:waterbodies_10km                   + 
+  COND_avg:waterbodies_10km                            + 
+  secchi_avg:waterbodies_10km                          +
+  surfacearea_ha:boatlaunch                            + 
+  shoreline_development:boatlaunch                     + 
+  nonFP_species_richness:boatlaunch                    + 
+  TOTP_avg + PH_avg:boatlaunch                         + 
+  COND_avg:boatlaunch                                  + 
+  secchi_avg:boatlaunch                                +
+  surfacearea_ha:dist_waterfowl                        + 
+  shoreline_development:dist_waterfowl                 + 
+  nonFP_species_richness:dist_waterfowl                + 
+  TOTP_avg + PH_avg:dist_waterfowl                     + 
+  COND_avg:dist_waterfowl                              + 
+  secchi_avg:dist_waterfowl                                
+
 glm_poisson_FPrich_full_interactions <- glm(formula, family=poisson, data=data, na.action = "na.fail")
 summary(glm_poisson_FPrich_full_interactions)
 
