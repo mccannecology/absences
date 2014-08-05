@@ -1,0 +1,85 @@
+Location,Species,Value,Variable
+"Connecticut, USA",Lemna minor,0.3218,Prop. Occurrence
+"Connecticut, USA",Spirodela polyrhiza,0.1782,Prop. Occurrence
+"Connecticut, USA",Wolffia sp. ,0.1322,Prop. Occurrence
+"Connecticut, USA",Lemna trisulca,0.023,Prop. Occurrence
+"Connecticut, USA",Azolla sp.,0.0172,Prop. Occurrence
+"Connecticut, USA",Eicchornia sp. ,0.0057,Prop. Occurrence
+"Connecticut, USA",Lemna minor,0.886,Rank Percentile
+"Connecticut, USA",Spirodela polyrhiza,0.748,Rank Percentile
+"Connecticut, USA",Wolffia sp. ,0.642,Rank Percentile
+"Connecticut, USA",Lemna trisulca,0.415,Rank Percentile
+"Connecticut, USA",Azolla sp.,0.35,Rank Percentile
+"Connecticut, USA",Eicchornia sp. ,0.211,Rank Percentile
+Denmark,Lemna trisulca,0.1829,Prop. Occurrence
+Denmark,Lemna trisulca,0.835,Rank Percentile
+France,Lemna minor,0.2609,Prop. Occurrence
+France,Lemna trisulca,0.1739,Prop. Occurrence
+France,Lemna minor,0.759,Rank Percentile
+France,Lemna trisulca,0.518,Rank Percentile
+Great Britain,Lemna minor,0.1246,Prop. Occurrence
+Great Britain,Lemna trisulca,0.0472,Prop. Occurrence
+Great Britain,Lemna minor,0.779,Rank Percentile
+Great Britain,Lemna trisulca,0.577,Rank Percentile
+Great Britain - 1989,Lemna minor,0.1317,Prop. Occurrence
+Great Britain - 1989,Lemna trisulca,0.0472,Prop. Occurrence
+Great Britain - 1989,Lemna gibba,0.0044,Prop. Occurrence
+Great Britain - 1989,Riccia fluitans,0.0044,Prop. Occurrence
+Great Britain - 1989,Spirodela polyrhiza,0.0027,Prop. Occurrence
+Great Britain - 1989,Azolla filiculoides,0.0018,Prop. Occurrence
+Great Britain - 1989,Lemna minuta,0.0009,Prop. Occurrence
+Great Britain - 1989,Wolffia arrhiza,0,Prop. Occurrence
+Great Britain - 1989,Lemna minor,0.765,Rank Percentile
+Great Britain - 1989,Lemna trisulca,0.569,Rank Percentile
+Great Britain - 1989,Lemna gibba,0.275,Rank Percentile
+Great Britain - 1989,Riccia fluitans,0.275,Rank Percentile
+Great Britain - 1989,Spirodela polyrhiza,0.167,Rank Percentile
+Great Britain - 1989,Azolla filiculoides,0.127,Rank Percentile
+Great Britain - 1989,Lemna minuta,0.088,Rank Percentile
+Great Britain - 1989,Wolffia arrhiza,NA,Rank Percentile
+Great Britain - 2004,Lemna minor,0.1187,Prop. Occurrence
+Great Britain - 2004,Lemna trisulca,0.0296,Prop. Occurrence
+Great Britain - 2004,Lemna gibba,0.0035,Prop. Occurrence
+Great Britain - 2004,Riccia fluitans,0.0026,Prop. Occurrence
+Great Britain - 2004,Spirodela polyrhiza,0.0015,Prop. Occurrence
+Great Britain - 2004,Azolla filiculoides,0.0003,Prop. Occurrence
+Great Britain - 2004,Lemna minuta,0.0003,Prop. Occurrence
+Great Britain - 2004,Wolffia arrhiza,0.0003,Prop. Occurrence
+Great Britain - 2004,Lemna minor,0.802,Rank Percentile
+Great Britain - 2004,Lemna trisulca,0.574,Rank Percentile
+Great Britain - 2004,Lemna gibba,0.297,Rank Percentile
+Great Britain - 2004,Riccia fluitans,0.238,Rank Percentile
+Great Britain - 2004,Spirodela polyrhiza,0.188,Rank Percentile
+Great Britain - 2004,Azolla filiculoides,0.099,Rank Percentile
+Great Britain - 2004,Lemna minuta,0.099,Rank Percentile
+Great Britain - 2004,Wolffia arrhiza,0.099,Rank Percentile
+N. Ireland,Lemna minor,0.5226,Prop. Occurrence
+N. Ireland,Spirodela polyrhiza,0.4425,Prop. Occurrence
+N. Ireland,Lemna trisulca,0.0488,Prop. Occurrence
+N. Ireland,Lemna minor,0.976,Rank Percentile
+N. Ireland,Spirodela polyrhiza,0.941,Rank Percentile
+N. Ireland,Lemna trisulca,0.682,Rank Percentile
+Netherlands,Lemna minor,0.8889,Prop. Occurrence
+Netherlands,Spirodela polyrhiza,0.7778,Prop. Occurrence
+Netherlands,Lemna trisulca,0.5556,Prop. Occurrence
+Netherlands,Lemna minuta,0.3333,Prop. Occurrence
+Netherlands,Lemna gibba,0.3333,Prop. Occurrence
+Netherlands,Wolffia arrhiza,0.2222,Prop. Occurrence
+Netherlands,Riccia fluitans,0.2222,Prop. Occurrence
+Netherlands,Lemna minor,0.979,Rank Percentile
+Netherlands,Spirodela polyrhiza,0.938,Rank Percentile
+Netherlands,Lemna trisulca,0.896,Rank Percentile
+Netherlands,Lemna minuta,0.75,Rank Percentile
+Netherlands,Lemna gibba,0.75,Rank Percentile
+Netherlands,Wolffia arrhiza,0.542,Rank Percentile
+Netherlands,Riccia fluitans,0.542,Rank Percentile
+Norway,Lemna minor,0.7656,Prop. Occurrence
+Norway,Spirodela polyrhiza,0.125,Prop. Occurrence
+Norway,Lemna trisulca,0.0156,Prop. Occurrence
+Norway,Lemna minor,0.979,Rank Percentile
+Norway,Spirodela polyrhiza,0.596,Rank Percentile
+Norway,Lemna trisulca,0.191,Rank Percentile
+Saaremaa Island (Estonia),Lemna trisulca,0.25,Prop. Occurrence
+Saaremaa Island (Estonia),Lemna minor,0.125,Prop. Occurrence
+Saaremaa Island (Estonia),Lemna trisulca,0.745,Rank Percentile
+Saaremaa Island (Estonia),Lemna minor,0.447,Rank Percentile

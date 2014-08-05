@@ -11,8 +11,69 @@ dataSPECIES
 
 ################
 # Scatterplots #
+# FP richness  #
 ################
-plot(data$TOTP_avg,data$FPrichness,log="x",ylab="Floating plant species richness",xlab="Total P(mg/L)")
+jpeg("predictors vs FP richness.jpg",height=8,width=11,units="in",res=1200)
+par(mfrow=c(2,4))
+plot(data$TOTP_avg,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="Total P(mg/L)")
+plot(data$surfacearea_ha,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="Surface area (ha)")
+plot(data$depth_max_m,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="Max depth (m)")
+plot(data$nonFP_species_richness,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="Non-FP species richness")
+plot(data$PH_avg,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="pH")
+plot(data$COND_avg,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="Conductivity (uS)")
+plot(data$ALK_avg,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="Alkalinity (mg/L)")
+plot(data$secchi_avg,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="Secchi depth (m)")
+dev.off()
+
+################
+# Scatterplots #
+# lemna_minor  #
+################
+jpeg("predictors vs lemna_minor.jpg",height=8,width=11,units="in",res=1200)
+par(mfrow=c(2,4))
+plot(data$TOTP_avg,data$lemna_minor,log="x",ylab="Lemna minor",xlab="Total P(mg/L)")
+plot(data$surfacearea_ha,data$lemna_minor,log="x",ylab="Lemna minor",xlab="Surface area (ha)")
+plot(data$depth_max_m,data$lemna_minor,log="x",ylab="Lemna minor",xlab="Max depth (m)")
+plot(data$nonFP_species_richness,data$lemna_minor,log="x",ylab="Lemna minor",xlab="Non-FP species richness")
+plot(data$PH_avg,data$lemna_minor,log="x",ylab="Lemna minor",xlab="pH")
+plot(data$COND_avg,data$lemna_minor,log="x",ylab="Lemna minor",xlab="Conductivity (uS)")
+plot(data$ALK_avg,data$lemna_minor,log="x",ylab="Lemna minor",xlab="Alkalinity (mg/L)")
+plot(data$secchi_avg,data$lemna_minor,log="x",ylab="Lemna minor",xlab="Secchi depth (m)")
+dev.off()
+
+################
+# Scatterplots #
+# spirodela    #
+################
+jpeg("predictors vs spirodela_polyrhiza.jpg",height=8,width=11,units="in",res=1200)
+par(mfrow=c(2,4))
+plot(data$TOTP_avg,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="Total P(mg/L)")
+plot(data$surfacearea_ha,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="Surface area (ha)")
+plot(data$depth_max_m,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="Max depth (m)")
+plot(data$nonFP_species_richness,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="Non-FP species richness")
+plot(data$PH_avg,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="pH")
+plot(data$COND_avg,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="Conductivity (uS)")
+plot(data$ALK_avg,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="Alkalinity (mg/L)")
+plot(data$secchi_avg,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="Secchi depth (m)")
+dev.off()
+
+################
+# Scatterplots #
+# wolffia_sp   #
+################
+data$wolffia_sp <- data$wolffia+ data$wolffia_brasiliensis + data$wolffia_borealis
+
+jpeg("predictors vs wolffia_sp.jpg",height=8,width=11,units="in",res=1200)
+par(mfrow=c(2,4))
+plot(data$TOTP_avg,data$wolffia_sp,log="x",ylab="Wolffia sp.",xlab="Total P(mg/L)")
+plot(data$surfacearea_ha,data$wolffia_sp,log="x",ylab="Wolffia sp.",xlab="Surface area (ha)")
+plot(data$depth_max_m,data$wolffia_sp,log="x",ylab="Wolffia sp.",xlab="Max depth (m)")
+plot(data$nonFP_species_richness,data$wolffia_sp,log="x",ylab="Wolffia sp.",xlab="Non-FP species richness")
+plot(data$PH_avg,data$wolffia_sp,log="x",ylab="Wolffia sp.",xlab="pH")
+plot(data$COND_avg,data$wolffia_sp,log="x",ylab="Wolffia sp.",xlab="Conductivity (uS)")
+plot(data$ALK_avg,data$wolffia_sp,log="x",ylab="Wolffia sp.",xlab="Alkalinity (mg/L)")
+plot(data$secchi_avg,data$wolffia_sp,log="x",ylab="Wolffia sp.",xlab="Secchi depth (m)")
+dev.off()
 
 #############################
 # Histogram of sp. richness #
@@ -64,16 +125,21 @@ head(dataSPECIES_freq)
 # if you want this plot with species listed alphabetically,
 # re-do dataSPECIES_freq in "absences - import.R" 
 # and leave out ordering the species as a factor of frequency 
-                                          
-sp_freq_plot <- ggplot(dataSPECIES_freq,aes(x=species,y=frequency))
-sp_freq_plot <- sp_freq_plot + geom_bar(stat="identity",fill = I("grey50"))
+          
+dataSPECIES_freq2 <- read.csv("dataSPECIES_freq.csv")
+
+sp_freq_plot <- ggplot(dataSPECIES_freq2,aes(x=reorder(Species, -Frequency),y=Frequency,fill=Label))
+sp_freq_plot <- sp_freq_plot + geom_bar(stat="identity")
 sp_freq_plot <- sp_freq_plot + theme_classic(base_size=10)
 sp_freq_plot <- sp_freq_plot + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 sp_freq_plot <- sp_freq_plot + xlab("Species")
 sp_freq_plot <- sp_freq_plot + ylab("# of waterbodies found in")
+sp_freq_plot <- sp_freq_plot + geom_text(aes(y=Frequency+1,label=Label))
+sp_freq_plot <- sp_freq_plot + ggtitle("This study - 174 lakes and ponds Connecticut, USA")
+sp_freq_plot <- sp_freq_plot + theme(legend.position="none")
 sp_freq_plot
 
-ggsave("sp_freq_plot.jpg",sp_freq_plot,height=8,width=11)
+ggsave("sp_freq_plot2.jpg",sp_freq_plot,height=8,width=11)
 
 ############################
 # Table of FP compositions # 

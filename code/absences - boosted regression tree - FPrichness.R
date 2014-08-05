@@ -64,3 +64,44 @@ gbm.perspec(FPrich.tc2.lr001, 3,8)
 gbm.perspec(FPrich.tc2.lr001, 7, 5,theta=25)
 
 
+
+###################################
+# re-try without any interactions #
+###################################
+# use the # of trees from the full model
+FPrich.tc2.lr001.nointeraction <- gbm.fixed(data=data, 
+                              gbm.x = c(10:12,30:35),
+                              gbm.y = 29,
+                              family = "poisson",
+                              tree.complexity = 1,
+                              learning.rate = 0.001,
+                              bag.fraction = 0.5,
+                              n.trees=2000
+)
+
+# Variable importance 
+summary(FPrich.tc2.lr001.nointeraction)
+
+FPrich.tc2.lr001.nointeraction$self.statistics
+
+
+#######################
+# re-try              #
+# excluded depth, ALK #
+#######################
+# use the # of trees from the full model
+FPrich.tc2.lr001.excludedvars <- gbm.fixed(data=data, 
+                                            gbm.x = c(10:11,30:33,35),
+                                            gbm.y = 29,
+                                            family = "poisson",
+                                            tree.complexity = 1,
+                                            learning.rate = 0.001,
+                                            bag.fraction = 0.5,
+                                            n.trees=2000
+)
+
+# Variable importance 
+summary(FPrich.tc2.lr001.excludedvars)
+
+FPrich.tc2.lr001.excludedvars$self.statistics
+
