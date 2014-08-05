@@ -118,7 +118,11 @@ importance(best_FPrich_interactions)
 # No interactions                    #
 # excluded: depth_max_m, ALK_avg     #
 ######################################
-formula <- FP_species_richness ~ surfacearea_ha + shoreline_development + nonFP_species_richness + TOTP_avg + PH_avg + COND_avg + secchi_avg 
+formula <- FP_species_richness ~ surfacearea_ha + shoreline_development + nonFP_species_richness + TOTP_avg + PH_avg + COND_avg + secchi_avg +
+  waterbodies_1km +
+  waterbodies_10km + 
+  boatlaunch + 
+  dist_waterfowl 
 glm_poisson_FPrich_full <- glm(formula, family=poisson, data=data, na.action = "na.fail")
 summary(glm_poisson_FPrich_full)
 
@@ -135,7 +139,7 @@ best_FPrich
 
 # write the table of all sub-models to file 
 numb_models <- nrow(best_FPrich)
-write.csv(best_FPrich[1:numb_models],file="best_FPrich.csv",na="NA")
+write.csv(best_FPrich[1:numb_models],file="best_glm_FPrich.csv",na="NA")
 
 # Return the best model (lowest AIC)
 get.models(best_FPrich, 1)
@@ -189,13 +193,17 @@ anova(glm_poisson_FPrich_best, test="Chisq")
 
 ######################################
 # Define a full model                #
-# log of predictor variables 
+# log of predictor variables         #
 # No interactions                    #
 # excluded: depth_max_m, ALK_avg     #
+# excluded: waterbodies_5km          #  
 ######################################
 formula <- FP_species_richness ~ log(surfacearea_ha) + log(shoreline_development) +
-                                 nonFP_species_richness + log(TOTP_avg) + 
-                                 log(PH_avg) + log(COND_avg) + log(secchi_avg) 
+                                 log(nonFP_species_richness+1) + log(TOTP_avg) + 
+                                 log(PH_avg) + log(COND_avg) + log(secchi_avg) + 
+                                 log(waterbodies_1km+1) + log(waterbodies_10km) + 
+                                 boatlaunch + log(dist_waterfowl+1)
+                                
 glm_poisson_FPrich_full_log <- glm(formula, family=poisson, data=data, na.action = "na.fail")
 summary(glm_poisson_FPrich_full_log)
 
@@ -214,7 +222,7 @@ best_FPrich_log
 
 # write the table of all sub-models to file 
 numb_models <- nrow(best_FPrich_log)
-write.csv(best_FPrich_log[1:numb_models],file="best_FPrich_log.csv",na="NA")
+write.csv(best_FPrich_log[1:numb_models],file="best_glm_FPrich_log.csv",na="NA")
 
 # Return the best model (lowest AIC)
 get.models(best_FPrich_log, 1)
