@@ -15,9 +15,9 @@ colnames(data)
 # data$wolffia_all <- dataFP$wolffia
 # already done 
 
-#################################
-# A first guess @ the paramters #
-#################################
+##################################
+# A first guess @ the parameters #
+##################################
 # Identify the optimal number of trees (nt)
 W.tc2.lr001 <- gbm.fixed(data=data, 
                             gbm.x = c(10:12,30:35,153,155:157),
