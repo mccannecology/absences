@@ -8,12 +8,15 @@ library(dismo)
 # Check out the column names to find out where your variables are 
 colnames(data)
 
+# Excluded waterbodies_5km 
+# Included depth_max_m and ALK_avg
+
 #################################
 # A first guess @ the paramters #
 #################################
 # Identify the optimal number of trees (nt)
 SP.tc2.lr001 <- gbm.fixed(data=data, 
-                            gbm.x = c(10:12,30:35),
+                            gbm.x = c(10:12,30:35,153,155:157),
                             gbm.y = 24,
                             family = "bernoulli",
                             tree.complexity = 2,
@@ -39,6 +42,15 @@ SP.tc2.lr001$self.statistics
 # Plotting #
 ############
 gbm.plot(SP.tc2.lr001,common.scale=F)
+
+
+# just the first 6 most important 
+# save the file 
+jpeg("BRT_SP.jpg",height=8,width=11,units="in",res=300)
+gbm.plot(SP.tc2.lr001,common.scale=F,n.plots=6,plot.layout=c(2, 3),write.title=FALSE)
+title(main="Boosted Regression Tree: Y=S. polyrhiza(presence)")
+dev.off()
+
 
 # plot the ﬁtted values in relation to each of the predictors
 # Depending on the distribution of observations within the environmental space, fitted functions can

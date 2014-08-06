@@ -126,6 +126,15 @@ formula <- FP_species_richness ~ surfacearea_ha + shoreline_development + nonFP_
 glm_poisson_FPrich_full <- glm(formula, family=poisson, data=data, na.action = "na.fail")
 summary(glm_poisson_FPrich_full)
 
+# try it with boatlaunch as a factor 
+formula <- FP_species_richness ~ surfacearea_ha + shoreline_development + nonFP_species_richness + TOTP_avg + PH_avg + COND_avg + secchi_avg +
+  waterbodies_1km +
+  waterbodies_10km + 
+  as.factor(boatlaunch) + 
+  dist_waterfowl 
+glm_poisson_FPrich_full_2 <- glm(formula, family=poisson, data=data, na.action = "na.fail")
+summary(glm_poisson_FPrich_full_2)
+
 ###############################
 # Full model w/o interactions #
 # All sub-models              #
@@ -162,6 +171,12 @@ coef(avg_FPrich)
 # Sum of ‘Akaike weights’ over all models including the explanatory variable
 # These don't sum up to one (across all variables)
 importance(best_FPrich)
+
+
+# try it with boatlaunch as a factor 
+best_FPrich_2 <- dredge(glm_poisson_FPrich_full_2)
+best_FPrich_2
+plot(best_FPrich_2)
 
 ##################
 # Best model     #

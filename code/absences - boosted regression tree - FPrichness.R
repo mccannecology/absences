@@ -8,12 +8,15 @@ library(dismo)
 # Check out the column names to find out where your variables are 
 colnames(data)
 
+# Excluded waterbodies_5km 
+# Included depth_max_m and ALK_avg
+
 #################################
 # A first guess @ the paramters #
 #################################
 # Identify the optimal number of trees (nt)
 FPrich.tc2.lr001 <- gbm.fixed(data=data, 
-                            gbm.x = c(10:12,30:35),
+                            gbm.x = c(10:12,30:35,153,155:157),
                             gbm.y = 29,
                             family = "poisson",
                             tree.complexity = 2,
@@ -38,7 +41,14 @@ FPrich.tc2.lr001$self.statistics
 ############
 # Plotting #
 ############
-gbm.plot(FPrich.tc2.lr001,common.scale=F)
+gbm.plot(FPrich.tc2.lr001,common.scale=F,plot.layout=c(4, 4))
+
+# just the first 6 most important 
+# save the file 
+jpeg("BRT_FPrichness.jpg",height=8,width=11,units="in",res=300)
+gbm.plot(FPrich.tc2.lr001,common.scale=F,n.plots=6,plot.layout=c(2, 3),write.title=FALSE)
+title(main="Boosted Regression Tree: Y=FP richness")
+dev.off()
 
 # plot the ﬁtted values in relation to each of the predictors
 # Depending on the distribution of observations within the environmental space, fitted functions can
@@ -57,20 +67,21 @@ FPrich.tc2.lr001.interactions$rank.list
 # pH and depth
 gbm.perspec(FPrich.tc2.lr001, 3, 6)
 
-# Alkalinity and depth
-gbm.perspec(FPrich.tc2.lr001, 3,8)
-
 # conductivity and total P
 gbm.perspec(FPrich.tc2.lr001, 7, 5,theta=25)
 
-
+# waterbodies_1km and COND_avg
+gbm.perspec(FPrich.tc2.lr001, 10,7)
+            
+# Alkalinity and depth
+gbm.perspec(FPrich.tc2.lr001, 3,8)
 
 ###################################
 # re-try without any interactions #
 ###################################
 # use the # of trees from the full model
 FPrich.tc2.lr001.nointeraction <- gbm.fixed(data=data, 
-                              gbm.x = c(10:12,30:35),
+                              gbm.x = c(10:12,30:35,153,155:157),
                               gbm.y = 29,
                               family = "poisson",
                               tree.complexity = 1,
@@ -91,7 +102,7 @@ FPrich.tc2.lr001.nointeraction$self.statistics
 #######################
 # use the # of trees from the full model
 FPrich.tc2.lr001.excludedvars <- gbm.fixed(data=data, 
-                                            gbm.x = c(10:11,30:33,35),
+                                            c(10:11,30:33,35,153,155:157),
                                             gbm.y = 29,
                                             family = "poisson",
                                             tree.complexity = 1,
