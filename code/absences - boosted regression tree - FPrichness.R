@@ -15,17 +15,17 @@ colnames(data)
 # A first guess @ the paramters #
 #################################
 # Identify the optimal number of trees (nt)
-FPrich.tc2.lr001 <- gbm.fixed(data=data, 
-                            gbm.x = c(10:12,30:35,153,155:157),
-                            gbm.y = 29,
-                            family = "poisson",
-                            tree.complexity = 2,
-                            learning.rate = 0.001,
-                            bag.fraction = 0.5,
-                            n.trees=2000
-                            )
+FPrich.tc2.lr001 <- gbm.step(data=data, 
+                              gbm.x = c(5,6,10:12,30:35,153:162),
+                              gbm.y = 29,
+                              family = "poisson",
+                              tree.complexity = 2,
+                              learning.rate = 0.001,
+                              bag.fraction = 0.5,
+                              plot.main=FALSE
+                              )
 # Variable importance 
-summary(FPrich.tc2.lr001)
+summary(FPrich.tc2.lr001,plot=FALSE)
 
 FPrich.tc2.lr001$self.statistics
 

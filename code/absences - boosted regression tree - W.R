@@ -8,8 +8,7 @@ library(dismo)
 # Check out the column names to find out where your variables are 
 colnames(data)
 
-# Excluded waterbodies_5km 
-# Included depth_max_m and ALK_avg
+# inlclude all possible predictor variables
 
 # add Wolffia (combined) to data 
 # data$wolffia_all <- dataFP$wolffia
@@ -19,17 +18,17 @@ colnames(data)
 # A first guess @ the parameters #
 ##################################
 # Identify the optimal number of trees (nt)
-W.tc2.lr001 <- gbm.fixed(data=data, 
-                            gbm.x = c(10:12,30:35,153,155:157),
-                            gbm.y = 158,
+W.tc2.lr001 <- gbm.step(data=data, 
+                            gbm.x = c(5,6,10:12,30:35,153:162),
+                            gbm.y = 164,
                             family = "bernoulli",
                             tree.complexity = 2,
                             learning.rate = 0.001,
                             bag.fraction = 0.5,
-                            n.trees=2000
+                            plot.main=FALSE
                             )
 # Variable importance 
-summary(W.tc2.lr001)
+summary(W.tc2.lr001,plot=FALSE)
 
 W.tc2.lr001$self.statistics
 

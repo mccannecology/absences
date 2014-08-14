@@ -7,6 +7,8 @@ dataFP
 dataNONFP
 dataSPECIES
 
+dataENV$id <- NULL 
+
 # Basic correlation matrices 
 cor(dataENV)
 cor(log(dataENV))
@@ -18,6 +20,15 @@ cor(log(dataENV))
 library(Hmisc)
 rcorr(as.matrix(dataENV), type="pearson") # type can be pearson or spearman
 rcorr(as.matrix(log(dataENV+0.1)), type="pearson") # type can be pearson or spearman
+
+# write each matrix to file 
+write.csv(rcorr(as.matrix(dataENV), type="pearson")$r,file="corr_dataENV_r.csv")
+write.csv(rcorr(as.matrix(dataENV), type="pearson")$P,file="corr_dataENV_p.csv")
+
+write.csv(rcorr(as.matrix(log(dataENV+0.1)), type="pearson")$r,file="corr_log_dataENV_r.csv")
+write.csv(rcorr(as.matrix(log(dataENV+0.1)), type="pearson")$P,file="corr_log_dataENV_p.csv")
+
+
 
 ##################################
 # Correlation scattefplot matrix #

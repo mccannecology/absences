@@ -1,175 +1,175 @@
-"latitude","longitude"
-41.86072,71.89911
-41.51468,71.97423
-41.62651,72.33073
-41.50827,71.89536
-41.72207,72.3592
-41.69298,72.53177
-41.44757,72.99517
-41.9005,72.12765
-41.49308,71.97971
-41.46259,73.52383
-41.79429,73.19495
-41.5904,72.42655
-41.57596,71.78904
-41.25058,73.14075
-41.56859,72.78691
-41.51539,72.73139
-41.99266,72.13085
-41.50757,71.87318
-41.09058,73.46373
-41.9231,72.21908
-41.34555,72.29826
-41.96955,72.06934
-41.56374,72.03777
-41.80132,72.433
-41.8089,72.42619
-41.82184,72.42102
-41.78829,72.45363
-41.37191,72.122
-41.29532,72.80171
-41.91115,72.53823
-41.91006,72.53856
-41.20738,73.18788
-41.87184,73.09576
-41.30587,72.52501
-41.25132,73.239
-41.40168,72.49901
-41.32061,72.77994
-41.93943,72.19431
-41.30229,72.39669
-41.84679,71.83803
-41.33719,72.74107
-41.77093,72.31974
-42.02516,72.52218
-41.52188,72.63876
-41.30111,72.41396
-41.93605,72.37389
-41.92278,72.09932
-41.38917,73.03082
-41.40869,72.80267
-41.34356,72.58872
-41.34116,72.59215
-41.69494,72.48231
-41.64631,72.63289
-41.64575,72.63426
-41.56392,71.87308
-41.81353,73.2388
-41.07916,73.46074
-41.60138,73.09778
-41.52323,73.14099
-41.64861,72.98933
-41.39612,72.9421
-41.32004,72.67371
-41.21996,73.20664
-41.74178,72.84136
-41.50874,72.22279
-41.39102,72.5576
-41.57392,72.56294
-41.53006,71.80907
-41.84019,72.10908
-41.67057,72.8475
-41.68358,73.47777
-41.51878,72.32729
-41.18087,73.37183
-41.42103,72.57104
-41.54686,72.72233
-41.54399,72.72083
-41.53777,72.72257
-41.55274,72.72902
-41.46175,72.25084
-41.18232,73.42648
-41.54433,72.60446
-41.32818,73.10852
-42.02222,72.99288
-41.28351,72.58265
-41.25053,73.00999
-41.91828,73.49461
-41.29901,72.39684
-41.34751,72.43418
-41.36054,72.70377
-41.80343,72.77213
-41.50103,73.11168
-41.88743,73.01997
-41.31704,72.78478
-41.6535,73.20825
-41.51451,72.42203
-41.39284,72.37909
-41.46451,72.85655
-41.44279,72.77219
-41.32008,73.52723
-41.63474,73.11386
-41.33882,72.48377
-41.69472,72.73002
-41.47727,72.63283
-41.82456,72.91158
-41.82656,72.91411
-41.81138,73.29292
-41.67663,72.31115
-41.73433,71.86675
-41.96006,72.1922
-42.02185,72.03045
-41.36302,71.96287
-41.41707,73.13694
-41.48544,72.77947
-41.35674,72.62813
-41.33061,72.73172
-41.2947,72.62439
-41.68265,72.84798
-41.3741,72.23028
-41.25557,73.17577
-41.43236,72.74155
-41.59784,72.49581
-41.39259,72.24905
-41.38053,71.8605
-41.37927,71.86087
-41.17,73.35631
-41.42209,72.33256
-42.00268,72.64729
-42.00276,72.6463
-41.33536,72.52367
-41.3388,73.37758
-41.95974,71.81632
-41.39442,72.69666
-41.34442,73.05247
-41.36418,72.30096
-41.13459,73.42225
-41.95089,71.95093
-41.17892,73.41998
-41.71794,72.60965
-41.3693,72.58971
-41.10905,73.44343
-41.31925,73.11065
-41.30803,73.11969
-41.5794,72.77293
-41.36044,71.90922
-41.77849,72.82611
-41.60271,72.86369
-41.51512,73.47843
-42.01228,72.25539
-41.59868,73.07024
-41.26764,72.78897
-41.41,73.33179
-41.07807,73.47213
-41.53585,73.51186
-41.29348,72.69152
-41.82003,72.82271
-41.81764,72.82342
-41.83768,73.26142
-41.44672,72.74408
-41.33809,72.6815
-41.504,72.407
-41.41692,72.8846
-41.2301,73.41338
-41.34991,73.45925
-41.87794,73.04411
-41.33899,72.7341
-41.85519,73.2565
-41.43822,71.96957
-41.63494,72.3087
-41.90873,73.15069
-41.58372,73.12765
-41.35391,72.96891
-41.73685,72.76538
-41.49105,71.87221
-41.27087,72.77647
+"latitude","longitude","major_watershed","regional_watershed","waterbodies_1km","waterbodies_5km","waterbodies_10km"
+41.86072,71.89911,"Thames","Quinebaug",0,8,44
+41.51468,71.97423,"Thames","Thames Main Stem",0,12,41
+41.62651,72.33073,"Connecticut","Salmon",1,11,41
+41.50827,71.89536,"Thames","Pachaug",0,6,33
+41.72207,72.3592,"Thames","Willimantic",0,10,37
+41.69298,72.53177,"Connecticut","Connecticut Main Stem",0,7,43
+41.44757,72.99517,"Housatonic","Naugatuck",1,13,60
+41.9005,72.12765,"Thames","Natchaug",2,18,85
+41.49308,71.97971,"Thames","Thames Main Stem",2,12,40
+41.46259,73.52383,"Housatonic","Candlewood",1,21,63
+41.79429,73.19495,"Housatonic","Shepaug",1,13,49
+41.5904,72.42655,"Connecticut","Salmon",0,7,53
+41.57596,71.78904,"Thames","Pachaug",0,8,52
+41.25058,73.14075,"Housatonic","Housatonic Main Stem",1,20,82
+41.56859,72.78691,"Connecticut","Mattabesset",2,18,77
+41.51539,72.73139,"Connecticut","Mattabesset",0,18,61
+41.99266,72.13085,"Thames","Natchaug",2,27,98
+41.50757,71.87318,"Thames","Pachaug",1,9,33
+41.09058,73.46373,"Southeast Coast","Southwest Shoreline",0,27,69
+41.9231,72.21908,"Thames","Natchaug",0,26,82
+41.34555,72.29826,"Connecticut","Connecticut Main Stem",3,24,77
+41.96955,72.06934,"Thames","Natchaug",3,36,88
+41.56374,72.03777,"Thames","Shetucket",2,18,48
+41.80132,72.433,"Thames","Willimantic",1,13,57
+41.8089,72.42619,"Thames","Willimantic",3,11,51
+41.82184,72.42102,"Thames","Willimantic",2,10,52
+41.78829,72.45363,"Connecticut","Hockanum",0,14,49
+41.37191,72.122,"Thames","Thames Main Stem",3,24,84
+41.29532,72.80171,"South Central Coast","South Central Eastern Complex",2,19,42
+41.91115,72.53823,"Connecticut","Scantic",3,10,31
+41.91006,72.53856,"Connecticut","Scantic",1,11,30
+41.20738,73.18788,"Southeast Coast","Southwest Eastern",0,16,69
+41.87184,73.09576,"Connecticut","Farmington",0,13,47
+41.30587,72.52501,"South Central Coast","South Central Eastern Complex",1,19,50
+41.25132,73.239,"Southeast Coast","Southwest Eastern",0,11,56
+41.40168,72.49901,"Connecticut","Connecticut Main Stem",1,16,59
+41.32061,72.77994,"South Central Coast","South Central Eastern Complex",2,16,45
+41.93943,72.19431,"Thames","Natchaug",2,17,85
+41.30229,72.39669,"South Central Coast","South Central Eastern Complex",3,23,71
+41.84679,71.83803,"Thames","Fivemile",0,18,52
+41.33719,72.74107,"South Central Coast","South Central Eastern Complex",1,11,52
+41.77093,72.31974,"Thames","Willimantic",0,9,49
+42.02516,72.52218,"Connecticut","Connecticut Main Stem",2,27,82
+41.52188,72.63876,"Connecticut","Connecticut Main Stem",0,14,62
+41.30111,72.41396,"South Central Coast","South Central Eastern Complex",2,21,66
+41.93605,72.37389,"Thames","Willimantic",2,18,67
+41.92278,72.09932,"Thames","Natchaug",1,29,88
+41.38917,73.03082,"Housatonic","Naugatuck",1,19,70
+41.40869,72.80267,"South Central Coast","Quinnipiac",0,5,37
+41.34356,72.58872,"South Central Coast","South Central Eastern Complex",2,12,55
+41.34116,72.59215,"South Central Coast","South Central Eastern Complex",1,11,54
+41.69494,72.48231,"Connecticut","Salmon",1,11,43
+41.64631,72.63289,"Connecticut","Connecticut Main Stem",2,14,60
+41.64575,72.63426,"Connecticut","Connecticut Main Stem",2,14,60
+41.56392,71.87308,"Thames","Pachaug",3,14,30
+41.81353,73.2388,"Housatonic","Shepaug",2,13,52
+41.07916,73.46074,"Southeast Coast","Southwest Shoreline",2,26,62
+41.60138,73.09778,"Housatonic","Naugatuck",0,14,53
+41.52323,73.14099,"Housatonic","Naugatuck",1,12,50
+41.64861,72.98933,"Housatonic","Naugatuck",1,14,71
+41.39612,72.9421,"South Central Coast","South Central Western Complex",0,19,65
+41.32004,72.67371,"South Central Coast","South Central Eastern Complex",1,21,52
+41.21996,73.20664,"Southeast Coast","Southwest Eastern",1,17,62
+41.74178,72.84136,"Connecticut","Farmington",3,19,64
+41.50874,72.22279,"Thames","Yantic",1,19,64
+41.39102,72.5576,"South Central Coast","South Central Eastern Complex",0,13,41
+41.57392,72.56294,"Connecticut","Connecticut Main Stem",0,10,42
+41.53006,71.80907,"Pawcatuck","Pawcatuck Main Stem",0,10,39
+41.84019,72.10908,"Thames","Natchaug",2,19,73
+41.67057,72.8475,"South Central Coast","Quinnipiac",0,15,76
+41.68358,73.47777,"Housatonic","Housatonic Main Stem",1,12,40
+41.51878,72.32729,"Connecticut","Eightmile",1,12,56
+41.18087,73.37183,"Southeast Coast","Saugatuck",2,20,70
+41.42103,72.57104,"South Central Coast","South Central Eastern Complex",2,12,43
+41.54686,72.72233,"Connecticut","Mattabesset",4,20,74
+41.54399,72.72083,"Connecticut","Mattabesset",3,18,69
+41.53777,72.72257,"Connecticut","Mattabesset",3,21,69
+41.55274,72.72902,"Connecticut","Mattabesset",1,18,80
+41.46175,72.25084,"Southeast Coast","Southeast Western Complex",4,17,52
+41.18232,73.42648,"Southeast Coast","Norwalk",1,16,75
+41.54433,72.60446,"Connecticut","Connecticut Main Stem",3,14,52
+41.32818,73.10852,"Housatonic","Housatonic Main Stem",3,28,85
+42.02222,72.99288,"Connecticut","Farmington",3,17,35
+41.28351,72.58265,"South Central Coast","South Central Shoreline",0,11,40
+41.25053,73.00999,"South Central Coast","South Central Western Complex",2,12,42
+41.91828,73.49461,"Housatonic","Tenmile",0,11,41
+41.29901,72.39684,"South Central Coast","South Central Eastern Complex",2,22,64
+41.34751,72.43418,"Connecticut","Connecticut Main Stem",1,24,83
+41.36054,72.70377,"South Central Coast","South Central Eastern Complex",0,14,51
+41.80343,72.77213,"Connecticut","Park",1,12,47
+41.50103,73.11168,"Housatonic","Naugatuck",1,8,53
+41.88743,73.01997,"Connecticut","Farmington",0,9,36
+41.31704,72.78478,"South Central Coast","South Central Eastern Complex",3,18,43
+41.6535,73.20825,"Housatonic","Pomperaug",1,8,39
+41.51451,72.42203,"Connecticut","Salmon",4,34,61
+41.39284,72.37909,"Connecticut","Connecticut Main Stem",2,22,76
+41.46451,72.85655,"South Central Coast","South Central Western Complex",1,8,27
+41.44279,72.77219,"South Central Coast","Quinnipiac",1,9,36
+41.32008,73.52723,"Hudson","Croton",1,32,110
+41.63474,73.11386,"Housatonic","Naugatuck",1,15,58
+41.33882,72.48377,"Connecticut","Connecticut Main Stem",2,20,71
+41.69472,72.73002,"Connecticut","Park",0,6,59
+41.47727,72.63283,"Connecticut","Connecticut Main Stem",0,5,46
+41.82456,72.91158,"Connecticut","Farmington",1,13,36
+41.82656,72.91411,"Connecticut","Farmington",1,14,34
+41.81138,73.29292,"Housatonic","Shepaug",0,11,33
+41.67663,72.31115,"Thames","Willimantic",0,15,41
+41.73433,71.86675,"Thames","Moosup",0,9,22
+41.96006,72.1922,"Thames","Natchaug",1,16,87
+42.02185,72.03045,"Thames","Quinebaug",0,22,86
+41.36302,71.96287,"Southeast Coast","Southeast Eastern Complex",1,10,52
+41.41707,73.13694,"Housatonic","Housatonic Main Stem",0,9,49
+41.48544,72.77947,"South Central Coast","Quinnipiac",0,15,50
+41.35674,72.62813,"South Central Coast","South Central Eastern Complex",0,15,54
+41.33061,72.73172,"South Central Coast","South Central Eastern Complex",1,12,51
+41.2947,72.62439,"South Central Coast","South Central Eastern Complex",1,11,47
+41.68265,72.84798,"South Central Coast","Quinnipiac",1,15,70
+41.3741,72.23028,"Southeast Coast","Southeast Western Complex",2,24,85
+41.25557,73.17577,"Southeast Coast","Southwest Eastern",0,17,66
+41.43236,72.74155,"South Central Coast","South Central Eastern Complex",1,10,42
+41.59784,72.49581,"Connecticut","Salmon",2,12,34
+41.39259,72.24905,"Southeast Coast","Southeast Western Complex",2,15,79
+41.38053,71.8605,"Southeast Coast","Southeast Eastern Complex",1,10,31
+41.37927,71.86087,"Southeast Coast","Southeast Eastern Complex",1,10,31
+41.17,73.35631,"Southeast Coast","Saugatuck",0,16,75
+41.42209,72.33256,"Connecticut","Eightmile",0,12,58
+42.00268,72.64729,"Connecticut","Stony Brook",1,13,54
+42.00276,72.6463,"Connecticut","Stony Brook",2,13,54
+41.33536,72.52367,"South Central Coast","South Central Eastern Complex",1,12,61
+41.3388,73.37758,"Southeast Coast","Saugatuck",3,19,68
+41.95974,71.81632,"Thames","Fivemile",2,21,67
+41.39442,72.69666,"South Central Coast","South Central Eastern Complex",0,14,46
+41.34442,73.05247,"Housatonic","Housatonic Main Stem",1,23,75
+41.36418,72.30096,"Connecticut","Connecticut Main Stem",6,35,88
+41.13459,73.42225,"Southeast Coast","Norwalk",2,19,79
+41.95089,71.95093,"Thames","Quinebaug",1,14,58
+41.17892,73.41998,"Southeast Coast","Norwalk",2,22,71
+41.71794,72.60965,"Connecticut","Connecticut Main Stem",0,14,43
+41.3693,72.58971,"South Central Coast","South Central Eastern Complex",1,13,47
+41.10905,73.44343,"Southeast Coast","Southwest Western Complex",1,26,75
+41.31925,73.11065,"Housatonic","Housatonic Main Stem",3,19,62
+41.30803,73.11969,"Housatonic","Housatonic Main Stem",3,19,58
+41.5794,72.77293,"Connecticut","Mattabesset",2,24,82
+41.36044,71.90922,"Southeast Coast","Southeast Shoreline",1,12,28
+41.77849,72.82611,"Connecticut","Farmington",1,22,63
+41.60271,72.86369,"South Central Coast","Quinnipiac",0,14,63
+41.51512,73.47843,"Housatonic","Candlewood",1,14,43
+42.01228,72.25539,"Thames","Willimantic",0,29,100
+41.59868,73.07024,"Housatonic","Naugatuck",0,14,55
+41.26764,72.78897,"South Central Coast","South Central Shoreline",1,12,42
+41.41,73.33179,"Housatonic","Housatonic Main Stem",1,14,54
+41.07807,73.47213,"Southeast Coast","Southwest Western Complex",0,29,58
+41.53585,73.51186,"Hudson","Croton",2,7,40
+41.29348,72.69152,"South Central Coast","South Central Eastern Complex",0,18,42
+41.82003,72.82271,"Connecticut","Farmington",2,13,49
+41.81764,72.82342,"Connecticut","Farmington",2,12,54
+41.83768,73.26142,"Housatonic","Shepaug",1,12,48
+41.44672,72.74408,"South Central Coast","Quinnipiac",2,11,45
+41.33809,72.6815,"South Central Coast","South Central Eastern Complex",3,14,53
+41.504,72.407,"Connecticut","Salmon",5,30,66
+41.41692,72.8846,"South Central Coast","South Central Western Complex",0,7,47
+41.2301,73.41338,"Southeast Coast","Norwalk",1,15,64
+41.34991,73.45925,"Housatonic","Still",2,36,99
+41.87794,73.04411,"Connecticut","Farmington",0,6,45
+41.33899,72.7341,"South Central Coast","South Central Eastern Complex",2,14,53
+41.85519,73.2565,"Housatonic","Shepaug",1,12,40
+41.43822,71.96957,"Southeast Coast","Southeast Eastern Complex",0,12,49
+41.63494,72.3087,"Thames","Yantic",2,14,41
+41.90873,73.15069,"Housatonic","Naugatuck",3,20,61
+41.58372,73.12765,"Housatonic","Naugatuck",1,17,45
+41.35391,72.96891,"South Central Coast","South Central Western Complex",2,23,62
+41.73685,72.76538,"Connecticut","Park",1,16,57
+41.49105,71.87221,"Pawcatuck","Pawcatuck Main Stem",0,5,27
+41.27087,72.77647,"South Central Coast","South Central Shoreline",2,13,42

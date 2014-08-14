@@ -95,7 +95,7 @@ data<-subset(data, !(waterbody == "Young's Pond" & year == "comb"))
 
 # Mackenzie Reservoir - 1 - large - does not contain an CAES chemistry data - can estimate with my survey
 # I will just remove this waterbody for now 
-data<-subset(data, !(waterbody == "Mackenzie Reservoir  1  large"))
+data<-subset(data, !(waterbody == "Mackenzie Reservoir - 1 - large"))
 
 ###############################################
 # 21 water bodies with 2 CAES surveys         #
@@ -181,6 +181,10 @@ write.csv(data,"data-cleanedup.csv",row.names=FALSE)
 ####################################
 # Add variables extracted from GIS # 
 ####################################
+# open up "data-cleanedup.csv"
+# add variables manually 
+# save as "data-with_GIS_variables.csv"
+
 data <- read.csv("data-with_GIS_variables.csv")
 
 ########################################
@@ -189,11 +193,11 @@ data <- read.csv("data-with_GIS_variables.csv")
 colnames(data)
 
 # matrix of latitude and longitudes 
-dataSPACE <- data[,5:6]
+dataSPACE <- cbind(data[,5:6],data[,153:157])
 write.csv(dataSPACE,"dataSPACE.csv",row.names=FALSE)
 
 # matrix of environmental variables 
-dataENV <- cbind(data[,10:12], data[,31:35],data[,153:157])
+dataENV <- cbind(data[,10:12], data[,31:35],data[,155:163])
 write.csv(dataENV,"dataENV.csv",row.names=FALSE)
 
 # matrix of floating plant species presence/absence

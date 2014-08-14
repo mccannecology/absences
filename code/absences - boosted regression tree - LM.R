@@ -8,26 +8,49 @@ library(dismo)
 # Check out the column names to find out where your variables are 
 colnames(data)
 
-# Excluded waterbodies_5km 
-# Included depth_max_m and ALK_avg
+# inlclude all possible predictor variables
 
 #################################
 # A first guess @ the paramters #
 #################################
 # Identify the optimal number of trees (nt)
-LM.tc2.lr001 <- gbm.fixed(data=data, 
-                            gbm.x = c(10:12,30:35,153,155:157),
-                            gbm.y = 20,
-                            family = "bernoulli",
-                            tree.complexity = 2,
-                            learning.rate = 0.001,
-                            bag.fraction = 0.5,
-                            n.trees=2000
-                            )
+LM.tc2.lr001 <- gbm.step(data=data, 
+                          gbm.x = c(5,6,10:12,30:35,153:162),
+                          gbm.y = 20,
+                          family = "bernoulli",
+                          tree.complexity = 2,
+                          learning.rate = 0.001,
+                          bag.fraction = 0.5)
+                         
 # Variable importance 
 summary(LM.tc2.lr001)
 
 LM.tc2.lr001$self.statistics
+
+
+# A fixed number of trees 
+LM.tc2.lr001 <- gbm.fixed(data=data, 
+                          gbm.x = c(5,6,10:12,30:35,153:162),
+                          gbm.y = 20,
+                            family = "bernoulli",
+                            tree.complexity = 2,
+                            learning.rate = 0.001,
+                            bag.fraction = 0.5,
+                            n.trees=10000
+                            )
+# Variable importance 
+summary(LM.tc2.lr001,plot=F)
+
+LM.tc2.lr001$self.statistics
+
+# simplify - variable removal proceeds until average change exceeds the original se
+LM.tc2.lr001.simp <- gbm.simplify(LM.tc2.lr001)
+
+# drop 4 variables
+# 1 - boatlaunch 
+# 2 - major_watershed 
+# 3 - nearest_SP 
+# 4 - nearest_W 
 
 ######################
 # Simplify the model #
@@ -41,8 +64,6 @@ LM.tc2.lr001$self.statistics
 ############
 # Plotting #
 ############
-gbm.plot(LM.tc2.lr001,common.scale=F,plot.layout=c(4, 4))
-
 # just the first 6 most important 
 # save the file 
 jpeg("BRT_LM.jpg",height=8,width=11,units="in",res=300)

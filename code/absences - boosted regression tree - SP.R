@@ -8,24 +8,23 @@ library(dismo)
 # Check out the column names to find out where your variables are 
 colnames(data)
 
-# Excluded waterbodies_5km 
-# Included depth_max_m and ALK_avg
+# inlclude all possible predictor variables
 
 #################################
 # A first guess @ the paramters #
 #################################
 # Identify the optimal number of trees (nt)
-SP.tc2.lr001 <- gbm.fixed(data=data, 
-                            gbm.x = c(10:12,30:35,153,155:157),
-                            gbm.y = 24,
-                            family = "bernoulli",
-                            tree.complexity = 2,
-                            learning.rate = 0.001,
-                            bag.fraction = 0.5,
-                            n.trees=2000
-                            )
+SP.tc2.lr001 <- gbm.step(data=data, 
+                          gbm.x = c(5,6,10:12,30:35,153:162),
+                          gbm.y = 24,
+                          family = "bernoulli",
+                          tree.complexity = 2,
+                          learning.rate = 0.001,
+                          bag.fraction = 0.5,
+                          plot.main=FALSE
+                          )
 # Variable importance 
-summary(SP.tc2.lr001)
+summary(SP.tc2.lr001,plot=FALSE)
 
 SP.tc2.lr001$self.statistics
 
@@ -42,7 +41,6 @@ SP.tc2.lr001$self.statistics
 # Plotting #
 ############
 gbm.plot(SP.tc2.lr001,common.scale=F)
-
 
 # just the first 6 most important 
 # save the file 
