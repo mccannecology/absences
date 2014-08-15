@@ -15,7 +15,7 @@ summary(data)
 # Include depth_max_m and ALK_avg
 
 # define your model formula 
-formula <- spirodela_polyrhiza ~ latitude + longitude + surfacearea_ha + shoreline_development +
+formula <- as.factor(spirodela_polyrhiza) ~ latitude + longitude + surfacearea_ha + shoreline_development +
   depth_max_m + TOTP_avg + PH_avg + COND_avg + ALK_avg + secchi_avg + nonFP_species_richness +
   major_watershed + waterbodies_1km + waterbodies_10km + boatlaunch + 
   dist_waterfowl + nearest_SP 

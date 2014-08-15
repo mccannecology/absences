@@ -27,12 +27,21 @@ sum(data$wolffia_sp)
 # not included: depth_max_m, ALK_avg #
 # No interactions                    #
 ######################################
-formula <- wolffia_sp ~ log(surfacearea_ha) + log(shoreline_development) + log(nonFP_species_richness+1) + 
-                          log(TOTP_avg) + log(PH_avg) + log(COND_avg) + log(secchi_avg) + 
-                          log(waterbodies_1km+1) + log(waterbodies_10km) + 
-                          boatlaunch + log(dist_waterfowl+1)
+formula <- wolffia_sp ~ log(latitude) + log(longitude) + 
+  log(surfacearea_ha) + log(shoreline_development) +
+  log(nonFP_species_richness+1) + log(TOTP_avg) + 
+  log(PH_avg) + log(COND_avg) + log(secchi_avg) + 
+  log(waterbodies_1km+1) + log(waterbodies_10km) + 
+  boatlaunch + log(dist_waterfowl+1) + 
+  log(nearest_W) #+ major_watershed + regional_watershed
+
 glm_binomial_W_full_log <- glm(formula, family=binomial, data=data, na.action = "na.fail")
+
 summary(glm_binomial_W_full_log)
+
+# null model 
+glm_binomial_W_null <- glm(wolffia_sp ~ 1, family=binomial, data=data, na.action = "na.fail")
+summary(glm_binomial_W_null)
 
 ##################
 # All sub-models #
@@ -42,11 +51,26 @@ require(MuMIn)
 best_W_log <- dredge(glm_binomial_W_full_log)
 best_W_log
 
+# write the table of all sub-models to file 
 numb_models <- nrow(best_W_log)
 write.csv(best_W_log[1:numb_models],file="best_glm_W_log.csv",na="NA")
 
 #'Best' model (lowest AIC)
 get.models(best_W_log, 1)
+
+# proportion deviance explained 
+# Null Deviance:      135.9 
+# Residual Deviance: 116.7 
+d2 <- (135.9 - 116.7)/135.9
+
+# adjusted proportion deviance explained 
+# http://modtools.wordpress.com/2013/08/14/dsquared/
+# d2_adj <- 1 - ((n - 1) / (n - p)) * (1 - d2)
+# where n = # of observations and p = # of parameters (including the intercept)
+n <- 174
+p <- 4
+d2_adj <- 1 - ((n - 1) / (n - p)) * (1 - d2)
+d2_adj
 
 # Visualize the model selection table:
 plot(best_W_log)

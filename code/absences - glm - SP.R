@@ -23,12 +23,22 @@ sum(data$spirodela_polyrhiza)
 # not included: depth_max_m, ALK_avg #
 # No interactions                    #
 ######################################
-formula <- spirodela_polyrhiza ~ log(surfacearea_ha) + log(shoreline_development) + log(nonFP_species_richness+1) + 
-                                    log(TOTP_avg) + log(PH_avg) + log(COND_avg) + log(secchi_avg) + 
-                                    log(waterbodies_1km+1) + log(waterbodies_10km) + 
-                                    boatlaunch + log(dist_waterfowl+1)
+formula <- spirodela_polyrhiza ~ log(latitude) + log(longitude) + 
+  log(surfacearea_ha) + log(shoreline_development) +
+  log(nonFP_species_richness+1) + log(TOTP_avg) + 
+  log(PH_avg) + log(COND_avg) + log(secchi_avg) + 
+  log(waterbodies_1km+1) + log(waterbodies_10km) + 
+  boatlaunch + log(dist_waterfowl+1) + 
+  log(nearest_SP) #+ major_watershed + regional_watershed
+
 glm_binomial_SP_full_log <- glm(formula, family=binomial, data=data, na.action = "na.fail")
+
 summary(glm_binomial_SP_full_log)
+
+# null model 
+glm_binomial_SP_null <- glm(spirodela_polyrhiza ~ 1, family=binomial, data=data, na.action = "na.fail")
+summary(glm_binomial_SP_null)
+
 
 ##################
 # All sub-models #
@@ -37,11 +47,27 @@ summary(glm_binomial_SP_full_log)
 require(MuMIn)
 best_SP__log <- dredge(glm_binomial_SP_full_log)
 best_SP__log
+
+# write the table of all sub-models to file 
 numb_models <- nrow(best_SP__log)
 write.csv(best_SP__log[1:numb_models],file="best_glm_SP_log.csv",na="NA")
 
 #'Best' model (lowest AIC)
 get.models(best_SP__log, 1)
+
+# proportion deviance explained 
+# Null Deviance:      163.1 
+# Residual Deviance: 158.5 
+d2 <- (163.1 - 158.5)/163.1
+
+# adjusted proportion deviance explained 
+# http://modtools.wordpress.com/2013/08/14/dsquared/
+# d2_adj <- 1 - ((n - 1) / (n - p)) * (1 - d2)
+# where n = # of observations and p = # of parameters (including the intercept)
+n <- 174
+p <- 2
+d2_adj <- 1 - ((n - 1) / (n - p)) * (1 - d2)
+d2_adj
 
 # Visualize the model selection table:
 plot(best_SP__log)
