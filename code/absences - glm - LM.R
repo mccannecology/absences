@@ -1,8 +1,8 @@
 ##############################################
 # ANALYSIS OF CT & LI DUCKWEED SURVEY DATA   #
 #                                            #
-# Presence / Absence of floating plants      # 
-# Importing data sets                        #
+# Presence / Absence of Lemna minor          #
+# Generalized linear model                   #
 # Created: 07/14/2014 by MJ McCann           #
 ##############################################
 
@@ -29,7 +29,7 @@ sum(data$lemna_minor)
 # -nearest_LMSPW                     #
 # No interactions                    #
 ######################################
-formula <- lemna_minor ~ ~ log(latitude) + log(longitude) + 
+formula <- lemna_minor ~ log(latitude) + log(longitude) + 
   log(surfacearea_ha) + log(shoreline_development) +
   log(nonFP_species_richness+1) + log(TOTP_avg) + 
   log(PH_avg) + log(COND_avg) + log(secchi_avg) + 
@@ -40,6 +40,12 @@ formula <- lemna_minor ~ ~ log(latitude) + log(longitude) +
 glm_binomial_LM_full_log <- glm(formula, family=binomial, data=data, na.action = "na.fail")
 
 summary(glm_binomial_LM_full_log)
+
+# proportion deviance explained 
+# Null Deviance:      218.6 
+# Residual Deviance: 169.5 
+d2 <- (218.6 - 166.3)/218.6
+d2
 
 # null model 
 glm_binomial_LM_null <- glm(lemna_minor ~ 1, family=binomial, data=data, na.action = "na.fail")
@@ -64,6 +70,7 @@ get.models(best_LM_log, 1)
 # Null Deviance:      218.6 
 # Residual Deviance: 169.5 
 d2 <- (218.6 - 169.5)/218.6
+d2
 
 # adjusted proportion deviance explained 
 # http://modtools.wordpress.com/2013/08/14/dsquared/
