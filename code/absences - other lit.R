@@ -185,6 +185,28 @@ sp_freq_plot_duigan_2004
 
 ggsave("sp_freq_plot_duigan_2004.jpg",sp_freq_plot_duigan_2004,height=8,width=11)
 
+
+############################
+# WA State - D. of Ecology #
+# 1974 - 2014              #
+# 502 lakes                #
+# 1371 surveys (total)     #
+# Only 1 survey/lake used  #
+############################
+sp_freq_plot_WA <- ggplot(dataWA_SPfreq,aes(x=reorder(species, -frequency),y=frequency,fill=label))
+sp_freq_plot_WA <- sp_freq_plot_WA + geom_bar(stat="identity")
+sp_freq_plot_WA <- sp_freq_plot_WA + theme_classic(base_size=10)
+sp_freq_plot_WA <- sp_freq_plot_WA + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+sp_freq_plot_WA <- sp_freq_plot_WA + xlab("Species")
+sp_freq_plot_WA <- sp_freq_plot_WA + ylab("# of waterbodies found in")
+sp_freq_plot_WA <- sp_freq_plot_WA + geom_text(aes(y=frequency+1,label=label))
+sp_freq_plot_WA <- sp_freq_plot_WA + ggtitle("Washington, USA - n=502 lakes")
+sp_freq_plot_WA <- sp_freq_plot_WA + theme(legend.position="none")
+sp_freq_plot_WA
+
+ggsave("sp_freq_plot_WA.jpg",sp_freq_plot_WA,height=8,width=11)
+
+
 ###################################
 # Comparing three regions         #
 # CT, USA (n=174 water bodies)    #
