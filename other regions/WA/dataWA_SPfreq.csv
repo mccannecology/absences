@@ -1,213 +1,213 @@
-species,frequency,label
-Alisma,17,
-Alisma gramineum,1,
-Alisma triviale,7,
-Alismatales,4,
-Amorpha fruticosa,3,
-Amphiscirpus nevadensis,1,
-Angelica,1,
-Angiospermae,34,
-Azolla,3,*
-Bidens,1,
-Bidens beckii,5,
-Bolboschoenus fluviatilis,1,
-Bolboschoenus maritimus,3,
-Brasenia schreberi,60,
-Bryophyta,5,
-Buddleja davidii,1,
-Butomus umbellatus,7,
-Cabomba caroliniana,2,
-Callitriche,22,
-Callitriche hermaphroditica,6,
-Callitriche palustris,1,
-Callitriche stagnalis,16,
-Carex,134,
-Carex comosa,4,
-Carex leptalea,1,
-Carex obnupta,5,
-Carex retrorsa,2,
-Ceratophyllum,1,
-Ceratophyllum demersum,147,
-Ceratophyllum echinatum,2,
-Chara,166,
-Cicuta bulbifera,2,
-Cicuta douglasii,34,
-Comarum palustre,103,
-Crassula aquatica,1,
-Cyperaceae,2,
-Cyperus,2,
-Cyperus erythrorhizos,1,
-Dipsacus fullonum,3,
-Drosera,1,
-Dulichium arundinaceum,37,
-Echinochloa crus-galli,1,
-Egeria densa,14,
-Elaeagnus angustifolia,4,
-Elatine,2,
-Eleocharis,97,
-Eleocharis acicularis,2,
-Eleocharis palustris,2,
-Elodea,73,
-Elodea canadensis,167,
-Elodea nuttallii,19,
-Epilobium,4,
-Epilobium hirsutum,7,
-Equisetum,39,
-Equisetum fluviatile,14,
-Eriophorum chamissonis,1,
-Fallopia japonica,18,
-Fontinalaceae,3,
-Fontinalis,1,
-Fontinalis antipyretica,37,
-Glyceria,13,
-Glyceria borealis,2,
-Glyceria maxima,1,
-Gratiola neglecta,1,
-Heteranthera dubia,15,
-Hibiscus moscheutos,1,
-Hippuris vulgaris,12,
-Hydrilla verticillata,1,
-Hydrocharis morsus-ranae,1,
-Hydrocotyle,1,
-Hydrocotyle ranunculoides,6,
-Impatiens,4,
-Iris pseudacorus,157,
-Isoetes,34,
-Juncus,147,
-Juncus balticus,1,
-Juncus bulbosus,1,
-Juncus effusus,4,
-Juncus supiniformis,1,
-Lemna,40,*
-Lemna minor,15,*
-Lemna trisulca,10,*
-Lilaeopsis occidentalis,1,
-Limosella,1,
-Limosella aquatica,5,
-Lobelia dortmanna,6,
-Ludwigia hexapetala,1,
-Ludwigia palustris,48,
-Lycopus americanus,2,
-Lycopus asper,5,
-Lysichiton americanum,4,
-Lysimachia nummularia,2,
-Lysimachia punctata,1,
-Lysimachia thyrsiflora,8,
-Lysimachia vulgaris,9,
-Lythrum salicaria,91,
-Marsilea mutica,1,
-Mentha,22,
-Mentha X piperita,1,
-Menyanthes trifoliata,22,
-Mimulus,4,
-Myosotis,17,
-Myosotis laxa,4,
-Myosotis scorpioides,8,
-Myriophyllum,23,
-Myriophyllum aquaticum,10,
-Myriophyllum heterophyllum,4,
-Myriophyllum hippuroides,2,
-Myriophyllum sibiricum,104,
-Myriophyllum spicatum,136,
-Myriophyllum spicatum X Myriophyllum sibiricum,13,
-Myriophyllum verticillatum,13,
-Najas,24,
-Najas flexilis,59,
-Najas guadalupensis,3,
-Nasturtium officinale,7,
-Nelumbo,1,
-Nitella,97,
-Nuphar,3,
-Nuphar polysepala,177,
-Nymphaea odorata,102,
-Nymphaeaceae,1,
-Nymphoides peltata,2,
-Persicaria,26,
-Persicaria amphibia,52,
-Persicaria hydropiper,1,
-Persicaria hydropiperoides,24,
-Persicaria maculosa,11,
-Phalaris arundinacea,163,
-Phragmites australis,19,
-Poaceae,4,
-Poales,37,
-Polygonum,9,
-Pontederia cordata,2,
-Potamogeton,172,
-Potamogeton alpinus,5,
-Potamogeton amplifolius,116,
-Potamogeton crispus,98,
-Potamogeton epihydrus,66,
-Potamogeton foliosus,19,
-Potamogeton friesii,8,
-Potamogeton gramineus,38,
-Potamogeton illinoensis,46,
-Potamogeton natans,58,
-Potamogeton nodosus,20,
-Potamogeton obtusifolius,6,
-Potamogeton praelongus,32,
-Potamogeton pusillus,43,
-Potamogeton richardsonii,71,
-Potamogeton robbinsii,43,
-Potamogeton strictifolius,1,
-Potamogeton zosteriformis,69,
-Ranunculus,14,
-Ranunculus aquatilis,63,
-Ranunculus flammula,9,
-Rhododendron,1,
-Rhododendron groenlandicum,5,
-Rumex,3,
-Ruppia cirrhosa,22,
-Sagittaria,15,
-Sagittaria cuneata,2,
-Sagittaria graminea,3,
-Sagittaria latifolia,7,
-Sagittaria platyphylla,1,
-Sagittaria rigida,4,
-Salix,32,
-Sarracenia purpurea,1,
-Schoenoplectus,91,
-Schoenoplectus acutus,23,
-Schoenoplectus americanus,5,
-Schoenoplectus pungens,1,
-Schoenoplectus subterminalis,7,
-Schoenoplectus tabernaemontani,11,
-Scirpus,67,
-Scirpus cyperinus,3,
-Scirpus microcarpus,12,
-Sium sauve,1,
-Solanum,42,
-Sparganium,54,
-Sparganium angustifolium,26,
-Sparganium emersum,2,
-Sparganium eurycarpum,9,
-Sparganium fluctuans,1,
-Sparganium natans,2,
-Sphagnum,1,
-Spiraea,14,
-Spiraea douglasii,60,
-Spirodela polyrrhiza,20,*
-Stuckenia,17,
-Stuckenia filiformis,7,
-Stuckenia pectinata,120,
-Stuckenia vaginata,6,
-Subularia aquatica,3,
-Tolypella intricata,5,
-Typha,39,
-Typha angustifolia,9,
-Typha domingensis,3,
-Typha latifolia,199,
-Typha X glauca,7,
-Utricularia,31,
-Utricularia gibba,1,
-Utricularia inflata,12,
-Utricularia intermedia,2,
-Utricularia minor,1,
-Utricularia vulgaris,56,
-Utricularia vulgaris ssp. macrorhiza,1,
-Vallisneria americana,48,
-Veronica,7,
-Wolffia,6,*
-Zannichellia palustris,17,
-Zantedeschia aethiopica,1,
-Zizania aquatica,4,
+species,frequency,label,FP?
+Alisma,17,,notFP
+Alisma gramineum,1,,notFP
+Alisma triviale,7,,notFP
+Alismatales,4,,notFP
+Amorpha fruticosa,3,,notFP
+Amphiscirpus nevadensis,1,,notFP
+Angelica,1,,notFP
+Angiospermae,34,,notFP
+Azolla,3,*,FP
+Bidens,1,,notFP
+Bidens beckii,5,,notFP
+Bolboschoenus fluviatilis,1,,notFP
+Bolboschoenus maritimus,3,,notFP
+Brasenia schreberi,60,,notFP
+Bryophyta,5,,notFP
+Buddleja davidii,1,,notFP
+Butomus umbellatus,7,,notFP
+Cabomba caroliniana,2,,notFP
+Callitriche,22,,notFP
+Callitriche hermaphroditica,6,,notFP
+Callitriche palustris,1,,notFP
+Callitriche stagnalis,16,,notFP
+Carex,134,,notFP
+Carex comosa,4,,notFP
+Carex leptalea,1,,notFP
+Carex obnupta,5,,notFP
+Carex retrorsa,2,,notFP
+Ceratophyllum,1,,notFP
+Ceratophyllum demersum,147,,notFP
+Ceratophyllum echinatum,2,,notFP
+Chara,166,,notFP
+Cicuta bulbifera,2,,notFP
+Cicuta douglasii,34,,notFP
+Comarum palustre,103,,notFP
+Crassula aquatica,1,,notFP
+Cyperaceae,2,,notFP
+Cyperus,2,,notFP
+Cyperus erythrorhizos,1,,notFP
+Dipsacus fullonum,3,,notFP
+Drosera,1,,notFP
+Dulichium arundinaceum,37,,notFP
+Echinochloa crus-galli,1,,notFP
+Egeria densa,14,,notFP
+Elaeagnus angustifolia,4,,notFP
+Elatine,2,,notFP
+Eleocharis,97,,notFP
+Eleocharis acicularis,2,,notFP
+Eleocharis palustris,2,,notFP
+Elodea,73,,notFP
+Elodea canadensis,167,,notFP
+Elodea nuttallii,19,,notFP
+Epilobium,4,,notFP
+Epilobium hirsutum,7,,notFP
+Equisetum,39,,notFP
+Equisetum fluviatile,14,,notFP
+Eriophorum chamissonis,1,,notFP
+Fallopia japonica,18,,notFP
+Fontinalaceae,3,,notFP
+Fontinalis,1,,notFP
+Fontinalis antipyretica,37,,notFP
+Glyceria,13,,notFP
+Glyceria borealis,2,,notFP
+Glyceria maxima,1,,notFP
+Gratiola neglecta,1,,notFP
+Heteranthera dubia,15,,notFP
+Hibiscus moscheutos,1,,notFP
+Hippuris vulgaris,12,,notFP
+Hydrilla verticillata,1,,notFP
+Hydrocharis morsus-ranae,1,,notFP
+Hydrocotyle,1,,notFP
+Hydrocotyle ranunculoides,6,,notFP
+Impatiens,4,,notFP
+Iris pseudacorus,157,,notFP
+Isoetes,34,,notFP
+Juncus,147,,notFP
+Juncus balticus,1,,notFP
+Juncus bulbosus,1,,notFP
+Juncus effusus,4,,notFP
+Juncus supiniformis,1,,notFP
+Lemna,40,*,FP
+Lemna minor,15,*,FP
+Lemna trisulca,10,*,FP
+Lilaeopsis occidentalis,1,,notFP
+Limosella,1,,notFP
+Limosella aquatica,5,,notFP
+Lobelia dortmanna,6,,notFP
+Ludwigia hexapetala,1,,notFP
+Ludwigia palustris,48,,notFP
+Lycopus americanus,2,,notFP
+Lycopus asper,5,,notFP
+Lysichiton americanum,4,,notFP
+Lysimachia nummularia,2,,notFP
+Lysimachia punctata,1,,notFP
+Lysimachia thyrsiflora,8,,notFP
+Lysimachia vulgaris,9,,notFP
+Lythrum salicaria,91,,notFP
+Marsilea mutica,1,,notFP
+Mentha,22,,notFP
+Mentha X piperita,1,,notFP
+Menyanthes trifoliata,22,,notFP
+Mimulus,4,,notFP
+Myosotis,17,,notFP
+Myosotis laxa,4,,notFP
+Myosotis scorpioides,8,,notFP
+Myriophyllum,23,,notFP
+Myriophyllum aquaticum,10,,notFP
+Myriophyllum heterophyllum,4,,notFP
+Myriophyllum hippuroides,2,,notFP
+Myriophyllum sibiricum,104,,notFP
+Myriophyllum spicatum,136,,notFP
+Myriophyllum spicatum X Myriophyllum sibiricum,13,,notFP
+Myriophyllum verticillatum,13,,notFP
+Najas,24,,notFP
+Najas flexilis,59,,notFP
+Najas guadalupensis,3,,notFP
+Nasturtium officinale,7,,notFP
+Nelumbo,1,,notFP
+Nitella,97,,notFP
+Nuphar,3,,notFP
+Nuphar polysepala,177,,notFP
+Nymphaea odorata,102,,notFP
+Nymphaeaceae,1,,notFP
+Nymphoides peltata,2,,notFP
+Persicaria,26,,notFP
+Persicaria amphibia,52,,notFP
+Persicaria hydropiper,1,,notFP
+Persicaria hydropiperoides,24,,notFP
+Persicaria maculosa,11,,notFP
+Phalaris arundinacea,163,,notFP
+Phragmites australis,19,,notFP
+Poaceae,4,,notFP
+Poales,37,,notFP
+Polygonum,9,,notFP
+Pontederia cordata,2,,notFP
+Potamogeton,172,,notFP
+Potamogeton alpinus,5,,notFP
+Potamogeton amplifolius,116,,notFP
+Potamogeton crispus,98,,notFP
+Potamogeton epihydrus,66,,notFP
+Potamogeton foliosus,19,,notFP
+Potamogeton friesii,8,,notFP
+Potamogeton gramineus,38,,notFP
+Potamogeton illinoensis,46,,notFP
+Potamogeton natans,58,,notFP
+Potamogeton nodosus,20,,notFP
+Potamogeton obtusifolius,6,,notFP
+Potamogeton praelongus,32,,notFP
+Potamogeton pusillus,43,,notFP
+Potamogeton richardsonii,71,,notFP
+Potamogeton robbinsii,43,,notFP
+Potamogeton strictifolius,1,,notFP
+Potamogeton zosteriformis,69,,notFP
+Ranunculus,14,,notFP
+Ranunculus aquatilis,63,,notFP
+Ranunculus flammula,9,,notFP
+Rhododendron,1,,notFP
+Rhododendron groenlandicum,5,,notFP
+Rumex,3,,notFP
+Ruppia cirrhosa,22,,notFP
+Sagittaria,15,,notFP
+Sagittaria cuneata,2,,notFP
+Sagittaria graminea,3,,notFP
+Sagittaria latifolia,7,,notFP
+Sagittaria platyphylla,1,,notFP
+Sagittaria rigida,4,,notFP
+Salix,32,,notFP
+Sarracenia purpurea,1,,notFP
+Schoenoplectus,91,,notFP
+Schoenoplectus acutus,23,,notFP
+Schoenoplectus americanus,5,,notFP
+Schoenoplectus pungens,1,,notFP
+Schoenoplectus subterminalis,7,,notFP
+Schoenoplectus tabernaemontani,11,,notFP
+Scirpus,67,,notFP
+Scirpus cyperinus,3,,notFP
+Scirpus microcarpus,12,,notFP
+Sium sauve,1,,notFP
+Solanum,42,,notFP
+Sparganium,54,,notFP
+Sparganium angustifolium,26,,notFP
+Sparganium emersum,2,,notFP
+Sparganium eurycarpum,9,,notFP
+Sparganium fluctuans,1,,notFP
+Sparganium natans,2,,notFP
+Sphagnum,1,,notFP
+Spiraea,14,,notFP
+Spiraea douglasii,60,,notFP
+Spirodela polyrrhiza,20,*,FP
+Stuckenia,17,,notFP
+Stuckenia filiformis,7,,notFP
+Stuckenia pectinata,120,,notFP
+Stuckenia vaginata,6,,notFP
+Subularia aquatica,3,,notFP
+Tolypella intricata,5,,notFP
+Typha,39,,notFP
+Typha angustifolia,9,,notFP
+Typha domingensis,3,,notFP
+Typha latifolia,199,,notFP
+Typha X glauca,7,,notFP
+Utricularia,31,,notFP
+Utricularia gibba,1,,notFP
+Utricularia inflata,12,,notFP
+Utricularia intermedia,2,,notFP
+Utricularia minor,1,,notFP
+Utricularia vulgaris,56,,notFP
+Utricularia vulgaris ssp. macrorhiza,1,,notFP
+Vallisneria americana,48,,notFP
+Veronica,7,,notFP
+Wolffia,6,*,FP
+Zannichellia palustris,17,,notFP
+Zantedeschia aethiopica,1,,notFP
+Zizania aquatica,4,,notFP
