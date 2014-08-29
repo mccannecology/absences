@@ -181,6 +181,13 @@ sp_freq_plot_CT
 
 ggsave("sp_freq_plot_CT.jpg",sp_freq_plot_CT,height=8,width=11)
 
+# re-do without species names 
+sp_freq_plot_CT2 <- sp_freq_plot_CT + scale_x_discrete(labels=seq(1,nrow(dataSPECIES_freq2),1))
+sp_freq_plot_CT2 <- sp_freq_plot_CT2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_CT2
+
+ggsave("sp_freq_plot_CT2.jpg",sp_freq_plot_CT2,height=8,width=11)
+
 ############################
 # Table of FP compositions # 
 ############################

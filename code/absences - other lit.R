@@ -46,6 +46,12 @@ sp_freq_plot_bornette
 
 ggsave("sp_freq_plot_bornette.jpg",sp_freq_plot_bornette,height=8,width=11)
 
+# re-do without species names 
+sp_freq_plot_bornette2 <- sp_freq_plot_bornette + scale_x_discrete(labels=seq(1,nrow(LIT_bornette),1))
+sp_freq_plot_bornette2 <- sp_freq_plot_bornette2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_bornette2
+
+ggsave("sp_freq_plot_bornette2.jpg",sp_freq_plot_bornette2,height=8,width=11)
 
 ########################### 
 # Edvardsen & Okland 2006 #
@@ -73,6 +79,13 @@ sp_freq_plot_edvardsen
 
 ggsave("sp_freq_plot_edvardsen.jpg",sp_freq_plot_edvardsen,height=8,width=11)
 
+# re-do without species names 
+sp_freq_plot_edvardsen2 <- sp_freq_plot_edvardsen + scale_x_discrete(labels=seq(1,nrow(subset(LIT_edvardsen, LIT_edvardsen$Group!="Terrestrial plant")),1))
+sp_freq_plot_edvardsen2 <- sp_freq_plot_edvardsen2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_edvardsen2
+
+ggsave("sp_freq_plot_edvardsen2.jpg",sp_freq_plot_edvardsen2,height=8,width=11)
+
 ##################################
 # Vestergaard & Sand-Jensen 2000 #
 # 82 lakes                       #
@@ -96,6 +109,13 @@ sp_freq_plot_vestergaard <- sp_freq_plot_vestergaard + theme(axis.text.x = eleme
 sp_freq_plot_vestergaard
 
 ggsave("sp_freq_plot_vestergaard.jpg",sp_freq_plot_vestergaard,height=8,width=11)
+
+# re-do without species names 
+sp_freq_plot_vestergaard2 <- sp_freq_plot_vestergaard + scale_x_discrete(labels=seq(1,nrow(LIT_vestergaard),1))
+sp_freq_plot_vestergaard2 <- sp_freq_plot_vestergaard2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_vestergaard2
+
+ggsave("sp_freq_plot_vestergaard2.jpg",sp_freq_plot_vestergaard2,height=8,width=11)
 
 #############################
 # Trei & Pall 2004          # 
@@ -121,6 +141,13 @@ sp_freq_plot_trei
 
 ggsave("sp_freq_plot_trei.jpg",sp_freq_plot_trei,height=8,width=11)
 
+# re-do without species names 
+sp_freq_plot_trei2 <- sp_freq_plot_trei + scale_x_discrete(labels=seq(1,nrow(LIT_trei),1))
+sp_freq_plot_trei2 <- sp_freq_plot_trei2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_trei2
+
+ggsave("sp_freq_plot_trei2.jpg",sp_freq_plot_trei2,height=8,width=11)
+
 ########################
 # Heegaard et al. 2001 #
 # 574 lakes            #
@@ -144,6 +171,13 @@ sp_freq_plot_heegaard <- sp_freq_plot_heegaard + theme(axis.text.x = element_tex
 sp_freq_plot_heegaard
 
 ggsave("sp_freq_plot_heegaard.jpg",sp_freq_plot_heegaard,height=8,width=11)
+
+# re-do without species names 
+sp_freq_plot_heegaard2 <- sp_freq_plot_heegaard + scale_x_discrete(labels=seq(1,nrow(LIT_heegaard),1))
+sp_freq_plot_heegaard2 <- sp_freq_plot_heegaard2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_heegaard2
+
+ggsave("sp_freq_plot_heegaard2.jpg",sp_freq_plot_heegaard2,height=8,width=11)
 
 ######################
 # Palmer et al. 1992 #
@@ -169,6 +203,12 @@ sp_freq_plot_palmer
 
 ggsave("sp_freq_plot_palmer.jpg",sp_freq_plot_palmer,height=8,width=11)
 
+# re-do without species names 
+sp_freq_plot_palmer2 <- sp_freq_plot_palmer + scale_x_discrete(labels=seq(1,nrow(LIT_palmer),1))
+sp_freq_plot_palmer2 <- sp_freq_plot_palmer2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_palmer2
+
+ggsave("sp_freq_plot_palmer2.jpg",sp_freq_plot_palmer2,height=8,width=11)
 
 ###########################
 # van Zuidman et al. 2011 #
@@ -193,6 +233,12 @@ sp_freq_plot_van_zuidman <- sp_freq_plot_van_zuidman + theme(axis.text.x = eleme
 sp_freq_plot_van_zuidman
 ggsave("sp_freq_plot_van_zuidman.jpg",sp_freq_plot_van_zuidman,height=8,width=11)
 
+# re-do without species names 
+sp_freq_plot_van_zuidman2 <- sp_freq_plot_van_zuidman + scale_x_discrete(labels=seq(1,nrow(LIT_van_zuidman),1))
+sp_freq_plot_van_zuidman2 <- sp_freq_plot_van_zuidman2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_van_zuidman2
+
+ggsave("sp_freq_plot_van_zuidman2.jpg",sp_freq_plot_van_zuidman2,height=8,width=11)
 
 #####################
 # Dugan et al 2006  #
@@ -219,6 +265,13 @@ sp_freq_plot_duigan_1989
 
 ggsave("sp_freq_plot_duigan_1989.jpg",sp_freq_plot_duigan_1989,height=8,width=11)
 
+# re-do without species names 
+sp_freq_plot_duigan_1989_2 <- sp_freq_plot_duigan_1989 + scale_x_discrete(labels=seq(1,nrow(LIT_dugan),1))
+sp_freq_plot_duigan_1989_2 <- sp_freq_plot_duigan_1989_2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_duigan_1989_2
+
+ggsave("sp_freq_plot_duigan_1989_2.jpg",sp_freq_plot_duigan_1989_2,height=8,width=11)
+
 #####################
 # Dugan et al 2006  #
 # 2004              #
@@ -244,6 +297,12 @@ sp_freq_plot_duigan_2004
 
 ggsave("sp_freq_plot_duigan_2004.jpg",sp_freq_plot_duigan_2004,height=8,width=11)
 
+# re-do without species names 
+sp_freq_plot_duigan_2004_2 <- sp_freq_plot_duigan_2004 + scale_x_discrete(labels=seq(1,nrow(LIT_dugan),1))
+sp_freq_plot_duigan_2004_2 <- sp_freq_plot_duigan_2004_2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_duigan_2004_2
+
+ggsave("sp_freq_plot_duigan_2004_2.jpg",sp_freq_plot_duigan_2004_2,height=8,width=11)
 
 ############################
 # WA State - D. of Ecology #
@@ -280,6 +339,12 @@ sp_freq_plot_WA
 
 ggsave("sp_freq_plot_WA.jpg",sp_freq_plot_WA,height=8,width=11)
 
+# re-do without species names 
+sp_freq_plot_WA2 <- sp_freq_plot_WA + scale_x_discrete(labels=seq(1,nrow(LIT_WA),1))
+sp_freq_plot_WA2 <- sp_freq_plot_WA2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_WA2
+
+ggsave("sp_freq_plot_WA2.jpg",sp_freq_plot_WA2,height=8,width=11)
 
 ###################################
 # Comparing three regions         #
