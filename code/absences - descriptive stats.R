@@ -160,19 +160,26 @@ head(dataSPECIES_freq)
 # and leave out ordering the species as a factor of frequency 
           
 dataSPECIES_freq2 <- read.csv("dataSPECIES_freq.csv")
+head(dataSPECIES_freq2)
 
-sp_freq_plot <- ggplot(dataSPECIES_freq2,aes(x=reorder(Species, -Frequency),y=Frequency,fill=Label))
-sp_freq_plot <- sp_freq_plot + geom_bar(stat="identity")
-sp_freq_plot <- sp_freq_plot + theme_classic(base_size=10)
-sp_freq_plot <- sp_freq_plot + theme(axis.text.x = element_text(angle = 90, hjust = 1))
-sp_freq_plot <- sp_freq_plot + xlab("Species")
-sp_freq_plot <- sp_freq_plot + ylab("# of waterbodies found in")
-sp_freq_plot <- sp_freq_plot + geom_text(aes(y=Frequency+1,label=Label))
-sp_freq_plot <- sp_freq_plot + ggtitle("This study - 174 lakes and ponds Connecticut, USA")
-sp_freq_plot <- sp_freq_plot + theme(legend.position="none")
-sp_freq_plot
+sp_freq_plot_CT <- ggplot(dataSPECIES_freq2,aes(x=reorder(species, -frequency),y=frequency,fill=FP.))
+sp_freq_plot_CT <- sp_freq_plot_CT + geom_bar(aes(fill=FP.),stat="identity")
+sp_freq_plot_CT <- sp_freq_plot_CT + scale_fill_manual(values=c("black","grey"))
+sp_freq_plot_CT <- sp_freq_plot_CT + xlab("Species")
+sp_freq_plot_CT <- sp_freq_plot_CT + ylab("# of waterbodies found in")
+sp_freq_plot_CT <- sp_freq_plot_CT + geom_text(aes(y=frequency+1,label=Label))
+sp_freq_plot_CT <- sp_freq_plot_CT + ggtitle("Connecticut, USA (n=174)")
+sp_freq_plot_CT <- sp_freq_plot_CT + theme_classic()
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.position="none")
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.x = element_text(size=18))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.y = element_text(size=18))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(plot.title = element_text(size=18))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.y = element_text(size=14))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(size=10))
+sp_freq_plot_CT
 
-ggsave("sp_freq_plot2.jpg",sp_freq_plot,height=8,width=11)
+ggsave("sp_freq_plot_CT.jpg",sp_freq_plot_CT,height=8,width=11)
 
 ############################
 # Table of FP compositions # 
