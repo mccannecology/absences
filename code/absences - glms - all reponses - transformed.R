@@ -6,8 +6,9 @@
 
 ###############
 # Lemna minor #
+# Full & Null #
 ###############
-# Build full and null models. Get proportion deviance explained for full model
+# Build full and null models
 
 colnames(dataENV_trans)
 temp_data_LM <- dataENV_trans
@@ -23,21 +24,15 @@ formula_LM # check out the formula
 glm_LM_trans <- glm(formula_LM, family=binomial, data=temp_data_LM, na.action = "na.fail")
 summary(glm_LM_trans)
 
-# Proportion deviance explained 
-null_dev <- as.numeric(summary(glm_LM_trans)[8]) # Null Deviance      
-resid_dev <- deviance(glm_LM_trans) # Residual Deviance
-# do the calculations   
-glm_LM_trans_devExpl <- (null_dev - resid_dev) / null_dev
-glm_LM_trans_devExpl
-
 # null model 
 glm_LM_trans_null <- glm(LM ~ 1, family=binomial, data=temp_data_LM, na.action = "na.fail")
 summary(glm_LM_trans_null)
 
 #######################
 # Spirodela polyrhiza #
+# Full & Null         #
 #######################
-# Build full and null models. Get proportion deviance explained for full model
+# Build full and null models
 
 colnames(dataENV_trans)
 temp_data_SP <- dataENV_trans
@@ -53,21 +48,15 @@ formula_SP # check out the formula
 glm_SP_trans <- glm(formula_SP, family=binomial, data=temp_data_SP, na.action = "na.fail")
 summary(glm_SP_trans)
 
-# Proportion deviance explained 
-null_dev <- as.numeric(summary(glm_SP_trans)[8]) # Null Deviance:      
-resid_dev <- deviance(glm_SP_trans) # Residual Deviance: 
-# do the calculations   
-glm_SP_trans_devExpl <- (null_dev - resid_dev) / null_dev
-glm_SP_trans_devExpl
-
 # null model 
 glm_SP_trans_null <- glm(SP ~ 1, family=binomial, data=temp_data_SP, na.action = "na.fail")
 summary(glm_SP_trans_null)
 
 ###############
 # Wolffia sp. #
+# Full & Null #
 ###############
-# Build full and null models. Get proportion deviance explained for full model
+# Build full and null models
 
 colnames(dataENV_trans)
 temp_data_W <- dataENV_trans
@@ -82,13 +71,6 @@ formula_W # view the formula
 # GLM for full model 
 glm_W_trans <- glm(formula_W, family=binomial, data=temp_data_W, na.action = "na.fail")
 summary(glm_W_trans)
-
-# Proportion deviance explained 
-null_dev <- as.numeric(summary(glm_W_trans)[8]) # Null Deviance: 
-resid_dev <- deviance(glm_W_trans) # Residual Deviance: 
-# do the calculations   
-glm_W_trans_devExpl <- (null_dev - resid_dev) / null_dev
-glm_W_trans_devExpl
 
 # null model 
 glm_W_trans_null <- glm(W ~ 1, family=binomial, data=temp_data_W, na.action = "na.fail")
@@ -122,21 +104,17 @@ best_glm_LM_trans <- get.models(all_glm_LM_trans, 1)[1]
 best_glm_SP_trans <- get.models(all_glm_SP_trans, 1)[1]
 best_glm_W_trans <- get.models(all_glm_W_trans, 1)[1]
 
-# deviance explained by best 
-(218.6-159.4)/218.6 # LM
-(163.1-154.8)/163.1 # SP
-(135.9-116.5)/135.9 # W 
-
 # but we actually want this to be the fitted model 
-best_glm_LM_trans <- glm(LM ~ COND_avg + dist_waterfowl + latitude + nearest_LM + secchi_avg + TOTP_avg + waterbodies_1km + 1, 
+# I deleted a "+ 1" from the end of each of these formulas - not sure why it was there (MJM 8/27/2014) 
+best_glm_LM_trans <- glm(LM ~ COND_avg + dist_waterfowl + latitude + nearest_LM + secchi_avg + TOTP_avg + waterbodies_1km, 
                          family = binomial, 
                          data = temp_data_LM, 
                          na.action = "na.fail")
 
-best_glm_SP_trans <- glm(SP ~ COND_avg + 1, family = binomial, data = temp_data_SP, 
+best_glm_SP_trans <- glm(SP ~ COND_avg, family = binomial, data = temp_data_SP, 
                          na.action = "na.fail")
 
-best_glm_W_trans <- glm(W ~ boatlaunch + COND_avg + secchi_avg + 1, family = binomial, 
+best_glm_W_trans <- glm(W ~ boatlaunch + COND_avg + secchi_avg, family = binomial, 
                         data = temp_data_W, na.action = "na.fail")
 
 ###################
@@ -160,7 +138,9 @@ importance(avg_LM_trans)
 importance(avg_SP_trans)
 importance(avg_W_trans)
 
-# get 95% confidence intervals for estimates 
+# get 95% confidence intervals for estimates
+# if they span 0, then the coefficient is not different than 0 
+# significance (p-values) produced by summary() do not agree with 95% CI spanning 0 
 confint(avg_LM_trans)
 confint(avg_SP_trans)
 confint(avg_W_trans)
@@ -191,11 +171,77 @@ r.squaredLR(glm_LM_trans, null = glm_LM_trans_null)
 r.squaredLR(glm_SP_trans, null = glm_SP_trans_null)
 r.squaredLR(glm_W_trans, null = glm_W_trans_null)
 
+####################### 
+# Signif. of deviance #
+# Full model          #
+#######################
+# if significant (p<0.05), then model is poor fit to data 
+resid_dev <- deviance(glm_LM_trans) # Residual Deviance
+resid_df <- as.numeric(summary(glm_LM_trans)[7]) # Null Deviance    
+1-pchisq(resid_dev,resid_df)
+
+resid_dev <- deviance(glm_SP_trans) # Residual Deviance
+resid_df <- as.numeric(summary(glm_SP_trans)[7]) # Null Deviance    
+1-pchisq(resid_dev,resid_df)
+
+resid_dev <- deviance(glm_W_trans) # Residual Deviance
+resid_df <- as.numeric(summary(glm_W_trans)[7]) # Null Deviance    
+1-pchisq(resid_dev,resid_df)
+
+####################### 
+# Signif. of deviance #
+# Best model          #
+#######################
+# if significant (p<0.05), then model is poor fit to data 
+resid_dev <- deviance(best_glm_LM_trans) # Residual Deviance
+resid_df <- as.numeric(summary(best_glm_LM_trans)[7]) # Null Deviance    
+1-pchisq(resid_dev,resid_df)
+
+resid_dev <- deviance(best_glm_SP_trans) # Residual Deviance
+resid_df <- as.numeric(summary(best_glm_SP_trans)[7]) # Null Deviance    
+1-pchisq(resid_dev,resid_df)
+
+resid_dev <- deviance(best_glm_W_trans) # Residual Deviance
+resid_df <- as.numeric(summary(best_glm_W_trans)[7]) # Null Deviance    
+1-pchisq(resid_dev,resid_df)
+
 ######################
-# Deviance explained # 
+# Deviance explained #
+# Full model         #
 ######################
-# get the deviance explained for each of the models with delta AIC < 2  
-# How can I loop through all of these? 
+null_dev <- as.numeric(summary(glm_LM_trans)[8]) # Null Deviance      
+resid_dev <- deviance(glm_LM_trans) # Residual Deviance
+glm_LM_trans_devExpl <- (null_dev - resid_dev) / null_dev
+glm_LM_trans_devExpl
+
+null_dev <- as.numeric(summary(glm_SP_trans)[8]) # Null Deviance:      
+resid_dev <- deviance(glm_SP_trans) # Residual Deviance: 
+glm_SP_trans_devExpl <- (null_dev - resid_dev) / null_dev
+glm_SP_trans_devExpl
+
+null_dev <- as.numeric(summary(glm_W_trans)[8]) # Null Deviance: 
+resid_dev <- deviance(glm_W_trans) # Residual Deviance: 
+glm_W_trans_devExpl <- (null_dev - resid_dev) / null_dev
+glm_W_trans_devExpl
+
+######################
+# Deviance explained #
+# Best model         #
+######################
+null_dev <- as.numeric(summary(best_glm_LM_trans)[8]) # Null Deviance      
+resid_dev <- deviance(best_glm_LM_trans) # Residual Deviance
+best_glm_LM_trans_devExpl <- (null_dev - resid_dev) / null_dev
+best_glm_LM_trans_devExpl
+
+null_dev <- as.numeric(summary(best_glm_SP_trans)[8]) # Null Deviance:      
+resid_dev <- deviance(best_glm_SP_trans) # Residual Deviance: 
+best_glm_SP_trans_devExpl <- (null_dev - resid_dev) / null_dev
+best_glm_SP_trans_devExpl
+
+null_dev <- as.numeric(summary(best_glm_W_trans)[8]) # Null Deviance: 
+resid_dev <- deviance(best_glm_W_trans) # Residual Deviance: 
+best_glm_W_trans_devExpl <- (null_dev - resid_dev) / null_dev
+best_glm_W_trans_devExpl
 
 #################### 
 # Cross-validation #
@@ -260,24 +306,52 @@ outlierTest(glm_LM_trans)
 outlierTest(glm_SP_trans)
 outlierTest(glm_W_trans)
 
+
+###################
+# Residuals plots #
+# Best model      #
+###################
+# If plots is curved - the model fit does not accurately describe the data 
+library(car)
+residualPlots(best_glm_LM_trans)
+residualPlots(best_glm_SP_trans)
+residualPlots(best_glm_W_trans)
+
+# returns lack-of-fit test is computed for each numeric predictor
+
+jpeg("best_glm_LM_trans_resids_plot.jpg",height=8,width=8,units="in",res=300)
+residualPlots(best_glm_LM_trans,main="Lemna minor - best model glm - residuals plot")
+dev.off()
+
+jpeg("best_glm_SP_trans_resids_plot.jpg",height=8,width=8,units="in",res=300)
+residualPlots(best_glm_SP_trans,main="Spirodela polyrhiza - best model glm - residuals plot")
+dev.off()
+
+jpeg("best_glm_W_trans_resids_plot.jpg",height=8,width=8,units="in",res=300)
+residualPlots(best_glm_W_trans,main="Wolffia sp. - best model glm -  residuals plot",smoother=F)
+dev.off()
+
+
 ##########################
 # Partial residuals plot #
+# Best model             # 
 ##########################
+# effect of predictors given other predictors are also in the model (i.e., controlling for those predictors)
 library(car)
 crPlots(best_glm_LM_trans)
 crPlots(best_glm_SP_trans)
 crPlots(best_glm_W_trans)
 
-jpeg("best_glm_LM_trans_resids_plot.jpg",height=8,width=8,units="in",res=300)
-crPlots(best_glm_LM_trans,main="Lemna minor - best model glm - residuals plot")
+jpeg("best_glm_LM_trans_partial_resids_plot.jpg",height=8,width=8,units="in",res=300)
+crPlots(best_glm_LM_trans,main="Lemna minor - best model glm - partial residuals plot",smoother=F)
 dev.off()
 
-jpeg("best_glm_SP_trans_resids_plot.jpg",height=8,width=8,units="in",res=300)
-crPlots(best_glm_SP_trans,main="Spirodela polyrhiza - best model glm - residuals plot")
+jpeg("best_glm_SP_trans_partial_resids_plot.jpg",height=8,width=8,units="in",res=300)
+crPlots(best_glm_SP_trans,main="Spirodela polyrhiza - best model glm - partial residuals plot",smoother=F,layout=1)
 dev.off()
 
-jpeg("best_glm_W_trans_resids_plot.jpg",height=8,width=8,units="in",res=300)
-crPlots(best_glm_W_trans,main="Wolffia sp. - best model glm - residuals plot")
+jpeg("best_glm_W_trans_partial_resids_plot.jpg",height=8,width=8,units="in",res=300)
+crPlots(best_glm_W_trans,main="Wolffia sp. - best model glm - partial residuals plot",smoother=F)
 dev.off()
 
 # or 

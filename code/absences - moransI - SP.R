@@ -83,6 +83,8 @@ correlogram_SP_incr10 <- correlogram_SP_incr10 + scale_shape_manual(name="Signif
 correlogram_SP_incr10 <- correlogram_SP_incr10 + geom_line()
 correlogram_SP_incr10 <- correlogram_SP_incr10 + xlab("Distance class (km)")
 correlogram_SP_incr10 <- correlogram_SP_incr10 + ylab("Moran's I")
+correlogram_SP_incr10 <- correlogram_SP_incr10 + ylim(-0.25,0.25)
+correlogram_SP_incr10 <- correlogram_SP_incr10 + geom_hline(yintercept=0,linetype="longdash")
 correlogram_SP_incr10 <- correlogram_SP_incr10 + ggtitle("Spirodela polyrhiza")
 correlogram_SP_incr10 <- correlogram_SP_incr10 + scale_linetype(name="Data")
 correlogram_SP_incr10 <- correlogram_SP_incr10 + theme_classic(base_size=18)
@@ -126,6 +128,8 @@ correlogram_SP_incr20 <- correlogram_SP_incr20 + scale_shape_manual(name="Signif
 correlogram_SP_incr20 <- correlogram_SP_incr20 + geom_line()
 correlogram_SP_incr20 <- correlogram_SP_incr20 + xlab("Distance class (km)")
 correlogram_SP_incr20 <- correlogram_SP_incr20 + ylab("Moran's I")
+correlogram_SP_incr20 <- correlogram_SP_incr20 + ylim(-0.25,0.25)
+correlogram_SP_incr20 <- correlogram_SP_incr20 + geom_hline(yintercept=0,linetype="longdash")
 correlogram_SP_incr20 <- correlogram_SP_incr20 + ggtitle("Spirodela polyrhiza")
 correlogram_SP_incr20 <- correlogram_SP_incr20 + scale_linetype(name="Data")
 correlogram_SP_incr20 <- correlogram_SP_incr20 + theme_classic(base_size=18)
@@ -133,3 +137,4 @@ correlogram_SP_incr20 <- correlogram_SP_incr20 + theme(plot.title=element_text(f
 correlogram_SP_incr20 
 
 ggsave("Correlogram - Spirodela polyrhiza - incr20.jpg",correlogram_SP_incr20,height=8,width=11)
+
