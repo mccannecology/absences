@@ -91,6 +91,8 @@ dataENV_trans <- cbind(log(dataPREDICTORS$surfacearea_ha + 1),
 # make sure boatlaunch is the last column
 # I don't want to "range" (transform to 0-1) this variable
 
+library(scales)
+
 for (i in 1:(ncol(dataENV_trans)-1)){
   #print(i)
   dataENV_trans[,i] <- rescale(dataENV_trans[,i])
