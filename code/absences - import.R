@@ -187,6 +187,13 @@ write.csv(data,"data-cleanedup.csv",row.names=FALSE)
 
 data <- read.csv("data-with_GIS_variables.csv")
 
+#######################################
+# Re-do FP presence / absence to data #
+#######################################
+# Change from Y/N to 1/0
+data$FP_presence <- ifelse(data$FP_species_richness == 0, 0, 1)
+data$FP_presence 
+
 ########################################
 # Create species, environment matrices #
 ########################################
