@@ -4,14 +4,16 @@
 ####################################
 
 head(dataENV)
+colnames(data)
 
 # goal: make a new data frame "dataENV_trans" 
 # with transformed variables that make 0 skewness
 # and variables range from 0 to 1 
 
 # add latitude and longitude to the data frame (make a new data frame)
-dataPREDICTORS <- cbind(dataENV,dataSPACE[,1:2])
+dataPREDICTORS <- cbind(dataENV,dataSPACE[,1:2],data$nonFP_species_richness)
 head(dataPREDICTORS)
+colnames(dataPREDICTORS)[20] <- "nonFP_species_richness"
 
 ####################################
 # check skewness for each variable # 
@@ -83,7 +85,8 @@ dataENV_trans <- cbind(log(dataPREDICTORS$surfacearea_ha + 1),
                        ((dataPREDICTORS$nearest_LMSPW^0.4613516 - 1) / 0.4613516),
                        ((dataPREDICTORS$latitude^-7.304205 - 1) / -7.304205),
                        ((dataPREDICTORS$longitude^4.331463 - 1) / 4.331463), 
-                       dataPREDICTORS$boatlaunch
+                       dataPREDICTORS$boatlaunch,
+                       (((dataPREDICTORS$nonFP_species_richness+1)^0.3509515 - 1) / 0.3509515)
 )
 
 
@@ -116,7 +119,8 @@ colnames(dataENV_trans) <- c("surfacearea_ha",
                              "nearest_LMSPW",
                              "latitude",
                              "longitude",
-                             "boatlaunch"
+                             "boatlaunch",
+                             "nonFP_species_richness"
 )
 
 dataENV_trans <- as.data.frame(dataENV_trans)
