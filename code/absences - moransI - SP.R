@@ -76,7 +76,6 @@ data_temp$signif[27] <- "Significant"
 data_temp$signif[28] <- "Significant"
 data_temp$signif[32] <- "Significant"
 
-
 correlogram_SP_incr10 <- ggplot(data_temp,aes(x=x,y=y,group=data_type,linetype=data_type))  
 correlogram_SP_incr10 <- correlogram_SP_incr10 + geom_point(aes(shape=signif),size=3)
 correlogram_SP_incr10 <- correlogram_SP_incr10 + scale_shape_manual(name="Significance",values=c(1,19))

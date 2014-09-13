@@ -130,7 +130,7 @@ dataENV_trans <- as.data.frame(dataENV_trans)
 ######################################
 dataENV_trans["ALK_avg"] <- NULL 
 dataENV_trans["waterbodies_5km"] <- NULL 
-dataENV_trans["nearest_LMSPW"] <- NULL 
+# dataENV_trans["nearest_LMSPW"] <- NULL 
 dataENV_trans["depth_max_m"] <- NULL 
   
 colnames(dataENV_trans)

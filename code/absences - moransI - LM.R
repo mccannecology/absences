@@ -83,6 +83,7 @@ data_temp$signif[30] <- "Significant"
 data_temp$signif[33] <- "Significant"
 data_temp$signif[34] <- "Significant"
 data_temp$signif[38] <- "Significant"
+data_temp$signif[40] <- "Significant"
 
 correlogram_LM_incr10 <- ggplot(data_temp,aes(x=x,y=y,group=data_type,linetype=data_type))  
 correlogram_LM_incr10 <- correlogram_LM_incr10 + geom_point(aes(shape=signif),size=3)
@@ -90,7 +91,6 @@ correlogram_LM_incr10 <- correlogram_LM_incr10 + scale_shape_manual(name="Signif
 correlogram_LM_incr10 <- correlogram_LM_incr10 + geom_line()
 correlogram_LM_incr10 <- correlogram_LM_incr10 + xlab("Distance class (km)")
 correlogram_LM_incr10 <- correlogram_LM_incr10 + ylab("Moran's I")
-correlogram_LM_incr10 <- correlogram_LM_incr10 + ylim(-0.8,0.8)
 correlogram_LM_incr10 <- correlogram_LM_incr10 + geom_hline(yintercept=0,linetype="longdash")
 correlogram_LM_incr10 <- correlogram_LM_incr10 + ggtitle("Lemna minor")
 correlogram_LM_incr10 <- correlogram_LM_incr10 + scale_linetype(name="Data")

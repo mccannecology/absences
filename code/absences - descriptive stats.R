@@ -188,6 +188,45 @@ sp_freq_plot_CT2
 
 ggsave("sp_freq_plot_CT2.jpg",sp_freq_plot_CT2,height=8,width=11)
 
+
+#################################
+# Histogram of # of waterbodies #
+# each species is found in      #
+# with functional groups labels #
+#################################
+# if you want this plot with species listed alphabetically,
+# re-do dataSPECIES_freq in "absences - import.R" 
+# and leave out ordering the species as a factor of frequency 
+
+dataSPECIES_freq3 <- read.csv("dataSPECIES_freq3_with_func_group_labels.csv")
+head(dataSPECIES_freq3)
+
+sp_freq_plot_CT <- ggplot(dataSPECIES_freq3,aes(x=reorder(species, -frequency),y=frequency,fill=group))
+sp_freq_plot_CT <- sp_freq_plot_CT + geom_bar(aes(fill=group),stat="identity")
+sp_freq_plot_CT <- sp_freq_plot_CT + scale_fill_manual(values=c("green2","violetred2","yellow2","turquoise2"))
+sp_freq_plot_CT <- sp_freq_plot_CT + xlab("Species")
+sp_freq_plot_CT <- sp_freq_plot_CT + ylab("# of waterbodies found in")
+sp_freq_plot_CT <- sp_freq_plot_CT + geom_text(aes(y=frequency+1,label=Label))
+sp_freq_plot_CT <- sp_freq_plot_CT + ggtitle("Connecticut, USA (n=174)")
+sp_freq_plot_CT <- sp_freq_plot_CT + theme_classic()
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+sp_freq_plot_CT <- sp_freq_plot_CT + scale_x_discrete(labels=seq(1,nrow(dataSPECIES_freq2),1)) # replace species names with #s
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.x = element_text(size=18))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.y = element_text(size=18))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(plot.title = element_text(size=18))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.y = element_text(size=14))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(size=10))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.title = element_text(size=16, face="bold"))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.text = element_text(size = 12))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.position=c(.95, .25))
+sp_freq_plot_CT
+
+ggsave("sp_freq_plot_CT - with_func_group_labels.jpg",sp_freq_plot_CT,height=8,width=11)
+
+
+
+
 ############################
 # Table of FP compositions # 
 ############################

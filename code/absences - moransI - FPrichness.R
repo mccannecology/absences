@@ -41,17 +41,17 @@ plot(correlog_FPrich_raw_incr2)
 # GLM resids          #
 #######################
 # Increment = 20
-correlog_FPrich_resid_incr20 <- correlog(data$latitude, data$longitude, glm_poisson_FPrich_best_resid, latlon=TRUE, increment=20, resamp=500)
+correlog_FPrich_resid_incr20 <- correlog(data$latitude, data$longitude, best_glm_FPrich_trans_resid, latlon=TRUE, increment=20, resamp=500)
 correlog_FPrich_resid_incr20
 plot(correlog_FPrich_resid_incr20)
 
 # Increment = 10
-correlog_FPrich_resid_incr10 <- correlog(data$latitude, data$longitude, glm_poisson_FPrich_best_resid, latlon=TRUE, increment=10, resamp=500)
+correlog_FPrich_resid_incr10 <- correlog(data$latitude, data$longitude, best_glm_FPrich_trans_resid, latlon=TRUE, increment=10, resamp=500)
 correlog_FPrich_resid_incr10
 plot(correlog_FPrich_resid_incr10)
 
 # Increment = 2
-correlog_FPrich_resid_incr2 <- correlog(data$latitude, data$longitude, glm_poisson_FPrich_best_resid, latlon=TRUE, increment=2, resamp=500)
+correlog_FPrich_resid_incr2 <- correlog(data$latitude, data$longitude, best_glm_FPrich_trans_resid, latlon=TRUE, increment=2, resamp=500)
 correlog_FPrich_resid_incr2
 plot(correlog_FPrich_resid_incr2)
 
@@ -73,16 +73,31 @@ data_temp2$data_type <- "Raw"
 
 data_temp <- rbind(data_temp,data_temp2)
 
-data_temp$signif <- ifelse(data_temp$p < 0.05, "Significant","Not significant")
+# The significance levels is not set @ 0.05 
+# Not sure if this is because of a Bonferroni correction ?
+data_temp$signif <- "Not significant" # first set them all to significant 
+data_temp$signif[1] <- "Significant"
+data_temp$signif[8] <- "Significant"
+data_temp$signif[21] <- "Significant"
+data_temp$signif[22] <- "Significant"
+data_temp$signif[25] <- "Significant"
+data_temp$signif[26] <- "Significant"
+data_temp$signif[28] <- "Significant"
+data_temp$signif[33] <- "Significant"
+data_temp$signif[34] <- "Significant"
+data_temp$signif[37] <- "Significant"
 
-correlogram_FPrich__incr10 <- ggplot(data_temp,aes(x=x,y=y,group=data_type,linetype=data_type))  
-correlogram_FPrich__incr10 <- correlogram_FPrich__incr10 + geom_point(aes(shape=signif),size=3)
-correlogram_FPrich__incr10 <- correlogram_FPrich__incr10 + scale_shape_manual(name="Significance",values=c(1,19))
-correlogram_FPrich__incr10 <- correlogram_FPrich__incr10 + geom_line()
-correlogram_FPrich__incr10 <- correlogram_FPrich__incr10 + xlab("Distance class")
-correlogram_FPrich__incr10 <- correlogram_FPrich__incr10 + ylab("Moran's I")
-correlogram_FPrich__incr10 <- correlogram_FPrich__incr10 + scale_linetype(name="Data")
-correlogram_FPrich__incr10 <- correlogram_FPrich__incr10 + theme_classic(base_size=18)
-correlogram_FPrich__incr10 
+correlogram_FPrich_incr10 <- ggplot(data_temp,aes(x=x,y=y,group=data_type,linetype=data_type))  
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + geom_point(aes(shape=signif),size=3)
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + scale_shape_manual(name="Significance",values=c(1,19))
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + geom_line()
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + xlab("Distance class (km)")
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + ylab("Moran's I")
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + ylim(-0.25,0.25)
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + geom_hline(yintercept=0,linetype="longdash")
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + ggtitle("Floating plant richness")
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + scale_linetype(name="Data")
+correlogram_FPrich_incr10 <- correlogram_FPrich_incr10 + theme_classic(base_size=18)
+correlogram_FPrich_incr10 
 
 ggsave("Correlogram - FP_richness - incr10.jpg",correlogram_FPrich_incr10,height=8,width=11)

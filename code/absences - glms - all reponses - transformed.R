@@ -14,6 +14,7 @@ colnames(dataENV_trans)
 temp_data_LM <- dataENV_trans
 temp_data_LM$nearest_SP <- NULL  # remove nearest SP
 temp_data_LM$nearest_W <- NULL   # remove nearest W
+temp_data_LM$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
 
 # make the formula 
 formula_LM <- as.formula(paste("LM ~ ", paste(colnames(temp_data_LM), collapse= "+")))
@@ -38,6 +39,7 @@ colnames(dataENV_trans)
 temp_data_SP <- dataENV_trans
 temp_data_SP$nearest_LM <- NULL  # remove nearest LM
 temp_data_SP$nearest_W <- NULL   # remove nearest W
+temp_data_SP$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
 
 # make formula 
 formula_SP <- as.formula(paste("SP ~ ", paste(colnames(temp_data_SP), collapse= "+")))
@@ -62,6 +64,7 @@ colnames(dataENV_trans)
 temp_data_W <- dataENV_trans
 temp_data_W$nearest_LM <- NULL  # remove nearest LM
 temp_data_W$nearest_SP <- NULL   # remove nearest SP
+temp_data_W$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
 
 # make formula 
 formula_W <- as.formula(paste("W ~ ", paste(colnames(temp_data_W), collapse= "+")))
@@ -84,14 +87,12 @@ summary(glm_W_trans_null)
 
 colnames(dataENV_trans)
 temp_data_FPpres <- dataENV_trans
-temp_data_FPpres$nearest_LM <- NULL  # remove nearest LM
-temp_data_FPpres$nearest_SP <- NULL   # remove nearest SP
-temp_data_FPpres$nearest_W <- NULL   # remove nearest W
+temp_data_FPpres$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
 colnames(temp_data_FPpres)
 
 # make formula 
 formula_FPpres <- as.formula(paste("FPpres ~ ", paste(colnames(temp_data_FPpres), collapse= "+")))
-temp_data_FPpres$FPpres <- data$FP_presence # add FP ppresence 
+temp_data_FPpres$FPpres <- as.numeric(data$FP_presence)-1 # add FP ppresence 
 formula_FPpres # view the formula 
 
 # GLM for full model 
@@ -101,6 +102,49 @@ summary(glm_FPpres_trans)
 # null model 
 glm_FPpres_trans_null <- glm(FPpres ~ 1, family=binomial, data=temp_data_FPpres, na.action = "na.fail")
 summary(glm_FPpres_trans_null)
+
+###############
+# FP richness # 
+# Full & Null #
+###############
+# Build full and null models
+
+colnames(dataENV_trans)
+temp_data_FPrich <- dataENV_trans
+temp_data_FPrich$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
+colnames(temp_data_FPrich)
+
+# make formula 
+formula_FPrich <- as.formula(paste("FPrich ~ ", paste(colnames(temp_data_FPrich), collapse= "+")))
+temp_data_FPrich$FPrich <- data$FP_species_richness # add FP ppresence 
+formula_FPrich # view the formula 
+
+# GLM for full model 
+glm_FPrich_trans <- glm(formula_FPrich, family=poisson, data=temp_data_FPrich, na.action = "na.fail")
+summary(glm_FPrich_trans)
+
+# null model 
+glm_FPrich_trans_null <- glm(FPrich ~ 1, family=poisson, data=temp_data_FPrich, na.action = "na.fail")
+summary(glm_FPrich_trans_null)
+
+############################
+# AICs for all full models #
+############################
+AIC(glm_LM_trans)
+AIC(glm_SP_trans) 
+AIC(glm_W_trans) 
+AIC(glm_FPpres_trans)
+AIC(glm_FPrich_trans)
+
+############################
+# AICs for all null models #
+############################
+AIC(glm_LM_trans_null)
+AIC(glm_SP_trans_null) 
+AIC(glm_W_trans_null) 
+AIC(glm_FPpres_trans_null)
+AIC(glm_FPrich_trans_null)
+
 
 #########################
 # Run all nested models #
@@ -112,17 +156,19 @@ all_glm_LM_trans <- dredge(glm_LM_trans)
 all_glm_SP_trans <- dredge(glm_SP_trans)
 all_glm_W_trans <- dredge(glm_W_trans)
 all_glm_FPpres_trans <- dredge(glm_FPpres_trans)
+all_glm_FPrich_trans <- dredge(glm_FPrich_trans)
 
 # save to file 
 numb_models <- nrow(all_glm_LM_trans)
-write.csv(all_glm_LM_trans[1:numb_models],file="all_glm_LM_trans.csv",na="NA")
+write.csv(all_glm_LM_trans[1:numb_models],file="all_glm_LM_trans_2.csv",na="NA")
 numb_models <- nrow(all_glm_SP_trans)
-write.csv(all_glm_SP_trans[1:numb_models],file="all_glm_SP_trans.csv",na="NA")
+write.csv(all_glm_SP_trans[1:numb_models],file="all_glm_SP_trans_2.csv",na="NA")
 numb_models <- nrow(all_glm_W_trans)
-write.csv(all_glm_W_trans[1:numb_models],file="all_glm_W_trans.csv",na="NA")
+write.csv(all_glm_W_trans[1:numb_models],file="all_glm_W_trans_2.csv",na="NA")
 numb_models <- nrow(all_glm_FPpres_trans)
-write.csv(all_glm_FPpres_trans[1:numb_models],file="all_glm_FPpres_trans.csv",na="NA")
-
+write.csv(all_glm_FPpres_trans[1:numb_models],file="all_glm_FPpres_trans_2.csv",na="NA")
+numb_models <- nrow(all_glm_FPrich_trans)
+write.csv(all_glm_FPrich_trans[1:numb_models],file="all_glm_FPrich_trans_2.csv",na="NA")
 
 ##############
 # Best model #  
@@ -134,6 +180,7 @@ best_glm_LM_trans <- get.models(all_glm_LM_trans, 1)[1]
 best_glm_SP_trans <- get.models(all_glm_SP_trans, 1)[1]
 best_glm_W_trans <- get.models(all_glm_W_trans, 1)[1]
 best_glm_FPpres_trans <- get.models(all_glm_FPpres_trans, 1)[1]
+best_glm_FPrich_trans <- get.models(all_glm_FPrich_trans, 1)[1]
 
 # but we actually want this to be the fitted model 
 # I deleted a "+ 1" from the end of each of these formulas - not sure why it was there (MJM 8/27/2014) 
@@ -148,10 +195,27 @@ best_glm_SP_trans <- glm(SP ~ COND_avg, family = binomial, data = temp_data_SP,
 best_glm_W_trans <- glm(W ~ boatlaunch + COND_avg + secchi_avg, family = binomial, 
                         data = temp_data_W, na.action = "na.fail")
 
-best_glm_FPpres_trans <- glm(FPpres ~ COND_avg + longitude + secchi_avg + TOTP_avg, 
+best_glm_FPpres_trans <- glm(FPpres ~ COND_avg + latitude + nearest_LM + nearest_SP + secchi_avg + TOTP_avg,
                              family = binomial, 
                              data = temp_data_FPpres, 
                              na.action = "na.fail")
+
+best_glm_FPrich_trans <- glm(FPrich ~ COND_avg + dist_waterfowl + latitude + nearest_LM + secchi_avg + TOTP_avg + waterbodies_1km,
+                             family = poisson, 
+                             data = temp_data_FPrich, 
+                             na.action = "na.fail")
+
+summary(best_glm_LM_trans)
+summary(best_glm_SP_trans) 
+summary(best_glm_W_trans) 
+summary(best_glm_FPpres_trans)
+summary(best_glm_FPrich_trans)
+
+AIC(best_glm_LM_trans)
+AIC(best_glm_SP_trans) 
+AIC(best_glm_W_trans) 
+AIC(best_glm_FPpres_trans)
+AIC(best_glm_FPrich_trans)
 
 ###################
 # Model Averaging # 
@@ -163,12 +227,14 @@ avg_LM_trans <- model.avg(all_glm_LM_trans, subset = delta < 2)
 avg_SP_trans <- model.avg(all_glm_SP_trans, subset = delta < 2)
 avg_W_trans <- model.avg(all_glm_W_trans, subset = delta < 2)
 avg_FPpres_trans <- model.avg(all_glm_FPpres_trans, subset = delta < 2)
+avg_FPrich_trans <- model.avg(all_glm_FPrich_trans, subset = delta < 2)
 
 # get the table for with the coefficient and p-value for each variable 
 summary(avg_LM_trans)
 summary(avg_SP_trans)
 summary(avg_W_trans)
 summary(avg_FPpres_trans)
+summary(avg_FPrich_trans)
 
 # importance 
 # Sum of ‘Akaike weights’ over all models including the explanatory variable 
@@ -176,6 +242,7 @@ importance(avg_LM_trans)
 importance(avg_SP_trans)
 importance(avg_W_trans)
 importance(avg_FPpres_trans)
+importance(avg_FPrich_trans)
 
 # get 95% confidence intervals for estimates
 # if they span 0, then the coefficient is not different than 0 
@@ -184,6 +251,7 @@ confint(avg_LM_trans)
 confint(avg_SP_trans)
 confint(avg_W_trans)
 confint(avg_FPpres_trans)
+confint(avg_FPrich_trans)
 
 ######################
 # pseudo-R-squared   #
@@ -198,11 +266,12 @@ r.squaredLR(best_glm_LM_trans, null = glm_LM_trans_null)
 r.squaredLR(best_glm_SP_trans, null = glm_SP_trans_null)
 r.squaredLR(best_glm_W_trans, null = glm_W_trans_null)
 r.squaredLR(best_glm_FPpres_trans, null = glm_FPpres_trans_null)
+r.squaredLR(best_glm_FPrich_trans, null = glm_FPrich_trans_null)
 
 ######################
 # pseudo-R-squared   #
 # Variance explained #
-# Ful model          #
+# Full model         #
 ######################
 # statistic based on improvment from null model - compares likelihood of both 
 # adj.r.squared is base on Nagelkerke 1991
@@ -212,6 +281,7 @@ r.squaredLR(glm_LM_trans, null = glm_LM_trans_null)
 r.squaredLR(glm_SP_trans, null = glm_SP_trans_null)
 r.squaredLR(glm_W_trans, null = glm_W_trans_null)
 r.squaredLR(glm_FPpres_trans, null = glm_FPpres_trans_null)
+r.squaredLR(glm_FPrich_trans, null = glm_FPrich_trans_null)
 
 ####################### 
 # Signif. of deviance #
@@ -234,6 +304,11 @@ resid_dev <- deviance(glm_FPpres_trans) # Residual Deviance
 resid_df <- as.numeric(summary(glm_FPpres_trans)[7]) # Null Deviance    
 1-pchisq(resid_dev,resid_df)
 
+resid_dev <- deviance(glm_FPrich_trans) # Residual Deviance
+resid_df <- as.numeric(summary(glm_FPrich_trans)[7]) # Null Deviance    
+1-pchisq(resid_dev,resid_df)
+
+
 ####################### 
 # Signif. of deviance #
 # Best model          #
@@ -253,6 +328,10 @@ resid_df <- as.numeric(summary(best_glm_W_trans)[7]) # Null Deviance
 
 resid_dev <- deviance(best_glm_FPpres_trans) # Residual Deviance
 resid_df <- as.numeric(summary(best_glm_FPpres_trans)[7]) # Null Deviance    
+1-pchisq(resid_dev,resid_df)
+
+resid_dev <- deviance(best_glm_FPrich_trans) # Residual Deviance
+resid_df <- as.numeric(summary(best_glm_FPrich_trans)[7]) # Null Deviance    
 1-pchisq(resid_dev,resid_df)
 
 ######################
@@ -279,6 +358,11 @@ resid_dev <- deviance(glm_FPpres_trans) # Residual Deviance:
 glm_FPpres_trans_devExpl <- (null_dev - resid_dev) / null_dev
 glm_FPpres_trans_devExpl
 
+null_dev <- as.numeric(summary(glm_FPrich_trans)[8]) # Null Deviance: 
+resid_dev <- deviance(glm_FPrich_trans) # Residual Deviance: 
+glm_FPrich_trans_devExpl <- (null_dev - resid_dev) / null_dev
+glm_FPrich_trans_devExpl
+
 ######################
 # Deviance explained #
 # Best model         #
@@ -302,6 +386,11 @@ null_dev <- as.numeric(summary(best_glm_FPpres_trans)[8]) # Null Deviance:
 resid_dev <- deviance(best_glm_FPpres_trans) # Residual Deviance: 
 best_glm_FPpres_trans_devExpl <- (null_dev - resid_dev) / null_dev
 best_glm_FPpres_trans_devExpl
+
+null_dev <- as.numeric(summary(best_glm_FPrich_trans)[8]) # Null Deviance: 
+resid_dev <- deviance(best_glm_FPrich_trans) # Residual Deviance: 
+best_glm_FPrich_trans_devExpl <- (null_dev - resid_dev) / null_dev
+best_glm_FPrich_trans_devExpl
 
 #################### 
 # Cross-validation #
@@ -328,6 +417,9 @@ best_glm_W_trans_CV$delta
 best_glm_FPpres_trans_CV <- cv.glm(data=temp_data_FPpres, best_glm_FPpres_trans, cost, K=10)
 best_glm_FPpres_trans_CV$delta
 
+best_glm_FPrich_trans_CV <- cv.glm(data=temp_data_FPrich, best_glm_FPrich_trans, cost, K=10)
+best_glm_FPrich_trans_CV$delta
+
 #################### 
 # Cross-validation #
 # Full model       #
@@ -353,6 +445,9 @@ full_glm_W_trans_CV$delta
 full_glm_FPpres_trans_CV <- cv.glm(data=temp_data_FPpres, glm_FPpres_trans, cost, K=10)
 full_glm_FPpres_trans_CV$delta
 
+full_glm_FPrich_trans_CV <- cv.glm(data=temp_data_FPrich, glm_FPrich_trans, cost, K=10)
+full_glm_FPrich_trans_CV$delta
+
 ################# 
 # Outlier Tests #
 # Best model    #
@@ -362,6 +457,7 @@ outlierTest(best_glm_LM_trans)
 outlierTest(best_glm_SP_trans)
 outlierTest(best_glm_W_trans)
 outlierTest(best_glm_FPpres_trans)
+outlierTest(best_glm_FPrich_trans)
 
 ################# 
 # Outlier Tests #
@@ -372,6 +468,7 @@ outlierTest(glm_LM_trans)
 outlierTest(glm_SP_trans)
 outlierTest(glm_W_trans)
 outlierTest(glm_FPpres_trans)
+outlierTest(glm_FPrich_trans)
 
 ###################
 # Residuals plots #
@@ -383,6 +480,7 @@ residualPlots(best_glm_LM_trans)
 residualPlots(best_glm_SP_trans)
 residualPlots(best_glm_W_trans)
 residualPlots(best_glm_FPpres_trans)
+residualPlots(best_glm_FPrich_trans)
 
 # returns lack-of-fit test is computed for each numeric predictor
 
@@ -402,6 +500,10 @@ jpeg("best_glm_FPpres_trans_resids_plot.jpg",height=8,width=8,units="in",res=300
 residualPlots(best_glm_FPpres_trans,main="FP presence - best model glm -  residuals plot",smoother=F)
 dev.off()
 
+jpeg("best_glm_FPrich_trans_resids_plot.jpg",height=8,width=8,units="in",res=300)
+residualPlots(best_glm_FPrich_trans,main="FP richness - best model glm -  residuals plot",smoother=F)
+dev.off()
+
 ##########################
 # Partial residuals plot #
 # Best model             # 
@@ -412,6 +514,7 @@ crPlots(best_glm_LM_trans)
 crPlots(best_glm_SP_trans)
 crPlots(best_glm_W_trans)
 crPlots(best_glm_FPpres_trans)
+crPlots(best_glm_FPrich_trans)
 
 jpeg("best_glm_LM_trans_partial_resids_plot.jpg",height=8,width=8,units="in",res=300)
 crPlots(best_glm_LM_trans,main="Lemna minor - best model glm - partial residuals plot",smoother=F)
@@ -429,6 +532,10 @@ jpeg("best_glm_FPpres_trans_partial_resids_plot.jpg",height=8,width=8,units="in"
 crPlots(best_glm_FPpres_trans,main="FP presence - best model glm - partial residuals plot",smoother=F)
 dev.off()
 
+jpeg("best_glm_FPrich_trans_partial_resids_plot.jpg",height=8,width=8,units="in",res=300)
+crPlots(best_glm_FPrich_trans,main="FP presence - best model glm - partial residuals plot",smoother=F)
+dev.off()
+
 # or 
 
 library(visreg)
@@ -436,6 +543,7 @@ visreg(best_glm_LM_trans)
 visreg(best_glm_SP_trans)
 visreg(best_glm_W_trans)
 visreg(best_glm_FPpres_trans)
+visreg(best_glm_FPrich_trans)
 
 ##############################
 # Model-average effect sizes #
@@ -465,6 +573,9 @@ best_glm_W_trans_resid <- as.vector(best_glm_W_trans_resid)
 
 best_glm_FPpres_trans_resid <- resid(best_glm_FPpres_trans)
 best_glm_FPpres_trans_resid <- as.vector(best_glm_FPpres_trans_resid)
+
+best_glm_FPrich_trans_resid <- resid(best_glm_FPrich_trans)
+best_glm_FPrich_trans_resid <- as.vector(best_glm_FPrich_trans_resid)
 
 
 ####################################
