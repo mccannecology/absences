@@ -588,6 +588,41 @@ sp.correlogram()
 # I used a different package and functions last time - compare to this 
 
 
+####################
+# Confusion matrix #
+####################
+# define the function to calculate a confusion matrix 
+# https://gist.github.com/ryanwitt/2911560
+# this only works for logistic 
+confusion.glm <- function(data, model) {
+  # this gives you the prediction for each observation 
+  prediction <- ifelse(predict(model, data, type='response') > 0.5, "present", "absent")
+  # this makes the table of the predictions vs. the observed  
+  confusion  <- table(prediction, ifelse(model$y==1, "present", "absent"))
+  # I'm not sure what this classification error is so I'm going to shut it off 
+  # confusion  <- cbind(confusion, c(1 - confusion[1,1]/(confusion[1,1]+confusion[2,1]), 1 - confusion[2,2]/(confusion[2,2]+confusion[1,2])))
+  # confusion  <- as.data.frame(confusion)
+  names(confusion) <- c('absent', 'present')
+  #names(confusion) <- c('FALSE', 'TRUE', 'class.error')
+  confusion
+}
+
+confusion.glm(temp_data_LM,best_glm_LM_trans)
+confusion.glm(temp_data_SP,best_glm_SP_trans) # the model only predicts absences 
+confusion.glm(temp_data_W,best_glm_W_trans)
+confusion.glm(temp_data_FPpres,best_glm_FPpres_trans)
+
+# cannot do it for FP richness - only works for logistic regression 
+confusion.glm(temp_data_FPrich,best_glm_FPrich_trans)
+
+###############################
+# Generating predicted values #
+###############################
+predict(best_glm_LM_trans, temp_data_LM, type="response")
+predict(best_glm_SP_trans, temp_data_SP, type="response")
+predict(best_glm_W_trans, temp_data_W, type="response")
+predict(best_glm_FPrich_trans, temp_data_FPrich, type="response")
+predict(best_glm_FPpres_trans, temp_data_FPpres, type="response")
 
 ############
 # clean up #   
