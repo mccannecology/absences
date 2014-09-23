@@ -242,4 +242,8 @@ write.csv(dataSPECIES_freq,"dataSPECIES_freq.csv",row.names=FALSE)
 data$wolffia_sp <- data$wolffia + data$wolffia_borealis + data$wolffia_brasiliensis # combine the wolffias 
 colnames(data)
 
+dataFP$wolffia_sp <- data$wolffia + data$wolffia_borealis + data$wolffia_brasiliensis # combine the wolffias 
+colnames(data)
+
+
 

@@ -6,11 +6,11 @@
 correlog2 <- function (x, y, z, w = NULL, increment, resamp = 1000, latlon = FALSE, 
           na.rm = FALSE, quiet = FALSE){
   
-  NAO <- FALSE
-  
   ###########################
   # look for missing values #
   ###########################
+  NAO <- FALSE
+  
   if (any(!is.finite(unlist(z)))) {
     if (na.rm) {
       warning("Missing values exist; Pairwise deletion will be used")
@@ -21,11 +21,11 @@ correlog2 <- function (x, y, z, w = NULL, increment, resamp = 1000, latlon = FAL
     }
   }
   
-  multivar <- !is.null(dim(z))
-  
   ################################### 
   # If the response is multivariate #
   ###################################
+  multivar <- !is.null(dim(z))
+  
   if (multivar == TRUE) {
     warning("Response is multivariate: the correlation matrix will be centered on zero. Use correlog.nc() for the non-centered correlogram")
     n <- length(z[, 1])
@@ -86,21 +86,27 @@ correlog2 <- function (x, y, z, w = NULL, increment, resamp = 1000, latlon = FAL
     }
   }
   
+  #####################################
+  # if the dimensions are NOT lat/lon #
+  #####################################
   else {
     dmat <- sqrt(outer(x, x, "-")^2 + outer(y, y, "-")^2)
   }
   
+  #########################################
+  # if you are resampling for signficance #
+  #########################################
   if (resamp != 0) {
     dmat2 <- dmat
     moran2 <- moran
   }
+  
   if (is.null(w)) {
     dmat <- dmat[lower.tri(dmat)]
   }
   else {
     dmat <- dmat[row(dmat) != col(dmat)]
   }
-  
   
   
   dkl <- ceiling(dmat/increment)
