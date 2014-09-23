@@ -7,6 +7,7 @@ correlog2 <- function (x, y, z, w = NULL, increment, resamp = 1000, latlon = FAL
           na.rm = FALSE, quiet = FALSE){
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   ###########################
   # look for missing values #
   ###########################
@@ -19,6 +20,13 @@ correlog2 <- function (x, y, z, w = NULL, increment, resamp = 1000, latlon = FAL
   # look for missing values #
   ###########################
 >>>>>>> bbe9a4f... Trying to understand the correlog() function in package ncf (spatial correlogram)
+=======
+  ###########################
+  # look for missing values #
+  ###########################
+  NAO <- FALSE
+  
+>>>>>>> 091cbfa... organzing some files; NMDS of envir. space (with P/A).
   if (any(!is.finite(unlist(z)))) {
     if (na.rm) {
       warning("Missing values exist; Pairwise deletion will be used")
@@ -29,6 +37,7 @@ correlog2 <- function (x, y, z, w = NULL, increment, resamp = 1000, latlon = FAL
     }
   }
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   ################################### 
   # If the response is multivariate #
@@ -42,6 +51,13 @@ correlog2 <- function (x, y, z, w = NULL, increment, resamp = 1000, latlon = FAL
   # If the response is multivariate #
   ###################################
 >>>>>>> bbe9a4f... Trying to understand the correlog() function in package ncf (spatial correlogram)
+=======
+  ################################### 
+  # If the response is multivariate #
+  ###################################
+  multivar <- !is.null(dim(z))
+  
+>>>>>>> 091cbfa... organzing some files; NMDS of envir. space (with P/A).
   if (multivar == TRUE) {
     warning("Response is multivariate: the correlation matrix will be centered on zero. Use correlog.nc() for the non-centered correlogram")
     n <- length(z[, 1])
@@ -103,29 +119,45 @@ correlog2 <- function (x, y, z, w = NULL, increment, resamp = 1000, latlon = FAL
   }
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   #####################################
   # if the dimensions are NOT lat/lon #
   #####################################
 =======
 >>>>>>> bbe9a4f... Trying to understand the correlog() function in package ncf (spatial correlogram)
+=======
+  #####################################
+  # if the dimensions are NOT lat/lon #
+  #####################################
+>>>>>>> 091cbfa... organzing some files; NMDS of envir. space (with P/A).
   else {
     dmat <- sqrt(outer(x, x, "-")^2 + outer(y, y, "-")^2)
   }
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   #########################################
   # if you are resampling for signficance #
   #########################################
 =======
 >>>>>>> bbe9a4f... Trying to understand the correlog() function in package ncf (spatial correlogram)
+=======
+  #########################################
+  # if you are resampling for signficance #
+  #########################################
+>>>>>>> 091cbfa... organzing some files; NMDS of envir. space (with P/A).
   if (resamp != 0) {
     dmat2 <- dmat
     moran2 <- moran
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> bbe9a4f... Trying to understand the correlog() function in package ncf (spatial correlogram)
+=======
+  
+>>>>>>> 091cbfa... organzing some files; NMDS of envir. space (with P/A).
   if (is.null(w)) {
     dmat <- dmat[lower.tri(dmat)]
   }
@@ -135,9 +167,12 @@ correlog2 <- function (x, y, z, w = NULL, increment, resamp = 1000, latlon = FAL
   
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> bbe9a4f... Trying to understand the correlog() function in package ncf (spatial correlogram)
+=======
+>>>>>>> 091cbfa... organzing some files; NMDS of envir. space (with P/A).
   dkl <- ceiling(dmat/increment)
   nlok <- sapply(split(moran, dkl), length)
   dmean <- sapply(split(dmat, dkl), mean, na.rm = TRUE)
