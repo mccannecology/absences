@@ -606,9 +606,13 @@ sp.correlogram()
 ####################
 # Confusion matrix #
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Best model       #
 =======
 >>>>>>> 66da6cb... added confusion matrices for logistic regressions
+=======
+# Best model       #
+>>>>>>> d4f2a63... model averaging
 ####################
 # define the function to calculate a confusion matrix 
 # https://gist.github.com/ryanwitt/2911560
@@ -627,6 +631,9 @@ confusion.glm <- function(data, model) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d4f2a63... model averaging
 # try with real data 
 prediction <- ifelse(predict(best_glm_LM_trans, temp_data_LM, type='response') > 0.5, "present", "absent")
 # this makes the table of the predictions vs. the observed  
@@ -638,8 +645,11 @@ names(confusion) <- c('absent', 'present')
 #names(confusion) <- c('FALSE', 'TRUE', 'class.error')
 confusion
 
+<<<<<<< HEAD
 =======
 >>>>>>> 66da6cb... added confusion matrices for logistic regressions
+=======
+>>>>>>> d4f2a63... model averaging
 confusion.glm(temp_data_LM,best_glm_LM_trans)
 confusion.glm(temp_data_SP,best_glm_SP_trans) # the model only predicts absences 
 confusion.glm(temp_data_W,best_glm_W_trans)
@@ -649,6 +659,9 @@ confusion.glm(temp_data_FPpres,best_glm_FPpres_trans)
 confusion.glm(temp_data_FPrich,best_glm_FPrich_trans)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d4f2a63... model averaging
 ####################
 # Confusion matrix #
 # Model average    #
@@ -680,8 +693,11 @@ confusion  <- table(prediction, ifelse(best_glm_FPpres_trans$y==1, "present", "a
 names(confusion) <- c('absent', 'present')
 confusion
 
+<<<<<<< HEAD
 =======
 >>>>>>> 66da6cb... added confusion matrices for logistic regressions
+=======
+>>>>>>> d4f2a63... model averaging
 ###############################
 # Generating predicted values #
 ###############################
