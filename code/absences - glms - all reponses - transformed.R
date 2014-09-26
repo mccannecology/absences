@@ -229,6 +229,20 @@ avg_W_trans <- model.avg(all_glm_W_trans, subset = delta < 2)
 avg_FPpres_trans <- model.avg(all_glm_FPpres_trans, subset = delta < 2)
 avg_FPrich_trans <- model.avg(all_glm_FPrich_trans, subset = delta < 2)
 
+# Re-do the model averaging based on explicity specifying a model list 
+# this is so I can use predict() with the model average object 
+model_list_LM <- get.models(all_glm_LM_trans, subset = delta < 2) # specify the list of models whose delta AIC < 2
+model_list_SP <- get.models(all_glm_SP_trans, subset = delta < 2)
+model_list_W <- get.models(all_glm_W_trans, subset = delta < 2)
+model_list_FPpress <- get.models(all_glm_FPpres_trans, subset = delta < 2)
+model_list_FPrich <- get.models(all_glm_FPrich_trans, subset = delta < 2)
+
+avg_LM_trans <- model.avg(model_list_LM) # use that list to do the model averaging 
+avg_SP_trans <- model.avg(model_list_SP)
+avg_W_trans <- model.avg(model_list_W)
+avg_FPpres_trans <- model.avg(model_list_FPpress)
+avg_FPrich_trans <- model.avg(model_list_FPrich)
+
 # get the table for with the coefficient and p-value for each variable 
 summary(avg_LM_trans)
 summary(avg_SP_trans)
@@ -252,6 +266,7 @@ confint(avg_SP_trans)
 confint(avg_W_trans)
 confint(avg_FPpres_trans)
 confint(avg_FPrich_trans)
+
 
 ######################
 # pseudo-R-squared   #
@@ -590,6 +605,7 @@ sp.correlogram()
 
 ####################
 # Confusion matrix #
+# Best model       #
 ####################
 # define the function to calculate a confusion matrix 
 # https://gist.github.com/ryanwitt/2911560
@@ -607,6 +623,17 @@ confusion.glm <- function(data, model) {
   confusion
 }
 
+# try with real data 
+prediction <- ifelse(predict(best_glm_LM_trans, temp_data_LM, type='response') > 0.5, "present", "absent")
+# this makes the table of the predictions vs. the observed  
+confusion  <- table(prediction, ifelse(best_glm_LM_trans$y==1, "present", "absent"))
+# I'm not sure what this classification error is so I'm going to shut it off 
+# confusion  <- cbind(confusion, c(1 - confusion[1,1]/(confusion[1,1]+confusion[2,1]), 1 - confusion[2,2]/(confusion[2,2]+confusion[1,2])))
+# confusion  <- as.data.frame(confusion)
+names(confusion) <- c('absent', 'present')
+#names(confusion) <- c('FALSE', 'TRUE', 'class.error')
+confusion
+
 confusion.glm(temp_data_LM,best_glm_LM_trans)
 confusion.glm(temp_data_SP,best_glm_SP_trans) # the model only predicts absences 
 confusion.glm(temp_data_W,best_glm_W_trans)
@@ -614,6 +641,37 @@ confusion.glm(temp_data_FPpres,best_glm_FPpres_trans)
 
 # cannot do it for FP richness - only works for logistic regression 
 confusion.glm(temp_data_FPrich,best_glm_FPrich_trans)
+
+####################
+# Confusion matrix #
+# Model average    #
+####################
+# I cannot use the function that I defined above 
+# a model.avg() object does not keep the observed values like a fitted.glm.object$y does 
+
+# LM #
+prediction <- ifelse(predict(avg_LM_trans, temp_data_LM, type='response') > 0.5, "present", "absent")
+confusion  <- table(prediction, ifelse(best_glm_LM_trans$y==1, "present", "absent"))
+names(confusion) <- c('absent', 'present')
+confusion
+
+# SP # 
+prediction <- ifelse(predict(avg_SP_trans, temp_data_SP, type='response') > 0.5, "present", "absent")
+confusion  <- table(prediction, ifelse(best_glm_SP_trans$y==1, "present", "absent"))
+names(confusion) <- c('absent', 'present')
+confusion
+
+# W # 
+prediction <- ifelse(predict(avg_W_trans, temp_data_W, type='response') > 0.5, "present", "absent")
+confusion  <- table(prediction, ifelse(best_glm_W_trans$y==1, "present", "absent"))
+names(confusion) <- c('absent', 'present')
+confusion
+
+# FPpres # 
+prediction <- ifelse(predict(avg_FPpres_trans, temp_data_FPpres, type='response') > 0.5, "present", "absent")
+confusion  <- table(prediction, ifelse(best_glm_FPpres_trans$y==1, "present", "absent"))
+names(confusion) <- c('absent', 'present')
+confusion
 
 ###############################
 # Generating predicted values #
