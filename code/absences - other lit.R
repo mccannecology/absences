@@ -12,6 +12,7 @@ LIT_trei <- read.csv("trei_pall.csv")
 LIT_palmer <- read.csv("palmer.csv")
 LIT_van_zuidman <- read.csv("van_zuidman.csv")
 LIT_dugan <- read.csv("dugan.csv")
+LIT_toivonen <- read.csv("toivonen.csv")
 
 head(LIT_bornette)
 head(LIT_edvardsen)
@@ -21,6 +22,58 @@ head(LIT_trei)
 head(LIT_palmer)
 head(LIT_van_zuidman)
 head(LIT_dugan)
+head(LIT_toivonen)
+
+####################### 
+# Toivonen & Huttenen # 
+# Finland             #
+# 57 "small lakes"    #
+#######################
+sp_freq_plot_toivonen <- ggplot(LIT_toivonen,aes(x=reorder(Species, -Frequency),y=Frequency,fill=FP.))
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + geom_bar(aes(fill=FP.),stat="identity")
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + scale_fill_manual(values=c("black","grey"))
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + xlab("Species")
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + ylab("# of waterbodies found in")
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + geom_text(aes(y=Frequency+0.25,label=Label))
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + ggtitle("Finland small lakes (n=57)")
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + theme_classic()
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + theme(legend.position="none")
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + theme(axis.title.x = element_text(size=18))
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + theme(axis.title.y = element_text(size=18))
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + theme(plot.title = element_text(size=18))
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + theme(axis.text.y = element_text(size=14))
+sp_freq_plot_toivonen <- sp_freq_plot_toivonen + theme(axis.text.x = element_text(size=10))
+sp_freq_plot_toivonen
+
+ggsave("sp_freq_plot_toivonen.jpg",sp_freq_plot_toivonen,height=8,width=11)
+
+# re-do without species names 
+sp_freq_plot_toivonen2 <- sp_freq_plot_toivonen + scale_x_discrete(labels=seq(1,nrow(LIT_toivonen),1))
+sp_freq_plot_toivonen2 <- sp_freq_plot_toivonen2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_toivonen2
+
+ggsave("sp_freq_plot_bornette2.jpg",sp_freq_plot_bornette2,height=8,width=11)
+
+#################################
+# Toivonen & Huttenen           #
+# Finland                       #
+# FP species richness histogram #
+#################################
+FP_ricness_toivonen <- c(3,3,5,5,5,3,1,1,4,3,4,1,1,1,6,0,0,1,0,0,0,1,3,4,1,0,0,1,1,0,0,1,1,2,5,3,0,0,0,0,0,2,1,0,0,0,0,1,0,0,0,0,0,2,4,2,2)
+table(FP_ricness_toivonen)
+FP_richness_matrix_toivonen <- matrix(c(0,1,2,3,4,5,6,23,14,5,6,4,4,1),nrow=7,ncol=2,byrow=F)
+FP_richness_matrix_toivonen <- as.data.frame(FP_richness_matrix_toivonen)
+colnames(FP_richness_matrix_toivonen)[1] <- "richness"
+colnames(FP_richness_matrix_toivonen)[2] <- "frequency"
+FP_richness_matrix_toivonen
+
+FP_richness_hist_toivonen <- ggplot(FP_richness_matrix_toivonen,aes(x=richness,y=frequency)) + geom_bar(stat="identity",fill = I("grey50"))
+FP_richness_hist_toivonen <- FP_richness_hist_toivonen + theme_classic(base_size=18)
+FP_richness_hist_toivonen <- FP_richness_hist_toivonen + xlab("Floating plant richness")
+FP_richness_hist_toivonen <- FP_richness_hist_toivonen + ylab("Frequency")
+FP_richness_hist_toivonen
+ggsave("FP_richness_hist_toivonen.jpg",FP_richness_hist_toivonen,height=8,width=8)
 
 ######################## 
 # Bornette et al. 1998 #

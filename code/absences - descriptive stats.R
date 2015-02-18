@@ -12,6 +12,31 @@ dataSPECIES_freq
 
 ################
 # Scatterplots #
+# FP presence  #
+################
+jpeg("predictors vs FP presence.jpg",height=8,width=11,units="in",res=300)
+par(mfrow=c(4,4))
+plot(data$TOTP_avg,data$FP_presence,log="x",ylab="Floating plant presence",xlab="Total P(mg/L)")
+plot(data$surfacearea_ha,data$FP_presence,log="x",ylab="Floating plant presence",xlab="Surface area (ha)")
+plot(data$depth_max_m,data$FP_presence,log="x",ylab="Floating plant presence",xlab="Max depth (m)")
+plot(data$nonFP_presence,data$FP_presence,ylab="Floating plant presence",xlab="Non-FP species richness")
+plot(data$PH_avg,data$FP_presence,log="x",ylab="Floating plant presence",xlab="pH")
+plot(data$COND_avg,data$FP_presence,log="x",ylab="Floating plant presence",xlab="Conductivity (uS)")
+plot(data$ALK_avg,data$FP_presence,log="x",ylab="Floating plant presence",xlab="Alkalinity (mg/L)")
+plot(data$secchi_avg,data$FP_presence,log="x",ylab="Floating plant presence",xlab="Secchi depth (m)")
+plot(data$waterbodies_1km,data$FP_presence,ylab="Floating plant presence",xlab="# waterbodies <1 km")
+plot(data$waterbodies_5km,data$FP_presence,log="x",ylab="Floating plant presence",xlab="waterbodies <5 km")
+plot(data$waterbodies_10km,data$FP_presence,log="x",ylab="Floating plant presence",xlab="# waterbodies <10 km")
+plot(data$boatlaunch,data$FP_presence,ylab="Floating plant presence",xlab="Boat launch presence")
+plot(data$dist_waterfowl,data$FP_presence,ylab="Floating plant presence",xlab="Distance to migratory waterfowl habitat (m)")
+plot(data$nearest_LM,data$FP_presence,ylab="Floating plant presence",xlab="Distance to nearest L. minor (m)")
+plot(data$nearest_SP,data$FP_presence,ylab="Floating plant presence",xlab="Distance to nearest S. polyrhiza (m)")
+plot(data$nearest_W,data$FP_presence,ylab="Floating plant presence",xlab="Distance to nearest Wolffia sp. (m)")
+dev.off()
+
+
+################
+# Scatterplots #
 # FP richness  #
 ################
 jpeg("predictors vs FP richness.jpg",height=8,width=11,units="in",res=300)
@@ -28,10 +53,10 @@ plot(data$waterbodies_1km,data$FP_species_richness,ylab="Floating plant species 
 plot(data$waterbodies_5km,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="waterbodies <5 km")
 plot(data$waterbodies_10km,data$FP_species_richness,log="x",ylab="Floating plant species richness",xlab="# waterbodies <10 km")
 plot(data$boatlaunch,data$FP_species_richness,ylab="Floating plant species richness",xlab="Boat launch presence")
-plot(data$dist_waterfowl,data$FP_species_richness,ylab="Floating plant species richness",xlab="Distance to migratory waterfowl habitat (km)")
-plot(data$nearest_LM,data$FP_species_richness,ylab="Floating plant species richness",xlab="Distance to nearest L. minor (km)")
-plot(data$nearest_SP,data$FP_species_richness,ylab="Floating plant species richness",xlab="Distance to nearest S. polyrhiza (km)")
-plot(data$nearest_W,data$FP_species_richness,ylab="Floating plant species richness",xlab="Distance to nearest Wolffia sp. (km)")
+plot(data$dist_waterfowl,data$FP_species_richness,ylab="Floating plant species richness",xlab="Distance to migratory waterfowl habitat (m)")
+plot(data$nearest_LM,data$FP_species_richness,ylab="Floating plant species richness",xlab="Distance to nearest L. minor (m)")
+plot(data$nearest_SP,data$FP_species_richness,ylab="Floating plant species richness",xlab="Distance to nearest S. polyrhiza (m)")
+plot(data$nearest_W,data$FP_species_richness,ylab="Floating plant species richness",xlab="Distance to nearest Wolffia sp. (m)")
 dev.off()
 
 ################
@@ -52,10 +77,10 @@ plot(data$waterbodies_1km,data$lemna_minor,ylab="Lemna minor",xlab="# waterbodie
 plot(data$waterbodies_5km,data$lemna_minor,log="x",ylab="Lemna minor",xlab="waterbodies <5 km")
 plot(data$waterbodies_10km,data$lemna_minor,log="x",ylab="Lemna minor",xlab="# waterbodies <10 km")
 plot(data$boatlaunch,data$lemna_minor,ylab="Lemna minor",xlab="Boat launch presence")
-plot(data$dist_waterfowl,data$lemna_minor,ylab="Lemna minor",xlab="Distance to migratory waterfowl habitat (km)")
-plot(data$nearest_LM,data$lemna_minor,ylab="Lemna minor",xlab="Distance to nearest L. minor (km)")
-plot(data$nearest_SP,data$lemna_minor,ylab="Lemna minor",xlab="Distance to nearest S. polyrhiza (km)")
-plot(data$nearest_W,data$lemna_minor,ylab="Lemna minor",xlab="Distance to nearest Wolffia sp. (km)")
+plot(data$dist_waterfowl,data$lemna_minor,ylab="Lemna minor",xlab="Distance to migratory waterfowl habitat (m)")
+plot(data$nearest_LM,data$lemna_minor,ylab="Lemna minor",xlab="Distance to nearest L. minor (m)")
+plot(data$nearest_SP,data$lemna_minor,ylab="Lemna minor",xlab="Distance to nearest S. polyrhiza (m)")
+plot(data$nearest_W,data$lemna_minor,ylab="Lemna minor",xlab="Distance to nearest Wolffia sp. (m)")
 dev.off()
 
 ################
@@ -76,10 +101,10 @@ plot(data$waterbodies_1km,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xl
 plot(data$waterbodies_5km,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="waterbodies <5 km")
 plot(data$waterbodies_10km,data$spirodela_polyrhiza,log="x",ylab="Spirodela polyrhiza",xlab="# waterbodies <10 km")
 plot(data$boatlaunch,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xlab="Boat launch presence")
-plot(data$dist_waterfowl,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xlab="Distance to migratory waterfowl habitat (km)")
-plot(data$nearest_LM,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xlab="Distance to nearest L. minor (km)")
-plot(data$nearest_SP,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xlab="Distance to nearest S. polyrhiza (km)")
-plot(data$nearest_W,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xlab="Distance to nearest Wolffia sp. (km)")
+plot(data$dist_waterfowl,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xlab="Distance to migratory waterfowl habitat (m)")
+plot(data$nearest_LM,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xlab="Distance to nearest L. minor (m)")
+plot(data$nearest_SP,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xlab="Distance to nearest S. polyrhiza (m)")
+plot(data$nearest_W,data$spirodela_polyrhiza,ylab="Spirodela polyrhiza",xlab="Distance to nearest Wolffia sp. (m)")
 dev.off()
 
 ################
@@ -102,10 +127,10 @@ plot(data$waterbodies_1km,data$wolffia_sp,ylab="Wolffia sp",xlab="# waterbodies 
 plot(data$waterbodies_5km,data$wolffia_sp,log="x",ylab="Wolffia sp",xlab="waterbodies <5 km")
 plot(data$waterbodies_10km,data$wolffia_sp,log="x",ylab="Wolffia sp",xlab="# waterbodies <10 km")
 plot(data$boatlaunch,data$wolffia_sp,ylab="Wolffia sp",xlab="Boat launch presence")
-plot(data$dist_waterfowl,data$wolffia_sp,ylab="Wolffia sp",xlab="Distance to migratory waterfowl habitat (km)")
-plot(data$nearest_LM,data$wolffia_sp,ylab="Wolffia sp",xlab="Distance to nearest L. minor (km)")
-plot(data$nearest_SP,data$wolffia_sp,ylab="Wolffia sp",xlab="Distance to nearest S. polyrhiza (km)")
-plot(data$nearest_W,data$wolffia_sp,ylab="Wolffia sp",xlab="Distance to nearest Wolffia sp. (km)")
+plot(data$dist_waterfowl,data$wolffia_sp,ylab="Wolffia sp",xlab="Distance to migratory waterfowl habitat (m)")
+plot(data$nearest_LM,data$wolffia_sp,ylab="Wolffia sp",xlab="Distance to nearest L. minor (m)")
+plot(data$nearest_SP,data$wolffia_sp,ylab="Wolffia sp",xlab="Distance to nearest S. polyrhiza (m)")
+plot(data$nearest_W,data$wolffia_sp,ylab="Wolffia sp",xlab="Distance to nearest Wolffia sp. (m)")
 dev.off()
 
 #############################
@@ -116,7 +141,7 @@ FP_richness_vector <- as.data.frame(rowSums(dataFP))
 colnames(FP_richness_vector)[1]<-"richness"
 FP_richness_vector
 table(FP_richness_vector)
-FP_richness_matrix <- matrix(c(0,1,2,3,4,102,39,21,11,1),nrow=5,ncol=2,byrow=F)
+FP_richness_matrix <- matrix(c(0,1,2,3,4,104,39,21,11,1),nrow=5,ncol=2,byrow=F)
 FP_richness_matrix <- as.data.frame(FP_richness_matrix)
 colnames(FP_richness_matrix)[1] <- "richness"
 colnames(FP_richness_matrix)[2] <- "frequency"
@@ -152,46 +177,6 @@ ggsave("hist_NONFP_rich.jpg",hist_NONFP_rich,height=8,width=11)
 #################################
 # Histogram of # of waterbodies #
 # each species is found in      #
-#################################
-head(dataSPECIES_freq)
-
-# if you want this plot with species listed alphabetically,
-# re-do dataSPECIES_freq in "absences - import.R" 
-# and leave out ordering the species as a factor of frequency 
-          
-dataSPECIES_freq2 <- read.csv("dataSPECIES_freq.csv")
-head(dataSPECIES_freq2)
-
-sp_freq_plot_CT <- ggplot(dataSPECIES_freq2,aes(x=reorder(species, -frequency),y=frequency,fill=FP.))
-sp_freq_plot_CT <- sp_freq_plot_CT + geom_bar(aes(fill=FP.),stat="identity")
-sp_freq_plot_CT <- sp_freq_plot_CT + scale_fill_manual(values=c("black","grey"))
-sp_freq_plot_CT <- sp_freq_plot_CT + xlab("Species")
-sp_freq_plot_CT <- sp_freq_plot_CT + ylab("# of waterbodies found in")
-sp_freq_plot_CT <- sp_freq_plot_CT + geom_text(aes(y=frequency+1,label=Label))
-sp_freq_plot_CT <- sp_freq_plot_CT + ggtitle("Connecticut, USA (n=174)")
-sp_freq_plot_CT <- sp_freq_plot_CT + theme_classic()
-sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 90, hjust = 1))
-sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.position="none")
-sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.x = element_text(size=18))
-sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.y = element_text(size=18))
-sp_freq_plot_CT <- sp_freq_plot_CT + theme(plot.title = element_text(size=18))
-sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.y = element_text(size=14))
-sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(size=10))
-sp_freq_plot_CT
-
-ggsave("sp_freq_plot_CT.jpg",sp_freq_plot_CT,height=8,width=11)
-
-# re-do without species names 
-sp_freq_plot_CT2 <- sp_freq_plot_CT + scale_x_discrete(labels=seq(1,nrow(dataSPECIES_freq2),1))
-sp_freq_plot_CT2 <- sp_freq_plot_CT2 + theme(axis.text.x = element_text(angle = 0, hjust = 1))
-sp_freq_plot_CT2
-
-ggsave("sp_freq_plot_CT2.jpg",sp_freq_plot_CT2,height=8,width=11)
-
-
-#################################
-# Histogram of # of waterbodies #
-# each species is found in      #
 # with functional groups labels #
 #################################
 # if you want this plot with species listed alphabetically,
@@ -209,11 +194,11 @@ sp_freq_plot_CT <- sp_freq_plot_CT + geom_bar(aes(fill=group),stat="identity")
 sp_freq_plot_CT <- sp_freq_plot_CT + scale_fill_manual(values=c("green2","violetred2","yellow2","turquoise2"))
 sp_freq_plot_CT <- sp_freq_plot_CT + xlab("Species")
 sp_freq_plot_CT <- sp_freq_plot_CT + ylab("# of waterbodies found in")
-sp_freq_plot_CT <- sp_freq_plot_CT + geom_text(aes(y=frequency+1,label=Label))
+sp_freq_plot_CT <- sp_freq_plot_CT + geom_text(aes(y=frequency+1,label=label))
 sp_freq_plot_CT <- sp_freq_plot_CT + ggtitle("Connecticut, USA (n=174)")
 sp_freq_plot_CT <- sp_freq_plot_CT + theme_classic()
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 90, hjust = 1))
-sp_freq_plot_CT <- sp_freq_plot_CT + scale_x_discrete(labels=seq(1,nrow(dataSPECIES_freq2),1)) # replace species names with #s
+sp_freq_plot_CT <- sp_freq_plot_CT + scale_x_discrete(labels=seq(1,nrow(dataSPECIES_freq3),1)) # replace species names with #s
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.x = element_text(size=18))
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.y = element_text(size=18))
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(plot.title = element_text(size=18))
@@ -231,7 +216,7 @@ ggsave("sp_freq_plot_CT - with_func_group_labels.jpg",sp_freq_plot_CT,height=8,w
 #######
 # B&W #
 #######
-# re-order functional groups so it goes from light to dary on the legend 
+# re-order functional groups so it goes from light to dark on the legend 
 dataSPECIES_freq3$group <- factor(dataSPECIES_freq3$group, levels=c("floating", "submerged", "emergent", "lily"))
 
 
@@ -243,17 +228,17 @@ sp_freq_plot_CT <- sp_freq_plot_CT + scale_fill_manual(values=c("grey90","grey55
 #sp_freq_plot_CT <- sp_freq_plot_CT + scale_fill_manual(values=c("grey28","grey90","black","grey50"))
 sp_freq_plot_CT <- sp_freq_plot_CT + xlab("Species")
 sp_freq_plot_CT <- sp_freq_plot_CT + ylab("# of waterbodies found in")
-sp_freq_plot_CT <- sp_freq_plot_CT + geom_text(aes(y=frequency+1,label=Label))
-sp_freq_plot_CT <- sp_freq_plot_CT + ggtitle("Connecticut, USA (n=174)")
+sp_freq_plot_CT <- sp_freq_plot_CT + geom_text(aes(y=frequency+1,label=label))
+#sp_freq_plot_CT <- sp_freq_plot_CT + ggtitle("Connecticut, USA (n=174)")
 sp_freq_plot_CT <- sp_freq_plot_CT + theme_classic()
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 90, hjust = 1))
-sp_freq_plot_CT <- sp_freq_plot_CT + scale_x_discrete(labels=seq(1,nrow(dataSPECIES_freq2),1)) # replace species names with #s
+sp_freq_plot_CT <- sp_freq_plot_CT + scale_x_discrete(labels=seq(1,nrow(dataSPECIES_freq3),1)) # replace species names with #s
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.x = element_text(size=18))
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.y = element_text(size=18))
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(plot.title = element_text(size=18))
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.y = element_text(size=14))
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(size=10))
-sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 0, hjust = 1))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 270, hjust = 0))
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.title = element_text(size=16, face="bold"))
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.text = element_text(size = 12))
 sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.position=c(.95, .25))
@@ -262,6 +247,29 @@ sp_freq_plot_CT
 ggsave("sp_freq_plot_CT - with_func_group_labels - B&W.jpg",sp_freq_plot_CT,height=8,width=11)
 
 
+sp_freq_plot_CT <- ggplot(dataSPECIES_freq3,aes(x=reorder(species, -frequency),y=frequency,fill=group))
+sp_freq_plot_CT <- sp_freq_plot_CT + geom_bar(aes(fill=group),stat="identity",colour="black")
+################################################################ floating, submerged, emergent, lily
+sp_freq_plot_CT <- sp_freq_plot_CT + scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c"))
+sp_freq_plot_CT <- sp_freq_plot_CT + xlab("Species")
+sp_freq_plot_CT <- sp_freq_plot_CT + ylab("# of waterbodies found in")
+sp_freq_plot_CT <- sp_freq_plot_CT + geom_text(aes(y=frequency+2,label=name,fontface="italic"),angle=45,hjust=0)
+sp_freq_plot_CT <- sp_freq_plot_CT + theme_classic()
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+sp_freq_plot_CT <- sp_freq_plot_CT + scale_x_discrete(labels=NULL) # replace species names with #s
+sp_freq_plot_CT <- sp_freq_plot_CT + scale_y_continuous(expand=c(0,0))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.x = element_text(size=18))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.title.y = element_text(size=18))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(plot.title = element_text(size=18))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.y = element_text(size=14))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(size=8))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(axis.text.x = element_text(angle = 270, hjust = 0))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.title = element_text(size=16, face="bold"))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.text = element_text(size = 12))
+sp_freq_plot_CT <- sp_freq_plot_CT + theme(legend.position=c(0.85, 0.75))
+sp_freq_plot_CT
+
+ggsave("sp_freq_plot_CT - with_func_group_labels - colour_v2.jpg",sp_freq_plot_CT,height=6,width=12)
 
 ############################
 # Table of FP compositions # 
@@ -304,7 +312,7 @@ dataLEMNA <- data[c("lemna_minor",
                    "depth_max_m","nonFP_species_richness",
                    "TOTP_avg","PH_avg","COND_avg","ALK_avg","secchi_avg",
                    "waterbodies_1km","waterbodies_5km","waterbodies_10km","dist_waterfowl",
-                   "nearest_LM","nearest_SP","nearest_W")]
+                   "nearest_LM","nearest_SP","nearest_W","nearest_any_FP")]
 
 for(i in names(dataLEMNA[,2:ncol(dataLEMNA)])){
   plots <- ggplot(data,aes_string(x="lemna_minor",y=i)) + geom_point(position=position_jitter(w=0.1,h=0))  
@@ -324,7 +332,7 @@ dataSPIRO <- data[c("spirodela_polyrhiza",
                     "depth_max_m","nonFP_species_richness",
                     "TOTP_avg","PH_avg","COND_avg","ALK_avg","secchi_avg",
                     "waterbodies_1km","waterbodies_5km","waterbodies_10km","dist_waterfowl",
-                    "nearest_LM","nearest_SP","nearest_W")]
+                    "nearest_LM","nearest_SP","nearest_W","nearest_any_FP")]
 
 for(i in names(dataSPIRO[,2:ncol(dataSPIRO)])){
   plots <- ggplot(data,aes_string(x="spirodela_polyrhiza",y=i)) + geom_point(position=position_jitter(w=0.1,h=0))  
@@ -345,7 +353,7 @@ dataWOLFFIA <- data[c("wolffia_sp",
                     "depth_max_m","nonFP_species_richness",
                     "TOTP_avg","PH_avg","COND_avg","ALK_avg","secchi_avg",
                     "waterbodies_1km","waterbodies_5km","waterbodies_10km","dist_waterfowl",
-                    "nearest_LM","nearest_SP","nearest_W")]
+                    "nearest_LM","nearest_SP","nearest_W","nearest_any_FP")]
 
 for(i in names(dataWOLFFIA[,2:ncol(dataWOLFFIA)])){
   plots <- ggplot(data,aes_string(x="wolffia_sp",y=i)) + geom_point(position=position_jitter(w=0.1,h=0))  
@@ -354,6 +362,28 @@ for(i in names(dataWOLFFIA[,2:ncol(dataWOLFFIA)])){
   plots <- plots + scale_x_continuous(breaks=0:1,labels=c("Absent","Present"))
   ggsave(plots,filename=paste("Wolffia_and_",i,".jpg",sep=""))
 }
+
+
+##################################
+# FP presence on x-axis          #
+# Continuous variables on y-axis #
+##################################
+# subset the data frame "data" for each species 
+dataFPpres <- data[c("FP_presence",
+                      "surfacearea_ha","shoreline_development",
+                      "depth_max_m","nonFP_species_richness",
+                      "TOTP_avg","PH_avg","COND_avg","ALK_avg","secchi_avg",
+                      "waterbodies_1km","waterbodies_5km","waterbodies_10km","dist_waterfowl",
+                      "nearest_LM","nearest_SP","nearest_W","nearest_any_FP")]
+
+for(i in names(dataFPpres[,2:ncol(dataFPpres)])){
+  plots <- ggplot(data,aes_string(x="FP_presence",y=i)) + geom_point(position=position_jitter(w=0.1,h=0))  
+  plots <- plots + xlab("FP presence")
+  plots <- plots + theme_bw(base_size=18)
+  plots <- plots + scale_x_continuous(breaks=0:1,labels=c("Absent","Present"))
+  ggsave(plots,filename=paste("FP_presence_and_",i,".jpg",sep=""))
+}
+
 
 ##################################
 # FP richness on x-axis          #
@@ -365,7 +395,7 @@ dataFPrich <- data[c("FP_species_richness",
                       "depth_max_m","nonFP_species_richness",
                       "TOTP_avg","PH_avg","COND_avg","ALK_avg","secchi_avg",
                       "waterbodies_1km","waterbodies_5km","waterbodies_10km","dist_waterfowl",
-                      "nearest_LM","nearest_SP","nearest_W")]
+                      "nearest_LM","nearest_SP","nearest_W","nearest_any_FP")]
 
 for(i in names(dataFPrich[,2:ncol(dataFPrich)])){
   plots <- ggplot(data,aes_string(x="FP_species_richness",y=i)) + geom_point(position=position_jitter(w=0.1,h=0))  
@@ -374,6 +404,13 @@ for(i in names(dataFPrich[,2:ncol(dataFPrich)])){
   plots <- plots + scale_x_continuous(breaks=0:4)
   ggsave(plots,filename=paste("FPrichness_and_",i,".jpg",sep=""))
 }
+
+
+
+
+
+# This analysis below was done August 2014
+# But not repeated in December 2014
 
 ############################ 
 # watersheds on the x-axis # 

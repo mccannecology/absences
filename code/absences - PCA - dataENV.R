@@ -5,18 +5,14 @@
 
 colnames(dataENV)
 
+# get rid of variables that you don't need 
 dataPCA <- dataENV
-dataPCA$waterbodies_1km <- NULL 
-dataPCA$waterbodies_5km <- NULL 
-dataPCA$waterbodies_10km <- NULL 
-dataPCA$nearest_LM <- NULL 
-dataPCA$nearest_SP <- NULL 
-dataPCA$nearest_W <- NULL 
-dataPCA$nearest_LMSPW <- NULL 
 
 colnames(dataPCA)
 
-# Perform PCA after scaling the data. 
+#######################################
+# Perform PCA after scaling the data. #
+#######################################
 # Returns a list with class "prcomp" w/ five components: 
 # (1) standard deviations (sdev) of the principal components, 
 # (2) the matrix of eigenvectors (rotation), 
@@ -46,6 +42,74 @@ biplot(pca)
 dev.off()
 
 
+#############################
+# PCA - with center & scale #
+#############################
+pca_01 <- prcomp(dataPCA, center=T, scale=T) 
+summary(pca_01)
+pca_01[2]
+plot(pca_01)
+biplot(pca_01)
+
+#####################################
+# PCA - with log(x+1) normalization #
+#####################################
+pca_02 <- prcomp(log(dataPCA+1), center=F, scale=F) 
+summary(pca_02)
+pca_02[2]
+plot(pca_02)
+biplot(pca_02)
+
+#####################################
+# PCA - with log(x+1) normalization #
+# center & scale                    #
+#####################################
+pca_03 <- prcomp(log(dataPCA+1), center=T, scale=T) 
+summary(pca_03)
+pca_03[2]
+plot(pca_03)
+biplot(pca_03)
+
+#####################################
+# PCA - with log(x+1) normalization #
+# center                            #
+#####################################
+pca_04 <- prcomp(log(dataPCA+1), center=T, scale=F) 
+summary(pca_04)
+pca_04[2]
+plot(pca_04)
+biplot(pca_04)
+
+#####################################
+# PCA - with log(x+1) normalization #
+# scale                             #
+#####################################
+pca_05 <- prcomp(log(dataPCA+1), center=F,scale=T) 
+summary(pca_05)
+pca_05[2]
+plot(pca_05)
+biplot(pca_05)
+
+
+
+################################################
+# PCA - with log(x+1) normalization & centered # This looks like it is the same as not specifiying centering 
+################################################ 
+pca_logx1_center <- prcomp(log(dataPCA+1), scale=T, center=T) 
+summary(pca_logx1_center)
+pca_logx1_center[2]
+plot(pca_logx1_center)
+biplot(pca_logx1_center)
+
+###############################
+# Alternative way to do a PCA #
+###############################
+pca <- princomp(dataPCA, scores=T) 
+summary(pca)
+print(pca)
+pca$scores[,1] # scores for the first principal component
+biplot(pca) # biplot 
+plot(pca) # scree plot
 
 ###############################
 # Re-do and include lat & lon #

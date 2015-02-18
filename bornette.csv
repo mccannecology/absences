@@ -1,0 +1,84 @@
+Group,Species,Frequency,Label,FP?,group
+Not strictly aquatic,Alisma plantago-aquatica,6,,notFP,emergent
+Not strictly aquatic,Alnus glutinosa,2,,notFP,emergent
+Not strictly aquatic,Alopecurus aequaliz,6,,notFP,emergent
+Aquatic,Berula erecta,7,,notFP,emergent
+Not strictly aquatic,Bidens tripartita,3,,notFP,emergent
+Aquatic,Callitriche platycarpa,14,,notFP,submerged
+Not strictly aquatic,Calystegia sepium,6,,notFP,emergent
+Not strictly aquatic,Carex acutiformis,8,,notFP,emergent
+Not strictly aquatic,Carex elata,10,,notFP,emergent
+Not strictly aquatic,Carex pseudocyperus,4,,notFP,emergent
+Aquatic,Ceratophyllum demersum,14,,notFP,submerged
+Aquatic,Chara major,1,,notFP,submerged
+Aquatic,Chara vulgaris,5,,notFP,submerged
+Not strictly aquatic,Cladium mariscus,5,,notFP,emergent
+Not strictly aquatic,Eleocharis acicularis,6,,notFP,emergent
+Not strictly aquatic,Eleocharis palustris,4,,notFP,emergent
+Aquatic,Elodea canadensis Michaux,14,,notFP,submerged
+Not strictly aquatic,Epilobium sp.,1,,notFP,emergent
+Aquatic,Fontinalis antipyretica,2,,notFP,submerged
+Not strictly aquatic,Frangula alnus,1,,notFP,emergent
+Not strictly aquatic,Galium palustre,3,,notFP,emergent
+Aquatic,Glyceria fluitans,4,,notFP,emergent
+Aquatic,Groenlandia densa,5,,notFP,submerged
+Aquatic,Hippuris vulgaris,5,,notFP,emergent
+Aquatic,Hottonia palustris,7,,notFP,submerged
+Not strictly aquatic,Humulus lupulus,1,,notFP,emergent
+Aquatic,Hydrocharis morsus-ranae,2,,notFP,lily
+Not strictly aquatic,Iris pseudacorus,6,,notFP,emergent
+Not strictly aquatic,Juncus articulatus,5,,notFP,emergent
+Not strictly aquatic,Juncus effusus,1,,notFP,emergent
+Not strictly aquatic,Juncus subnodulosus,2,,notFP,emergent
+Aquatic,Lemna minor,6,*,FP,floating
+Aquatic,Lemna trisulca,4,*,FP,floating
+Aquatic,Luronium natans,2,,notFP,lily
+Not strictly aquatic,Lycopus europaeus,1,,notFP,emergent
+Not strictly aquatic,Lysimachia nummularia,2,,notFP,emergent
+Not strictly aquatic,Lysimachia vulgaris,3,,notFP,emergent
+Not strictly aquatic,Lythrum salicaria,5,,notFP,emergent
+Not strictly aquatic,Mentha aquatica,5,,notFP,emergent
+Aquatic,Menyanthes trifoliata,2,,notFP,emergent
+Not strictly aquatic,Myosotis scorpio?des,7,,notFP,emergent
+Aquatic,Myriophyllum spicatum,13,,notFP,submerged
+Aquatic,Myriophyllum verticillatum,13,,notFP,submerged
+Aquatic,Najas marina,5,,notFP,submerged
+Not strictly aquatic,Nasturtium officinale,7,,notFP,submerged
+Aquatic,Nitella confervacea,3,,notFP,submerged
+Aquatic,Nuphar lutea,9,,notFP,lily
+Aquatic,Nymphea alba,5,,notFP,lily
+Not strictly aquatic,Phalaris arundinacea,14,,notFP,emergent
+Not strictly aquatic,Phragmites australis,17,,notFP,emergent
+Not strictly aquatic,Polygonum hydropiper,10,,notFP,emergent
+Aquatic,Potamogeton coloratus,2,,notFP,submerged
+Aquatic,Potamogeton compressus,4,,notFP,submerged
+Aquatic,Potamogeton crispus,3,,notFP,submerged
+Aquatic,Potamogeton friesii,1,,notFP,submerged
+Aquatic,Potamogeton lucens,6,,notFP,submerged
+Aquatic,Potamogeton natans,9,,notFP,submerged
+Aquatic,Potamogeton nodosus,2,,notFP,submerged
+Aquatic,Potamogeton pectinatus,5,,notFP,submerged
+Aquatic,Potamogeton perfoliatus,1,,notFP,submerged
+Aquatic,Potamogeton pusillus,15,,notFP,submerged
+Aquatic,Potamogeton trichoides,4,,notFP,submerged
+Aquatic,Ranunculus circinatus,6,,notFP,emergent
+Not strictly aquatic,Ranunculus lingua,1,,notFP,emergent
+Aquatic,Ranunculus trichophyllus,6,,notFP,emergent
+Aquatic,Riccia fluitans,2,*,FP,floating
+Not strictly aquatic,Rorippa amphibia,7,,notFP,emergent
+Not strictly aquatic,Rubus fructicosus,1,,notFP,emergent
+Aquatic,Sagittaria sagittifolia,1,,notFP,emergent
+Not strictly aquatic,Salix cinerea,1,,notFP,emergent
+Not strictly aquatic,Scirpus lacustris,6,,notFP,emergent
+Not strictly aquatic,Scrophularia auriculata,2,,notFP,emergent
+Not strictly aquatic,Scutellaria galericulata,2,,notFP,emergent
+Not strictly aquatic,Senecio aquaticus,1,,notFP,emergent
+Not strictly aquatic,Solanum dulcamara,1,,notFP,emergent
+Aquatic,Sparganium emersum,10,,notFP,emergent
+Not strictly aquatic,Sparganium erectum,2,,notFP,emergent
+Not strictly aquatic,Thelypteris palustris,2,,notFP,emergent
+Not strictly aquatic,Typha latifolia,2,,notFP,emergent
+Not strictly aquatic,Urtica dioica,2,,notFP,emergent
+Aquatic,Utricularia minor,2,,notFP,submerged
+Aquatic,Utricularia vulgaris,4,,notFP,submerged
+Not strictly aquatic,Veronica beccabunga,3,,notFP,emergent

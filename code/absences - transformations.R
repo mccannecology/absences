@@ -11,9 +11,9 @@ colnames(data)
 # and variables range from 0 to 1 
 
 # add latitude and longitude to the data frame (make a new data frame)
-dataPREDICTORS <- cbind(dataENV,dataSPACE[,1:2],data$nonFP_species_richness)
+dataPREDICTORS <- cbind(dataENV,dataSPACE[,1:2])
 head(dataPREDICTORS)
-colnames(dataPREDICTORS)[20] <- "nonFP_species_richness"
+
 
 ####################################
 # check skewness for each variable # 
@@ -52,14 +52,13 @@ library(car)
 for (i in 1:ncol(dataPREDICTORS)){
   variable <- colnames(dataPREDICTORS)[i]
     
-  if (variable == "waterbodies_1km" | variable == "boatlaunch" | variable == "dist_waterfowl"){
+  if (variable == "nonFP_species_richness" | variable == "waterbodies_1km" | variable == "boatlaunch" | variable == "longitude"){
     print(paste("*** Skipped ",variable," values <=0",sep=""))
   }
   else {
     power <- powerTransform(dataPREDICTORS[,i])$lambda
     temp <- skewness(((dataPREDICTORS[,i])^power - 1) / power)
-    #print(c(variable,temp)) 
-    print(power)
+    print(c(variable,temp,power)) 
   }
 }
 
@@ -68,25 +67,25 @@ for (i in 1:ncol(dataPREDICTORS)){
 ####################################
 # add each variable with its best transformation (skewness closest to 0)
 dataENV_trans <- cbind(log(dataPREDICTORS$surfacearea_ha + 1),
-                       ((dataPREDICTORS$shoreline_development^-0.8704562 - 1) / -0.8704562),
-                       ((dataPREDICTORS$depth_max_m^-0.01880383 - 1) / -0.01880383),
-                       ((dataPREDICTORS$TOTP_avg^-0.01574937 - 1) / -0.01574937),
-                       ((dataPREDICTORS$PH_avg^-0.6989874 - 1) / -0.6989874),
-                       ((dataPREDICTORS$COND_avg^0.1692474 - 1) / 0.1692474),
-                       ((dataPREDICTORS$ALK_avg^0.1444776 - 1) / 0.1444776),
-                       ((dataPREDICTORS$secchi_avg^0.1559967 - 1) / 0.1559967),
+                       ((dataPREDICTORS$shoreline_development^-0.848911695 - 1) / -0.848911695),
+                       ((dataPREDICTORS$depth_max_m^-0.025437664 - 1) / -0.025437664),
+                       ((dataPREDICTORS$TOTP_avg^-0.015432306 - 1) / -0.015432306),
+                       ((dataPREDICTORS$PH_avg^-0.691845256 - 1) / -0.691845256),
+                       ((dataPREDICTORS$COND_avg^0.163450962 - 1) / 0.163450962),
+                       ((dataPREDICTORS$ALK_avg^0.141677487 - 1) / 0.141677487),
+                       ((dataPREDICTORS$secchi_avg^0.154358069 - 1) / 0.154358069),
                        log(dataPREDICTORS$waterbodies_1km + 1),
-                       ((dataPREDICTORS$waterbodies_5km^0.1439263 - 1) / 0.1439263),
-                       ((dataPREDICTORS$waterbodies_10km^0.2475298 - 1) / 0.2475298),
-                       log(dataPREDICTORS$dist_waterfowl + 1),
-                       ((dataPREDICTORS$nearest_LM^0.3773737 - 1) / 0.3773737),
-                       ((dataPREDICTORS$nearest_SP^0.6108591 - 1) / 0.6108591),
-                       ((dataPREDICTORS$nearest_W^0.5045787 - 1) / 0.5045787),
-                       ((dataPREDICTORS$nearest_LMSPW^0.4613516 - 1) / 0.4613516),
-                       ((dataPREDICTORS$latitude^-7.304205 - 1) / -7.304205),
-                       ((dataPREDICTORS$longitude^4.331463 - 1) / 4.331463), 
+                       ((dataPREDICTORS$waterbodies_5km^0.208044927 - 1) / 0.208044927),
+                       ((dataPREDICTORS$waterbodies_10km^0.209346202 - 1) / 0.209346202),
+                       ((dataPREDICTORS$dist_waterfowl^0.261806542 - 1) / 0.261806542),
+                       ((dataPREDICTORS$nearest_LM^0.344699109 - 1) / 0.344699109),
+                       ((dataPREDICTORS$nearest_SP^0.614010651 - 1) / 0.614010651),
+                       ((dataPREDICTORS$nearest_W^0.517930073977737 - 1) / 0.517930073977737),
+                       ((dataPREDICTORS$nearest_any_FP^0.455384538 - 1) / 0.455384538),
+                       ((dataPREDICTORS$latitude^-7.654166014 - 1) / -7.654166014),
+                       dataPREDICTORS$longitude, 
                        dataPREDICTORS$boatlaunch,
-                       (((dataPREDICTORS$nonFP_species_richness+1)^0.3509515 - 1) / 0.3509515)
+                       log(dataPREDICTORS$nonFP_species_richness+1)
 )
 
 
@@ -96,7 +95,7 @@ dataENV_trans <- cbind(log(dataPREDICTORS$surfacearea_ha + 1),
 
 library(scales)
 
-for (i in 1:(ncol(dataENV_trans)-1)){
+for (i in 1:(ncol(dataENV_trans))){
   #print(i)
   dataENV_trans[,i] <- rescale(dataENV_trans[,i])
 }
@@ -116,7 +115,7 @@ colnames(dataENV_trans) <- c("surfacearea_ha",
                              "nearest_LM",
                              "nearest_SP",
                              "nearest_W",
-                             "nearest_LMSPW",
+                             "nearest_any_FP",
                              "latitude",
                              "longitude",
                              "boatlaunch",
@@ -128,12 +127,11 @@ dataENV_trans <- as.data.frame(dataENV_trans)
 ######################################
 # Remove highly correlated variables #
 ######################################
-dataENV_trans["ALK_avg"] <- NULL 
 dataENV_trans["waterbodies_5km"] <- NULL 
-# dataENV_trans["nearest_LMSPW"] <- NULL 
-dataENV_trans["depth_max_m"] <- NULL 
   
 colnames(dataENV_trans)
+
+write.csv(dataENV_trans,"dataENV_trans.csv",row.names=FALSE)
 
 #############################
 # clean up when you're done #

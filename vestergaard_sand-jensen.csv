@@ -1,0 +1,104 @@
+Group,Species,Frequency,Percent,Label,FP?,group
+Isoetid,Eleocharis acicularis,12,14.6,,notFP,emergent
+Elodeid,Helosciadium inundatum ,12,14.6,,notFP,emergent
+Elodeid,Hippuris vulgaris,8,9.8,,notFP,emergent
+Isoetid,Isoetes echinospora,9,11,,notFP,emergent
+Isoetid,Juncus bulbosus ,31,37.8,,notFP,emergent
+Isoetid,Litorella dortmanna,23,28,,notFP,emergent
+Isoetid,Littorella uniflora,31,37.8,,notFP,emergent
+Isoetid,Lobelia lacustris ,13,15.9,,notFP,emergent
+Isoetid,Pilularia globulifera,4,4.9,,notFP,emergent
+Isoetid,Ranunculus flammula,11,13.4,,notFP,emergent
+Isoetid,Ranunculus reptans,5,6.1,,notFP,emergent
+Elodeid,Sagittaria sagittifolia ,2,2.4,,notFP,emergent
+Elodeid,Sparganium angustifolium,11,13.4,,notFP,emergent
+Elodeid,Sparganium emersum,22,26.8,,notFP,emergent
+Elodeid,Sparganium minimum ,8,9.8,,notFP,emergent
+Bryophyte,Sphagnum sp.,7,8.5,,notFP,emergent
+Bryophyte,Sphagnum subsecundum,12,14.6,,notFP,emergent
+Isoetid,Subularia aquatica,1,1.2,,notFP,emergent
+Isoetid,Scirpus parvulus,3,3.7,,notFP,emergent
+Elodeid,Lemna trisulca ,15,18.3,*,FP,floating
+Elodeid,Luronium natans,1,1.2,,notFP,lily
+Elodeid,Batrachium aquatile,8,9.8,,notFP,submerged
+Elodeid,Batrachium baudotti,7,8.5,,notFP,submerged
+Elodeid,Batrachium circinatum,31,37.8,,notFP,submerged
+Elodeid,Batrachium hederaceum,3,3.7,,notFP,submerged
+Elodeid,Batrachium peltatum ,7,8.5,,notFP,submerged
+Elodeid,Batrachium sp.,3,3.7,,notFP,submerged
+Elodeid,Batrachium trichophyllum,4,4.9,,notFP,submerged
+Elodeid,Callitriche hamulata,11,13.4,,notFP,submerged
+Elodeid,Callitriche hermaphroditica ,5,6.1,,notFP,submerged
+Elodeid,Callitriche pendunculata ,1,1.2,,notFP,submerged
+Elodeid,Callitriche platycarpa,15,18.3,,notFP,submerged
+Elodeid,Callitriche sp.,1,1.2,,notFP,submerged
+Elodeid,Callitriche stagnalis ,4,4.9,,notFP,submerged
+Elodeid,Ceratophyllum dermersum,22,26.8,,notFP,submerged
+Elodeid,Ceratophyllum submersum,3,3.7,,notFP,submerged
+Characean,Chara aspera,11,13.4,,notFP,submerged
+Characean,Chara canescens,3,3.7,,notFP,submerged
+Characean,Chara connivens ,1,1.2,,notFP,submerged
+Characean,Chara contraria ,2,2.4,,notFP,submerged
+Characean,Chara denudata,1,1.2,,notFP,submerged
+Characean,Chara fragilis,1,1.2,,notFP,submerged
+Characean,Chara globularis Thuill.,17,20.7,,notFP,submerged
+Characean,Chara globularis Thuillier,8,9.8,,notFP,submerged
+Characean,Chara globularis v. virgata,2,2.4,,notFP,submerged
+Characean,Chara hispida,2,2.4,,notFP,submerged
+Characean,Chara rudis,1,1.2,,notFP,submerged
+Characean,Chara sp.,12,14.6,,notFP,submerged
+Characean,Chara tomentosa,3,3.7,,notFP,submerged
+Characean,Chara vulgaris v. denundata ,1,1.2,,notFP,submerged
+Characean,Chara vulgaris v. longibracteata,2,2.4,,notFP,submerged
+Characean,Chara vulgaris v. papillata,4,4.9,,notFP,submerged
+Characean,Chara vulgarus ,3,3.7,,notFP,submerged
+Characean,Chara vulgarus v. contraria,3,3.7,,notFP,submerged
+Bryophyte,Chiloscyphus fragilis ,2,2.4,,notFP,submerged
+Bryophyte,Depanocladus fluitans,2,2.4,,notFP,submerged
+Bryophyte,Drepanocladus exannulatus,2,2.4,,notFP,submerged
+Bryophyte,Drepanocladus sp.,11,13.4,,notFP,submerged
+Isoetid,Elatine hexanrda,7,8.5,,notFP,submerged
+Isoetid,Elatine hydropiber,3,3.7,,notFP,submerged
+Elodeid,Elodea canadensis ,32,39,,notFP,submerged
+Bryophyte,Fontinalis antipyretica,23,28,,notFP,submerged
+Elodeid,Hottonia palustris ,9,11,,notFP,submerged
+Characean,Lamprothamnium papulosum,1,1.2,,notFP,submerged
+Elodeid,Myriophyllum alterniflorum,14,17.1,,notFP,submerged
+Elodeid,Myriophyllum spicatum,31,37.8,,notFP,submerged
+Elodeid,Myriophyllum verticillatum,5,6.1,,notFP,submerged
+Elodeid,Najas flexilis,2,2.4,,notFP,submerged
+Elodeid,Najas marina,1,1.2,,notFP,submerged
+Characean,Nitella flexilis,15,18.3,,notFP,submerged
+Characean,Nitella mucronata,1,1.2,,notFP,submerged
+Characean,Nitella sp.,4,4.9,,notFP,submerged
+Characean,Nitella tenuissimia,2,2.4,,notFP,submerged
+Characean,Nitella translucens,2,2.4,,notFP,submerged
+Characean,Nitellopsis obtusa,4,4.9,,notFP,submerged
+Elodeid,Potamogeton acutifolius ,2,2.4,,notFP,submerged
+Elodeid,Potamogeton alpinus,5,6.1,,notFP,submerged
+Elodeid,Potamogeton berchtoldii,28,34.1,,notFP,submerged
+Elodeid,Potamogeton crispus,31,37.8,,notFP,submerged
+Elodeid,Potamogeton filiformis ,8,9.8,,notFP,submerged
+Elodeid,Potamogeton friesii,7,8.5,,notFP,submerged
+Elodeid,Potamogeton gramineus ,11,13.4,,notFP,submerged
+Elodeid,Potamogeton lucens,9,11,,notFP,submerged
+Elodeid,Potamogeton obtusifolius ,31,37.8,,notFP,submerged
+Elodeid,Potamogeton pectinatus,41,50,,notFP,submerged
+Elodeid,Potamogeton perfoliatus,32,39,,notFP,submerged
+Elodeid,Potamogeton praelongus ,8,9.8,,notFP,submerged
+Elodeid,Potamogeton pusillus,18,22,,notFP,submerged
+Elodeid,Potamogeton x nitens,3,3.7,,notFP,submerged
+Elodeid,Potamogeton x zizii,1,1.2,,notFP,submerged
+Elodeid,Potamogeton zosterifolius ,5,6.1,,notFP,submerged
+Bryophyte,Riccardia sinuata,3,3.7,,notFP,submerged
+Elodeid,Ruppia aloides,1,1.2,,notFP,submerged
+Elodeid,Scirpus fluitains ,2,2.4,,notFP,submerged
+Characean,Tolypella glomerata ,2,2.4,,notFP,submerged
+Characean,Tolypella nidifica ,3,3.7,,notFP,submerged
+Elodeid,Utricularia australis ,6,7.3,,notFP,submerged
+Elodeid,Utricularia minor,2,2.4,,notFP,submerged
+Elodeid,Utricularia ochroleuca,1,1.2,,notFP,submerged
+Elodeid,Utricularia vulgaris ,2,2.4,,notFP,submerged
+Elodeid,Zannichellia major,4,4.9,,notFP,submerged
+Elodeid,Zannichellia pedunculata,7,8.5,,notFP,submerged
+Elodeid,Zannichellia repens ,13,15.9,,notFP,submerged

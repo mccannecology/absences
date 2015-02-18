@@ -14,7 +14,7 @@ colnames(dataENV_trans)
 temp_data_LM <- dataENV_trans
 temp_data_LM$nearest_SP <- NULL  # remove nearest SP
 temp_data_LM$nearest_W <- NULL   # remove nearest W
-temp_data_LM$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
+temp_data_LM$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
 
 # make the formula 
 formula_LM <- as.formula(paste("LM ~ ", paste(colnames(temp_data_LM), collapse= "+")))
@@ -39,7 +39,7 @@ colnames(dataENV_trans)
 temp_data_SP <- dataENV_trans
 temp_data_SP$nearest_LM <- NULL  # remove nearest LM
 temp_data_SP$nearest_W <- NULL   # remove nearest W
-temp_data_SP$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
+temp_data_SP$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
 
 # make formula 
 formula_SP <- as.formula(paste("SP ~ ", paste(colnames(temp_data_SP), collapse= "+")))
@@ -64,7 +64,7 @@ colnames(dataENV_trans)
 temp_data_W <- dataENV_trans
 temp_data_W$nearest_LM <- NULL  # remove nearest LM
 temp_data_W$nearest_SP <- NULL   # remove nearest SP
-temp_data_W$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
+temp_data_W$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
 
 # make formula 
 formula_W <- as.formula(paste("W ~ ", paste(colnames(temp_data_W), collapse= "+")))
@@ -87,12 +87,12 @@ summary(glm_W_trans_null)
 
 colnames(dataENV_trans)
 temp_data_FPpres <- dataENV_trans
-temp_data_FPpres$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
+temp_data_FPpres$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
 colnames(temp_data_FPpres)
 
 # make formula 
 formula_FPpres <- as.formula(paste("FPpres ~ ", paste(colnames(temp_data_FPpres), collapse= "+")))
-temp_data_FPpres$FPpres <- as.numeric(data$FP_presence)-1 # add FP ppresence 
+temp_data_FPpres$FPpres <- as.numeric(data$FP_presence) # add FP ppresence 
 formula_FPpres # view the formula 
 
 # GLM for full model 
@@ -111,7 +111,7 @@ summary(glm_FPpres_trans_null)
 
 colnames(dataENV_trans)
 temp_data_FPrich <- dataENV_trans
-temp_data_FPrich$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
+temp_data_FPrich$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
 colnames(temp_data_FPrich)
 
 # make formula 
@@ -153,22 +153,118 @@ library(MuMIn)
 
 # this may take awhile 
 all_glm_LM_trans <- dredge(glm_LM_trans)
-all_glm_SP_trans <- dredge(glm_SP_trans)
-all_glm_W_trans <- dredge(glm_W_trans)
-all_glm_FPpres_trans <- dredge(glm_FPpres_trans)
-all_glm_FPrich_trans <- dredge(glm_FPrich_trans)
-
-# save to file 
 numb_models <- nrow(all_glm_LM_trans)
 write.csv(all_glm_LM_trans[1:numb_models],file="all_glm_LM_trans_2.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+
+all_glm_SP_trans <- dredge(glm_SP_trans)
 numb_models <- nrow(all_glm_SP_trans)
 write.csv(all_glm_SP_trans[1:numb_models],file="all_glm_SP_trans_2.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+
+all_glm_W_trans <- dredge(glm_W_trans)
 numb_models <- nrow(all_glm_W_trans)
 write.csv(all_glm_W_trans[1:numb_models],file="all_glm_W_trans_2.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+
+all_glm_FPpres_trans <- dredge(glm_FPpres_trans)
 numb_models <- nrow(all_glm_FPpres_trans)
 write.csv(all_glm_FPpres_trans[1:numb_models],file="all_glm_FPpres_trans_2.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+
+all_glm_FPrich_trans <- dredge(glm_FPrich_trans) # do this one later 
+numb_models <- nrow(all_glm_FPrich_trans) # do this one later 
+write.csv(all_glm_FPrich_trans[1:numb_models],file="all_glm_FPrich_trans_2.csv",na="NA")
+
+##################################
+# Running all models in parallel #
+# pdredge()                      #
+##################################
+# create a cluster 
+library(doSNOW)
+clust <- makeCluster(4,"SOCK") 
+clusterExport(clust, "temp_data_LM")
+
+# run the model in parallel
+all_glm_LM_trans <- pdredge(glm_LM_trans, cluster=clust)
+numb_models <- nrow(all_glm_LM_trans)
+write.csv(all_glm_LM_trans[1:numb_models],file="all_glm_LM_trans_2.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+
+# stop the cluster 
+stopCluster(clust)
+
+
+
+
+# create a cluster 
+library(doSNOW)
+clust <- makeCluster(4,"SOCK") 
+clusterExport(clust, "temp_data_SP")
+
+# run the model in parallel
+all_glm_SP_trans <- pdredge(glm_SP_trans, cluster=clust)
+numb_models <- nrow(all_glm_SP_trans)
+write.csv(all_glm_SP_trans[1:numb_models],file="all_glm_SP_trans_2.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+
+# stop the cluster 
+stopCluster(clust)
+
+
+
+# create a cluster 
+library(doSNOW)
+clust <- makeCluster(4,"SOCK") 
+clusterExport(clust, "temp_data_W")
+
+# run the model in parallel
+all_glm_W_trans <- pdredge(glm_W_trans, cluster=clust)
+numb_models <- nrow(all_glm_W_trans)
+write.csv(all_glm_W_trans[1:numb_models],file="all_glm_W_trans_2.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+
+# stop the cluster 
+stopCluster(clust)
+
+
+
+
+# create a cluster 
+library(doSNOW)
+clust <- makeCluster(4,"SOCK") 
+clusterExport(clust, "temp_data_FPpres")
+
+# run the model in parallel
+all_glm_FPpres_trans <- pdredge(glm_FPpres_trans, cluster=clust)
+numb_models <- nrow(all_glm_FPpres_trans)
+write.csv(all_glm_FPpres_trans[1:numb_models],file="all_glm_FPpres_trans_2.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+
+# stop the cluster 
+stopCluster(clust)
+
+
+
+
+# create a cluster 
+library(doSNOW)
+clust <- makeCluster(4,"SOCK") 
+clusterExport(clust, "temp_data_FPrich")
+
+# run the model in parallel
+all_glm_FPrich_trans <- pdredge(all_glm_FPrich_trans, cluster=clust)
 numb_models <- nrow(all_glm_FPrich_trans)
 write.csv(all_glm_FPrich_trans[1:numb_models],file="all_glm_FPrich_trans_2.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+
+# stop the cluster 
+stopCluster(clust)
+
+
+
+
+
 
 ##############
 # Best model #  
@@ -184,23 +280,26 @@ best_glm_FPrich_trans <- get.models(all_glm_FPrich_trans, 1)[1]
 
 # but we actually want this to be the fitted model 
 # I deleted a "+ 1" from the end of each of these formulas - not sure why it was there (MJM 8/27/2014) 
-best_glm_LM_trans <- glm(LM ~ COND_avg + dist_waterfowl + latitude + nearest_LM + secchi_avg + TOTP_avg + waterbodies_1km, 
+best_glm_LM_trans <- glm(LM ~ COND_avg + depth_max_m + dist_waterfowl + latitude + TOTP_avg, 
                          family = binomial, 
                          data = temp_data_LM, 
                          na.action = "na.fail")
 
-best_glm_SP_trans <- glm(SP ~ COND_avg, family = binomial, data = temp_data_SP, 
+best_glm_SP_trans <- glm(SP ~ ALK_avg + secchi_avg, 
+                         family = binomial, 
+                         data = temp_data_SP, 
                          na.action = "na.fail")
 
-best_glm_W_trans <- glm(W ~ boatlaunch + COND_avg + secchi_avg, family = binomial, 
+best_glm_W_trans <- glm(W ~ boatlaunch + COND_avg + depth_max_m + latitude + waterbodies_10km, 
+                        family = binomial, 
                         data = temp_data_W, na.action = "na.fail")
 
-best_glm_FPpres_trans <- glm(FPpres ~ COND_avg + latitude + nearest_LM + nearest_SP + secchi_avg + TOTP_avg,
+best_glm_FPpres_trans <- glm(FPpres ~ ALK_avg + secchi_avg + TOTP_avg,
                              family = binomial, 
                              data = temp_data_FPpres, 
                              na.action = "na.fail")
 
-best_glm_FPrich_trans <- glm(FPrich ~ COND_avg + dist_waterfowl + latitude + nearest_LM + secchi_avg + TOTP_avg + waterbodies_1km,
+best_glm_FPrich_trans <- glm(FPrich ~ ALK_avg + boatlaunch + COND_avg + depth_max_m + dist_waterfowl + latitude + nearest_LM + TOTP_avg,
                              family = poisson, 
                              data = temp_data_FPrich, 
                              na.action = "na.fail")

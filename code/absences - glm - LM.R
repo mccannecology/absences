@@ -18,6 +18,40 @@ head(data)
 # number of water bodies with LM present 
 sum(data$lemna_minor)
 
+
+######################
+# Full model         #
+# no transformations #
+######################
+formula <- lemna_minor ~ latitude + longitude + 
+  surfacearea_ha + shoreline_development +
+  nonFP_species_richness + TOTP_avg + 
+  PH_avg + COND_avg + secchi_avg + 
+  waterbodies_1km + waterbodies_10km + 
+  boatlaunch + dist_waterfowl + nearest_LM 
+
+glm_LM_full <- glm(formula, family=binomial, data=data, na.action = "na.fail")
+
+summary(glm_LM_full)
+
+##############
+# Sub-models #
+##############
+# nearest_LM is (-)
+formula <- lemna_minor ~ nearest_LM 
+glm_LM_sub01 <- glm(formula, family=binomial, data=data, na.action = "na.fail")
+summary(glm_LM_sub01)
+
+# nearest_LM is (-)
+formula <- lemna_minor ~ nearest_LM + COND_avg
+glm_LM_sub02 <- glm(formula, family=binomial, data=data, na.action = "na.fail")
+summary(glm_LM_sub02)
+
+# nearest_LM is (+)
+formula <- lemna_minor ~ nearest_LM + COND_avg + secchi_avg
+glm_LM_sub03 <- glm(formula, family=binomial, data=data, na.action = "na.fail")
+summary(glm_LM_sub03)
+
 ######################################
 # Define a full model                #
 # Excluded:                          #

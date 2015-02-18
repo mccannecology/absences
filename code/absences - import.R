@@ -10,7 +10,7 @@
 # NOTE: SAVING EXCEL FILES FOR IMPORTING 
 # save main database ("survey analysis all xx-xx-20xx.xls") as "allsurveys+combined.csv" 
 # open up allsurveys+combined.csv
-# CTRL + F and replace all "-" with ""
+# CTRL + F and replace all "-" with "" (EXCEPT FOR IN THE LONGITUDE!)
 ###############################################################################################
 
 data <- read.csv("allsurveys+combined.csv") # import data matrix 
@@ -80,6 +80,8 @@ data<-subset(data, !(waterbody == "Dayton Pond" & year == "comb"))
 data<-subset(data, !(waterbody == "Lucky Pond (Galko Farm Pond)" & year == "comb"))
 # Mackenzie Reservoir - 2 - small
 data<-subset(data, !(waterbody == "Mackenzie Reservoir - 2 - small" & year == "comb")) 
+# Mackenzie Reservoir - 2 - small
+data<-subset(data, !(waterbody == "Mackenzie Reservoir  2  small" & year == "comb")) 
 # Mill Pond Park
 data<-subset(data, !(waterbody == "Mill Pond Park" & year == "comb"))
 # Mills Pond, Lower
@@ -95,7 +97,7 @@ data<-subset(data, !(waterbody == "Young's Pond" & year == "comb"))
 
 # Mackenzie Reservoir - 1 - large - does not contain an CAES chemistry data - can estimate with my survey
 # I will just remove this waterbody for now 
-data<-subset(data, !(waterbody == "Mackenzie Reservoir - 1 - large"))
+data<-subset(data, !(waterbody == "Mackenzie Reservoir  1  large"))
 
 ###############################################
 # 21 water bodies with 2 CAES surveys         #
@@ -148,6 +150,11 @@ data<-subset(data, !(waterbody == "West Lake" & year != "comb"))
 # West Side Pond    
 data<-subset(data, !(waterbody == "West Side Pond" & year != "comb"))
 
+########################################
+# Remove functional group / plant info #
+########################################
+data <- data[,-(179:187)]
+
 #########################################
 # Remove extra variables
 # i.e., sample size # 
@@ -171,7 +178,8 @@ drops <- c("potamogeton_vase","potamogeton_frie","nymphoides_pelt","nymphaea_odo
 data <- data[,!(names(data) %in% drops)]
 
 # remove 4H camp - no plants were present 
-data <- data[-1,]
+# data <- data[-1,]
+# I am  going to keep this pond in for now (MJM 12/2/2014)
 
 rm(drops)
 
@@ -200,11 +208,12 @@ data$FP_presence
 colnames(data)
 
 # matrix of latitude and longitudes 
-dataSPACE <- cbind(data[,5:6],data[,153:157])
+# dataSPACE <- cbind(data[,5:6],data[,153:157])
+dataSPACE <- cbind(data[,5:6])
 write.csv(dataSPACE,"dataSPACE.csv",row.names=FALSE)
 
 # matrix of environmental variables 
-dataENV <- cbind(data[,10:12], data[,31:35],data[,155:163])
+dataENV <- cbind(data[,10:12], data[,30:35], data[,154:162])
 write.csv(dataENV,"dataENV.csv",row.names=FALSE)
 
 # matrix of floating plant species presence/absence
@@ -218,7 +227,7 @@ colnames(dataFP)
 write.csv(dataFP,"dataFP.csv",row.names=FALSE)
 
 # matrix of non-floating plant species presence/absence 
-dataNONFP <- data[,36:152]
+dataNONFP <- data[,36:153]
 write.csv(dataNONFP,"dataNONFP.csv",row.names=FALSE)
 
 # matrix of both floating and non-floating plant species presence/absence 
@@ -242,8 +251,9 @@ write.csv(dataSPECIES_freq,"dataSPECIES_freq.csv",row.names=FALSE)
 data$wolffia_sp <- data$wolffia + data$wolffia_borealis + data$wolffia_brasiliensis # combine the wolffias 
 colnames(data)
 
-dataFP$wolffia_sp <- data$wolffia + data$wolffia_borealis + data$wolffia_brasiliensis # combine the wolffias 
-colnames(data)
 
-
-
+################################
+# import transformed variables # 
+################################
+# this file should be made with absences - transformations 
+dataENV_trans <- read.csv("dataENV_trans.csv")

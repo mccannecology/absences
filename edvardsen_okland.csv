@@ -1,0 +1,321 @@
+Group,Species,Frequency,Label,FP?,group
+Helophyte,Acorus calmus,2,,notFP,emergent
+Helophyte,Alisma plantago-aquatica,32,,notFP,emergent
+Isoetid,Alopecurus aequalis,9,,notFP,emergent
+Helophyte,Bidens cernua,13,,notFP,emergent
+Helophyte,Bidens tripartita,31,,notFP,emergent
+Helophyte,Calla palustris,2,,notFP,emergent
+Helophyte,Carex acuta,1,,notFP,emergent
+Helophyte,Carex aquatilis,1,,notFP,emergent
+Helophyte,Carex nigra,25,,notFP,emergent
+Helophyte,Carex pseudocyperus,2,,notFP,emergent
+Helophyte,Carex rostrata,11,,notFP,emergent
+Helophyte,Carex vesicaria,7,,notFP,emergent
+Helophyte,Cicuta virosa,1,,notFP,emergent
+Helophyte,Eleocharis mamillata,16,,notFP,emergent
+Helophyte,Eleocharis palustris,6,,notFP,emergent
+Helophyte,Equisetum fluviatile,6,,notFP,emergent
+Helophyte,Glyceria fluitans,43,,notFP,emergent
+Helophyte,Iris pseudacorus,8,,notFP,emergent
+Helophyte,Lysimachia thyrsiflora,9,,notFP,emergent
+Helophyte,Menyanthes trifoliata,1,,notFP,emergent
+Nymphaeid,Persicaria amphibia,1,,notFP,emergent
+Helophyte,Phragmites australis,6,,notFP,emergent
+Isoetid,Ranunculus reptans,4,,notFP,emergent
+Helophyte,Schoenoplectus lacustris,4,,notFP,emergent
+Nymphaeid,Sparganium emersum,4,,notFP,emergent
+Helophyte,Sparganium erectum,18,,notFP,emergent
+Helophyte,Sparganium glomeratum,5,,notFP,emergent
+Nymphaeid,Sparganium natans,12,,notFP,emergent
+Helophyte,Typha angustifolia,2,,notFP,emergent
+Helophyte,Typha latifolia,10,,notFP,emergent
+Lemnid,Lemna minor,49,*,FP,floating 
+Lemnid,Lemna trisulca,1,*,FP,floating 
+Lemnid,Spirodela polyrhiza,8,*,FP,floating 
+Nymphaeid,Nuphar lutea,3,,notFP,lily
+Nymphaeid,Nymphaea alba,1,,notFP,lily
+Elodeid,Callitriche cophocarpa,15,,notFP,submerged
+Elodeid,Callitriche hamulata,11,,notFP,submerged
+Elodeid,Callitriche palustris,5,,notFP,submerged
+Elodeid,Hippuris vulgaris,3,,notFP,submerged
+Elodeid,Potamogeton alpinus,12,,notFP,submerged
+Elodeid,Potamogeton berchtoldii,29,,notFP,submerged
+Nymphaeid,Potamogeton natans,28,,notFP,submerged
+Elodeid,Potamogeton perfoliatus,1,,notFP,submerged
+Elodeid,Potamogeton pusillus,7,,notFP,submerged
+Elodeid,Ranunculus aquatilis,1,,notFP,submerged
+Elodeid,Utricularia minor,4,,notFP,submerged
+Elodeid,Utricularia vulgaris,1,,notFP,submerged
+Terrestrial plant,Acer platanoides,10,,notFP,terrestrial
+Terrestrial plant,Acer pseudoplatanus,1,,notFP,terrestrial
+Terrestrial plant,Achillea millefolium,53,,notFP,terrestrial
+Terrestrial plant,Achillea ptarmica,36,,notFP,terrestrial
+Terrestrial plant,Aconitum septentrionale,1,,notFP,terrestrial
+Terrestrial plant,Aegopodium podagraria,10,,notFP,terrestrial
+Terrestrial plant,Agrimonia eupatoria,1,,notFP,terrestrial
+Terrestrial plant,Agrostis capillaris,40,,notFP,terrestrial
+Terrestrial plant,Agrostis gigantea,3,,notFP,terrestrial
+Terrestrial plant,Agrostis stolonifera,14,,notFP,terrestrial
+Terrestrial plant,Ajuga pyramidalis,1,,notFP,terrestrial
+Terrestrial plant,Alchemilla filicaulis,1,,notFP,terrestrial
+Terrestrial plant,Alchemilla glabra,6,,notFP,terrestrial
+Terrestrial plant,Alchemilla gracilis,2,,notFP,terrestrial
+Terrestrial plant,Alchemilla monticola,5,,notFP,terrestrial
+Terrestrial plant,Alchemilla subcrenata,4,,notFP,terrestrial
+Terrestrial plant,Alchemilla wichurae,1,,notFP,terrestrial
+Terrestrial plant,Alnus glutinosa,11,,notFP,terrestrial
+Terrestrial plant,Alnus incana,10,,notFP,terrestrial
+Terrestrial plant,Alopecurus geniculatus,11,,notFP,terrestrial
+Terrestrial plant,Alopecurus pratensis,17,,notFP,terrestrial
+Terrestrial plant,Amelanchier spicata,1,,notFP,terrestrial
+Terrestrial plant,Anemone nemorosa,12,,notFP,terrestrial
+Terrestrial plant,Angelica sylvestris,17,,notFP,terrestrial
+Terrestrial plant,Anthoxanthum odoratum,10,,notFP,terrestrial
+Terrestrial plant,Anthriscus sylvestris,43,,notFP,terrestrial
+Terrestrial plant,Anthyllis vulneraria,1,,notFP,terrestrial
+Terrestrial plant,Aquilegia vulgaris,1,,notFP,terrestrial
+Terrestrial plant,Arctium spp.,3,,notFP,terrestrial
+Terrestrial plant,Artemisia vulgaris,19,,notFP,terrestrial
+Terrestrial plant,Aruncus dioicus,1,,notFP,terrestrial
+Terrestrial plant,Athyrium filix-femina,15,,notFP,terrestrial
+Terrestrial plant,Atriplex patula,4,,notFP,terrestrial
+Terrestrial plant,Avena sativa,2,,notFP,terrestrial
+Terrestrial plant,Barbarea vulgaris,6,,notFP,terrestrial
+Terrestrial plant,Betula pendula,25,,notFP,terrestrial
+Terrestrial plant,Betula pubescens,22,,notFP,terrestrial
+Terrestrial plant,Bistorta vivipara,2,,notFP,terrestrial
+Terrestrial plant,Bromus inermis,3,,notFP,terrestrial
+Terrestrial plant,Calamagrostis arundinacea,2,,notFP,terrestrial
+Terrestrial plant,Calamagrostis canescens,9,,notFP,terrestrial
+Terrestrial plant,Calamagrostis purpurea,5,,notFP,terrestrial
+Terrestrial plant,Calluna vulgaris,4,,notFP,terrestrial
+Terrestrial plant,Caltha palustris,13,,notFP,terrestrial
+Terrestrial plant,Campanula patula,1,,notFP,terrestrial
+Terrestrial plant,Campanula persicifolia,2,,notFP,terrestrial
+Terrestrial plant,Campanula rapunculoides,5,,notFP,terrestrial
+Terrestrial plant,Campanula rotundifolia,12,,notFP,terrestrial
+Terrestrial plant,Capsella bursa-pastoris,2,,notFP,terrestrial
+Terrestrial plant,Cardamine amara,1,,notFP,terrestrial
+Terrestrial plant,Cardamine pratensis,9,,notFP,terrestrial
+Terrestrial plant,Carduus crispus,9,,notFP,terrestrial
+Terrestrial plant,Carex canescens,34,,notFP,terrestrial
+Terrestrial plant,Carex diandra,1,,notFP,terrestrial
+Terrestrial plant,Carex echinata,5,,notFP,terrestrial
+Terrestrial plant,Carex elongata,1,,notFP,terrestrial
+Terrestrial plant,Carex flava,3,,notFP,terrestrial
+Terrestrial plant,Carex ovalis,24,,notFP,terrestrial
+Terrestrial plant,Carex pallescens,8,,notFP,terrestrial
+Terrestrial plant,Carex panicea,2,,notFP,terrestrial
+Terrestrial plant,Carum carvi,1,,notFP,terrestrial
+Terrestrial plant,Centaurea jacea,6,,notFP,terrestrial
+Terrestrial plant,Cerastium fontanum,23,,notFP,terrestrial
+Terrestrial plant,Chamomilla suaveolens,8,,notFP,terrestrial
+Terrestrial plant,Chenopodium album,5,,notFP,terrestrial
+Terrestrial plant,Chrysosplenium alternifolium,1,,notFP,terrestrial
+Terrestrial plant,Cirsium arvense,35,,notFP,terrestrial
+Terrestrial plant,Cirsium helenioides,7,,notFP,terrestrial
+Terrestrial plant,Cirsium palustre,6,,notFP,terrestrial
+Terrestrial plant,Cirsium vulgare,8,,notFP,terrestrial
+Terrestrial plant,Convallaria majalis,2,,notFP,terrestrial
+Terrestrial plant,Convolvolus arvensis,1,,notFP,terrestrial
+Terrestrial plant,Cornus sanguinea,1,,notFP,terrestrial
+Terrestrial plant,Corylus avellana,1,,notFP,terrestrial
+Terrestrial plant,Cotoneaster lucidus,1,,notFP,terrestrial
+Terrestrial plant,Crepis paludosa,1,,notFP,terrestrial
+Terrestrial plant,Dactylis glomerata,25,,notFP,terrestrial
+Terrestrial plant,Dactylorhiza fuchsii,1,,notFP,terrestrial
+Terrestrial plant,Deschampsia cespitosa,43,,notFP,terrestrial
+Terrestrial plant,Deschampsia flexuosa,13,,notFP,terrestrial
+Terrestrial plant,Dryopteris carthusiana,5,,notFP,terrestrial
+Terrestrial plant,Dryopteris expansa,1,,notFP,terrestrial
+Terrestrial plant,Dryopteris filix-mas,7,,notFP,terrestrial
+Terrestrial plant,Elymus repens,37,,notFP,terrestrial
+Terrestrial plant,Epilobium angustifolium,22,,notFP,terrestrial
+Terrestrial plant,Epilobium montanum,8,,notFP,terrestrial
+Terrestrial plant,Epilobium palustre,4,,notFP,terrestrial
+Terrestrial plant,Epilobium watsonii,43,,notFP,terrestrial
+Terrestrial plant,Equisetum arvense,17,,notFP,terrestrial
+Terrestrial plant,Equisetum palustre,1,,notFP,terrestrial
+Terrestrial plant,Equisetum pratense,20,,notFP,terrestrial
+Terrestrial plant,Equisetum sylvaticum,14,,notFP,terrestrial
+Terrestrial plant,Erodium cicutarium,1,,notFP,terrestrial
+Terrestrial plant,Erysimum cheiranthoides,3,,notFP,terrestrial
+Terrestrial plant,Euphrasia nemorosa,1,,notFP,terrestrial
+Terrestrial plant,Fallopia convolvulus,2,,notFP,terrestrial
+Terrestrial plant,Festuca pratensis,28,,notFP,terrestrial
+Terrestrial plant,Festuca rubra,21,,notFP,terrestrial
+Terrestrial plant,Filaginella uliginosa,6,,notFP,terrestrial
+Terrestrial plant,Filipendula ulmaria,41,,notFP,terrestrial
+Terrestrial plant,Fragaria vesca,8,,notFP,terrestrial
+Terrestrial plant,Frangula alnus,4,,notFP,terrestrial
+Terrestrial plant,Fraxinus excelsior,10,,notFP,terrestrial
+Terrestrial plant,Fumaria officinalis,2,,notFP,terrestrial
+Terrestrial plant,Galeopsis bifida,21,,notFP,terrestrial
+Terrestrial plant,Galeopsis speciosa,1,,notFP,terrestrial
+Terrestrial plant,Galeopsis tetrahit,41,,notFP,terrestrial
+Terrestrial plant,Galium album,10,,notFP,terrestrial
+Terrestrial plant,Galium boreale,3,,notFP,terrestrial
+Terrestrial plant,Galium palustre,28,,notFP,terrestrial
+Terrestrial plant,Galium uliginosum,12,,notFP,terrestrial
+Terrestrial plant,Geranium robertianum,1,,notFP,terrestrial
+Terrestrial plant,Geranium sylvaticum,9,,notFP,terrestrial
+Terrestrial plant,Geum rivale,6,,notFP,terrestrial
+Terrestrial plant,Geum urbanum,10,,notFP,terrestrial
+Terrestrial plant,Glechoma hederacea,10,,notFP,terrestrial
+Terrestrial plant,Gymnocarpium dryopteris,4,,notFP,terrestrial
+Terrestrial plant,Heracleum sibiricum,3,,notFP,terrestrial
+Terrestrial plant,Hieracium foliosa,8,,notFP,terrestrial
+Terrestrial plant,Hieracium rigida,2,,notFP,terrestrial
+Terrestrial plant,Hieracium vulgata,4,,notFP,terrestrial
+Terrestrial plant,Hosta spp.,1,,notFP,terrestrial
+Terrestrial plant,Hypericum maculatum,28,,notFP,terrestrial
+Terrestrial plant,Impatiens glandulifera,1,,notFP,terrestrial
+Terrestrial plant,Impatiens noli-tangere,3,,notFP,terrestrial
+Terrestrial plant,Juncus alpinoarticulatus,2,,notFP,terrestrial
+Terrestrial plant,Juncus articulatus,16,,notFP,terrestrial
+Terrestrial plant,Juncus bufonius,3,,notFP,terrestrial
+Terrestrial plant,Juncus conglomeratus,22,,notFP,terrestrial
+Terrestrial plant,Juncus effusus,22,,notFP,terrestrial
+Terrestrial plant,Juncus filiformis,14,,notFP,terrestrial
+Terrestrial plant,Juncus supinus,3,,notFP,terrestrial
+Terrestrial plant,Juniperus communis,6,,notFP,terrestrial
+Terrestrial plant,Knautia arvensis,2,,notFP,terrestrial
+Terrestrial plant,Lapsana communis,11,,notFP,terrestrial
+Terrestrial plant,Lathyrus linifolius,6,,notFP,terrestrial
+Terrestrial plant,Lathyrus pratensis,29,,notFP,terrestrial
+Terrestrial plant,Leontodon autumnalis,22,,notFP,terrestrial
+Terrestrial plant,Leucanthemum vulgare,18,,notFP,terrestrial
+Terrestrial plant,Linaria vulgaris,7,,notFP,terrestrial
+Terrestrial plant,Linum catharticum,1,,notFP,terrestrial
+Terrestrial plant,Lolium multiflorum,2,,notFP,terrestrial
+Terrestrial plant,Lolium perenne,4,,notFP,terrestrial
+Terrestrial plant,Lotus corniculatus,10,,notFP,terrestrial
+Terrestrial plant,Lupinus polyphyllus,4,,notFP,terrestrial
+Terrestrial plant,Luzula multiflora,7,,notFP,terrestrial
+Terrestrial plant,Luzula pilosa,9,,notFP,terrestrial
+Terrestrial plant,Lychnis flos-cuculi,3,,notFP,terrestrial
+Terrestrial plant,Lysimachia nummularia,5,,notFP,terrestrial
+Terrestrial plant,Lysimachia vulgaris,9,,notFP,terrestrial
+Terrestrial plant,Lythrum salicaria,7,,notFP,terrestrial
+Terrestrial plant,Maianthemum bifolium,5,,notFP,terrestrial
+Terrestrial plant,Matricaria perforata,28,,notFP,terrestrial
+Terrestrial plant,Medicago lupulina,1,,notFP,terrestrial
+Terrestrial plant,Melampyrum pratense,10,,notFP,terrestrial
+Terrestrial plant,Melampyrum sylvaticum,5,,notFP,terrestrial
+Terrestrial plant,Melica nutans,3,,notFP,terrestrial
+Terrestrial plant,Mentha arvensis,9,,notFP,terrestrial
+Terrestrial plant,Monotropa hypopitys,1,,notFP,terrestrial
+Terrestrial plant,Montia fontana,1,,notFP,terrestrial
+Terrestrial plant,Mycelis muralis,1,,notFP,terrestrial
+Terrestrial plant,Myosotis arvensis,17,,notFP,terrestrial
+Terrestrial plant,Myosotis laxa,6,,notFP,terrestrial
+Terrestrial plant,Myosotis scorpioides,1,,notFP,terrestrial
+Terrestrial plant,Omalotheca sylvatica,3,,notFP,terrestrial
+Terrestrial plant,Origanum vulgare,1,,notFP,terrestrial
+Terrestrial plant,Oxalis acetosella,4,,notFP,terrestrial
+Terrestrial plant,Paris quadrifolia,3,,notFP,terrestrial
+Terrestrial plant,Persicaria hydropiper,5,,notFP,terrestrial
+Terrestrial plant,Persicaria maculosa,2,,notFP,terrestrial
+Terrestrial plant,Peucedanum palustre,1,,notFP,terrestrial
+Terrestrial plant,Phalaris arundinacea,5,,notFP,terrestrial
+Terrestrial plant,Phegopteris connectilis,3,,notFP,terrestrial
+Terrestrial plant,Phleum pratense,38,,notFP,terrestrial
+Terrestrial plant,Picea abies,20,,notFP,terrestrial
+Terrestrial plant,Pinus sylvestris,9,,notFP,terrestrial
+Terrestrial plant,Plantago major,16,,notFP,terrestrial
+Terrestrial plant,Poa annua,8,,notFP,terrestrial
+Terrestrial plant,Poa nemoralis,1,,notFP,terrestrial
+Terrestrial plant,Poa palustris,11,,notFP,terrestrial
+Terrestrial plant,Poa pratensis,17,,notFP,terrestrial
+Terrestrial plant,Poa trivialis,46,,notFP,terrestrial
+Terrestrial plant,Polygala amarella,1,,notFP,terrestrial
+Terrestrial plant,Polygonum aviculare,7,,notFP,terrestrial
+Terrestrial plant,Populus tremula,14,,notFP,terrestrial
+Terrestrial plant,Potentilla anserina,5,,notFP,terrestrial
+Terrestrial plant,Potentilla erecta,16,,notFP,terrestrial
+Terrestrial plant,Potentilla palustris,8,,notFP,terrestrial
+Terrestrial plant,Prunella vulgaris,7,,notFP,terrestrial
+Terrestrial plant,Prunus avium,1,,notFP,terrestrial
+Terrestrial plant,Prunus cerasus,1,,notFP,terrestrial
+Terrestrial plant,Prunus padus,5,,notFP,terrestrial
+Terrestrial plant,Pteridium aquilinum,4,,notFP,terrestrial
+Terrestrial plant,Quercus robur,6,,notFP,terrestrial
+Terrestrial plant,Ranunculus acris,35,,notFP,terrestrial
+Terrestrial plant,Ranunculus flammula,3,,notFP,terrestrial
+Terrestrial plant,Ranunculus repens,55,,notFP,terrestrial
+Terrestrial plant,Ranunculus sceleratus,9,,notFP,terrestrial
+Terrestrial plant,Ribes nigrum,2,,notFP,terrestrial
+Terrestrial plant,Ribes rubrum,1,,notFP,terrestrial
+Terrestrial plant,Ribes spicatum,2,,notFP,terrestrial
+Terrestrial plant,Rorippa palustris,1,,notFP,terrestrial
+Terrestrial plant,Rosa subcollina,4,,notFP,terrestrial
+Terrestrial plant,Rosa villosa,1,,notFP,terrestrial
+Terrestrial plant,Rubus ideaus,36,,notFP,terrestrial
+Terrestrial plant,Rubus saxatilis,2,,notFP,terrestrial
+Terrestrial plant,Rubus spp.,1,,notFP,terrestrial
+Terrestrial plant,Rumex acetosa,39,,notFP,terrestrial
+Terrestrial plant,Rumex acetosella,5,,notFP,terrestrial
+Terrestrial plant,Rumex aquaticus,2,,notFP,terrestrial
+Terrestrial plant,Rumex longifolius,35,,notFP,terrestrial
+Terrestrial plant,Sagina procumbens,2,,notFP,terrestrial
+Terrestrial plant,Salix alba x fragilis,4,,notFP,terrestrial
+Terrestrial plant,Salix aurita,9,,notFP,terrestrial
+Terrestrial plant,Salix caprea,29,,notFP,terrestrial
+Terrestrial plant,Salix cinerea,17,,notFP,terrestrial
+Terrestrial plant,Salix lapponum,1,,notFP,terrestrial
+Terrestrial plant,Salix myrsinifolia,21,,notFP,terrestrial
+Terrestrial plant,Salix pentrandra,5,,notFP,terrestrial
+Terrestrial plant,Sambucus racemosa,7,,notFP,terrestrial
+Terrestrial plant,Scirpus sylvaticus,24,,notFP,terrestrial
+Terrestrial plant,Scrophularia nodosa,1,,notFP,terrestrial
+Terrestrial plant,Sedum spurium,1,,notFP,terrestrial
+Terrestrial plant,Sedum telephium,3,,notFP,terrestrial
+Terrestrial plant,Senecio jacobaea,1,,notFP,terrestrial
+Terrestrial plant,Senecio viscosus,3,,notFP,terrestrial
+Terrestrial plant,Senecio vulgaris,4,,notFP,terrestrial
+Terrestrial plant,Silene latifolia,1,,notFP,terrestrial
+Terrestrial plant,Solanum dulcamara,14,,notFP,terrestrial
+Terrestrial plant,Solidago Canadensis,1,,notFP,terrestrial
+Terrestrial plant,Solidago virgaurea,6,,notFP,terrestrial
+Terrestrial plant,Sonchus arvensis,16,,notFP,terrestrial
+Terrestrial plant,Sonchus asper,3,,notFP,terrestrial
+Terrestrial plant,Sonchus oleraceus,2,,notFP,terrestrial
+Terrestrial plant,Sorbus aucuparia,21,,notFP,terrestrial
+Terrestrial plant,Sorbus intermedia,1,,notFP,terrestrial
+Terrestrial plant,Spergula arvensis,3,,notFP,terrestrial
+Terrestrial plant,Stachys palustris,8,,notFP,terrestrial
+Terrestrial plant,Stachys sylvatica,2,,notFP,terrestrial
+Terrestrial plant,Stellaria alsine,16,,notFP,terrestrial
+Terrestrial plant,Stellaria graminea,45,,notFP,terrestrial
+Terrestrial plant,Stellaria media,16,,notFP,terrestrial
+Terrestrial plant,Stellaria nemorum,2,,notFP,terrestrial
+Terrestrial plant,Tanacetum vulgare,6,,notFP,terrestrial
+Terrestrial plant,Taraxacum spp.,39,,notFP,terrestrial
+Terrestrial plant,Thlaspi arvense,1,,notFP,terrestrial
+Terrestrial plant,Tragopogon pratensis,1,,notFP,terrestrial
+Terrestrial plant,Trientalis europaea,5,,notFP,terrestrial
+Terrestrial plant,Trifolium hybridum,21,,notFP,terrestrial
+Terrestrial plant,Trifolium medium,5,,notFP,terrestrial
+Terrestrial plant,Trifolium pratense,28,,notFP,terrestrial
+Terrestrial plant,Trifolium repens,37,,notFP,terrestrial
+Terrestrial plant,Tussilago farfara,20,,notFP,terrestrial
+Terrestrial plant,Urtica dioica,51,,notFP,terrestrial
+Terrestrial plant,Vaccinium myrtillus,11,,notFP,terrestrial
+Terrestrial plant,Vaccinium uliginosum,1,,notFP,terrestrial
+Terrestrial plant,Vaccinium vitis-idaea,6,,notFP,terrestrial
+Terrestrial plant,Valeriana sambucifolia,3,,notFP,terrestrial
+Terrestrial plant,Veronica beccabunga,3,,notFP,terrestrial
+Terrestrial plant,Veronica chamaedrys,23,,notFP,terrestrial
+Terrestrial plant,Veronica officinalis,5,,notFP,terrestrial
+Terrestrial plant,Veronica scutellata,13,,notFP,terrestrial
+Terrestrial plant,Veronica serpyllifolia,4,,notFP,terrestrial
+Terrestrial plant,Viburnum opulus,2,,notFP,terrestrial
+Terrestrial plant,Vicia cracca,53,,notFP,terrestrial
+Terrestrial plant,Vicia sepium,8,,notFP,terrestrial
+Terrestrial plant,Vicia sylvatica,2,,notFP,terrestrial
+Terrestrial plant,Viola arvensis,1,,notFP,terrestrial
+Terrestrial plant,Viola canina,1,,notFP,terrestrial
+Terrestrial plant,Viola mirabilis,1,,notFP,terrestrial
+Terrestrial plant,Viola palustris,12,,notFP,terrestrial
+Terrestrial plant,Viola riviniana,7,,notFP,terrestrial
+Terrestrial plant,Viola tricolor,2,,notFP,terrestrial

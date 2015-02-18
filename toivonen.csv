@@ -1,0 +1,92 @@
+group,grouping1,grouping2,Species,code,Frequency,Rank,Label,FP?
+emergent,Helophyte,Reed/herb,Acorus calamus L.,Acor cala,1,82,,notFP
+emergent,Helophyte,Reed/herb,Alisma plantago-aquatica L.,Alis plan,34,16,,notFP
+emergent,Helophyte,Reed/herb,Alopecurus aequalis Sobol.,Alop aequ,25,25,,notFP
+emergent,Helophyte,Reed/herb,Butomus umbellatus L.,Buto umbe,9,59,,notFP
+emergent,Helophyte,Sedge,Carex acuta L. ,Care acut,32,19,,notFP
+emergent,Helophyte,Sedge,Carex aquatilis Wahlenb.,Care aqua,12,45,,notFP
+emergent,Helophyte,Sedge,Carex diandra Schrank,Care dian,20,35,,notFP
+emergent,Helophyte,Sedge,Carex elata All.,Care elat,10,54,,notFP
+emergent,Helophyte,Sedge,Carex lasiocarpa Ehrh. ,Care lasi,43,8,,notFP
+emergent,Helophyte,Sedge,Carex pseudocyperus L.,Care pseu,5,69,,notFP
+emergent,Helophyte,Sedge,Carex rostrata Stokes,Care rost,54,4,,notFP
+emergent,Helophyte,Sedge,Carex vesicaria L.,Care vesi,23,29,,notFP
+emergent,Helophyte,Reed/herb,Elatine alsinastrum L.,Elat alsi,1,82,,notFP
+emergent,Helophyte,Reed/herb,Eleocharis mamillata (H. Lindb. ) H. Lindb. ex D0rfler 10,Eleo mami,26,24,,notFP
+emergent,Helophyte,Reed/herb,Eleocharis palustris (L.) Roemer & Schultes,Eleo palu,16,39,,notFP
+emergent,Helophyte,Reed/herb,Equisetum fluviatile L.,Equi fluv,55,3,,notFP
+emergent,Helophyte,Reed/herb,Glyceria maxima (Hartm.) Holmberg,Glyc maxi,2,75,,notFP
+emergent,Helophyte,Reed/herb,Glyceriafluitans (L.) R. Br.,Glyc flui,22,32,,notFP
+emergent,Helophyte,Reed/herb,Hippuris vulgaris L. a,Hipp vulg,11,48,,notFP
+emergent,Helophyte,Reed/herb,Iris pseudacorus L.,Iris preu,31,21,,notFP
+emergent,Helophyte,Reed/herb,Lysimachia thyrsiflora L.,Lysi thyr,57,1,,notFP
+emergent,Helophyte,Reed/herb,Peplis portula L.,Pepl port,1,82,,notFP
+emergent,Helophyte,Reed/herb,Phalaris arundinaea L.,Phal arun,11,48,,notFP
+emergent,Helophyte,Reed/herb,Phragmites australis ( Cav. ) Trin. ex Steudel,Phra aust,53,6,,notFP
+emergent,Helophyte,Reed/herb,Ranunculus lingua L.,Ranu ling,6,67,,notFP
+emergent,Helophyte,Reed/herb,Rorippa amphibia (L.) Besser,Rori amph,2,75,,notFP
+emergent,Helophyte,Reed/herb,Rumex hydrolapathum Hudson,Rume hydr,1,82,,notFP
+emergent,Helophyte,Reed/herb,Sagittaria sagittifolia L.,Sagi sagi,24,26,,notFP
+emergent,Helophyte,Reed/herb,Schoenoplectus lacustris (L.) Palla,Scho lacu,19,36,,notFP
+emergent,Helophyte,Reed/herb,Scolochloafestucacea (Willd.) Link,Scol fest,2,75,,notFP
+emergent,Rhizophytic hydrophyte,floating-leaved,Sparganium angustiJblium Michx.,Spar angu,2,75,,notFP
+emergent,Helophyte,Reed/herb,Sparganium emersum Rehman a,Spar emer,54,4,,notFP
+emergent,Helophyte,Reed/herb,Sparganium erectum L.,Spar erec,7,65,,notFP
+emergent,Helophyte,Reed/herb,Sparganium minimum Wallr. a,Spar mini,42,9,,notFP
+emergent,Pleustophytes,Ceratophyllids s. lato,Stratiotes aloides L.,Stra aloi,1,82,,notFP
+emergent,Helophyte,Reed/herb,Typha angustifolia L.,Typh angu,9,59,,notFP
+emergent,Helophyte,Reed/herb,Typha angustiJblia × T. latifolia,Typh hybr,2,75,,notFP
+emergent,Helophyte,Reed/herb,Typha latifolia L.,Typh lati,34,16,,notFP
+floating,Pleustophytes,Lemnids s. lato,Hydrocharis morsus-ranae L.,Hydr mors,16,39,*,FP
+floating,Pleustophytes,Lemnids s. lato,Lemna minor L.,Lemn mino,32,19,*,FP
+floating,Pleustophytes,Ceratophyllids s. lato,Lemna trisulca L.,Lemn tris,2,75,*,FP
+floating,Pleustophytes,Lemnids s. lato,Riccia fluitans L.,Ricc flui,14,43,*,FP
+floating,Pleustophytes,Lemnids s. lato,Ricciocarpus natans (L.) Corda,Ricc nata,10,54,*,FP
+floating,Pleustophytes,Lemnids s. lato,Spirodela polyrhiza (L.) Schleiden,Spir poly,11,48,*,FP
+lily,Rhizophytic hydrophyte,floating-leaved,Nuphar-luteum (L.) Sibth. & Sm.,Nuph lute,57,1,,notFP
+lily,Rhizophytic hydrophyte,floating-leaved,Nymphaea candida C. Presl.,Nymp cand,46,7,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Calliergon megalophyllum Mikut.,Call mega,35,14,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Calliergonella cuspidata (Hedw.) Loeske,Call cusp,11,48,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Callitriche hermaphroditica L.,Call herm,1,82,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Callitriche palustris L. + Callitriche cophocarpa Sendtner,Call spp.,41,10,,notFP
+submerged,Pleustophytes,Ceratophyllids s. lato,Ceratophyllum demersum L.,Cera deme,12,45,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Chara J~agilis Thuill.,Char frag,1,82,,notFP
+submerged,Rhizophytic hydrophyte,Isoetids,Crassula aquatica (L.) Sch6nl.,Cras aqua ,3,73,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Drepanocladus capillifolius (Warnst.) Warnst.,Drep capi,10,54,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Drepanocladus tenuinervis T. Kop.,Drep tenu,21,33,,notFP
+submerged,Rhizophytic hydrophyte,Isoetids,Elatine hydropiper L. s. lato,Elat hydr,11,48,,notFP
+submerged,Rhizophytic hydrophyte,Isoetids,Elatine triandra Schkuhr,Elat tria,9,59,,notFP
+submerged,Rhizophytic hydrophyte,Isoetids,Elecharis acicularis (L.) Roemer & Schultes b,Eleo acic,29,22,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Elodea canadensis Michx.,Elod cana,16,39,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,"Fissidensfontanus (B, Pyl.) Steud.",Fiss font ,1,82,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Fontinalis antipyretica Hedw.,Font anti,33,18,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Fontinalis dichelymoides Lindb,Font dich,10,54,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Fontinalis hypnoides Hartm.,Font hypn,10,54,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Juncus bulbosus L.,Junc bulb,1,82,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Leptodictyum riparium (Hedw.) Warnst,Lept ripa ,6,67,,notFP
+submerged,Rhizophytic hydrophyte,Isoetids,Limosella aquatica L,Limo aqua,1,82,,notFP
+submerged,Rhizophytic hydrophyte,Isoetids,Lobelia dortmanna L.,Lobe dort,4,71,,notFP
+submerged,Rhizophytic hydrophyte,Isoetids,lsoetes lacustris L.,Isoe lacu,12,45,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Myriophyllum alterniflorum DC.,Myri alte,16,39,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Myriophyllum verticillatum L.,Myri vert,5,69,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Nitella flexilis Thuill. + Nitella wahlbergiana Wallman,Nite spp.,11,48,,notFP
+submerged,Rhizophytic hydrophyte,floating-leaved,Polygonum amphibium L.,Poly amph,13,44,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Potamogeton alpinus Balbis,Pota alpi,35,14,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,"Potamogeton berchtoldii Fieb,",Pota berc,23,29,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Potamogeton crispus L.,Pota cris,4,71,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Potamogeton gramineus L.,Pota gram,8,63,,notFP
+submerged,Rhizophytic hydrophyte,floating-leaved,Potamogeton natans L.,Pota nata,41,10,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Potamogeton obtusifolius Mert. & Koch,Pota obtu ,24,26,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Potamogeton perfoliatus L.,Pota perf,19,36,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Potamogeton praelongus Wulfen,Pota prae,3,73,,notFP
+submerged,Rhizophytic hydrophyte,Elodeids s. lato,Ranunculus peltatus Schrank,Ranu pelt,7,65,,notFP
+submerged,Rhizophytic hydrophyte,Isoetids,Ranunculus reptans L. b,Ranu rept,21,33,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Rhynchostegium riparioides (Hedw.) Card,Rhyn ripa,2,75,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Scorpidium scorpioides (Hedw.) Limpr,Scor scor,9,59,,notFP
+submerged,Rhizophytic hydrophyte,floating-leaved,Sparganium gramineum Georgi,Spar gram,24,26,,notFP
+submerged,Rhizophytic hydrophyte,Isoetids,Subularia aquatica L.,Subu aqua,8,63,,notFP
+submerged,Pleustophytes,Ceratophyllids s. lato,Utricularia intermedia Hayne,Utri inte,29,22,,notFP
+submerged,Pleustophytes,Ceratophyllids s. lato,"Utricularia minor L,",Utri mino,23,29,,notFP
+submerged,Pleustophytes,Ceratophyllids s. lato,Utricularia vulgaris L.,Utri vulg,38,13,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Warnstorfia procera (Ren. & H. Am.) Tuom. & T. Kop.,Warn proc ,40,12,,notFP
+submerged,Submerged bryophytes,Submerged bryophytes,Warnstorfia trichophylla (Warnst.) Tuom. & T. Kop.,Warn tric ,17,38,,notFP
