@@ -69,6 +69,7 @@ data_temp <- rbind(data_temp,data_temp2)
 # The significance levels is not set @ 0.05 
 # Not sure if this is because of a Bonferroni correction ?
 data_temp$signif <- "Not significant" # first set them all to significant 
+data_temp$signif[21] <- "Significant"
 data_temp$signif[24] <- "Significant"
 
 correlogram_W_incr10 <- ggplot(data_temp,aes(x=x,y=y,group=data_type,linetype=data_type))  

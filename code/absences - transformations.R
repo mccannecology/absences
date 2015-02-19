@@ -128,6 +128,18 @@ dataENV_trans <- as.data.frame(dataENV_trans)
 # Remove highly correlated variables #
 ######################################
 dataENV_trans["waterbodies_5km"] <- NULL 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+# dataENV_trans["nearest_LMSPW"] <- NULL 
+=======
+dataENV_trans["nearest_LMSPW"] <- NULL 
+>>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
+dataENV_trans["depth_max_m"] <- NULL 
+>>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
+>>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
   
 colnames(dataENV_trans)
 
