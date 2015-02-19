@@ -14,24 +14,8 @@ colnames(dataENV_trans)
 temp_data_LM <- dataENV_trans
 temp_data_LM$nearest_SP <- NULL  # remove nearest SP
 temp_data_LM$nearest_W <- NULL   # remove nearest W
-<<<<<<< HEAD
 temp_data_LM$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-temp_data_LM$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-=======
 temp_data_LM$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
->>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
-=======
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-<<<<<<< HEAD
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-=======
-=======
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
->>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 
 # make the formula 
 formula_LM <- as.formula(paste("LM ~ ", paste(colnames(temp_data_LM), collapse= "+")))
@@ -56,24 +40,8 @@ colnames(dataENV_trans)
 temp_data_SP <- dataENV_trans
 temp_data_SP$nearest_LM <- NULL  # remove nearest LM
 temp_data_SP$nearest_W <- NULL   # remove nearest W
-<<<<<<< HEAD
 temp_data_SP$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-temp_data_SP$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-=======
 temp_data_SP$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
->>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
-=======
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-<<<<<<< HEAD
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-=======
-=======
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
->>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 
 # make formula 
 formula_SP <- as.formula(paste("SP ~ ", paste(colnames(temp_data_SP), collapse= "+")))
@@ -98,24 +66,8 @@ colnames(dataENV_trans)
 temp_data_W <- dataENV_trans
 temp_data_W$nearest_LM <- NULL  # remove nearest LM
 temp_data_W$nearest_SP <- NULL   # remove nearest SP
-<<<<<<< HEAD
 temp_data_W$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-temp_data_W$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-=======
 temp_data_W$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
->>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
-=======
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-<<<<<<< HEAD
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-=======
-=======
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
->>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 
 # make formula 
 formula_W <- as.formula(paste("W ~ ", paste(colnames(temp_data_W), collapse= "+")))
@@ -138,54 +90,15 @@ summary(glm_W_trans_null)
 
 colnames(dataENV_trans)
 temp_data_FPpres <- dataENV_trans
-<<<<<<< HEAD
 temp_data_FPpres$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-temp_data_FPpres$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-=======
-temp_data_FPpres$nearest_LMSPW <- NULL   # remove nearest LM,SP,or W
->>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
-=======
 temp_data_FPpres$nearest_LM <- NULL  # remove nearest LM
 temp_data_FPpres$nearest_SP <- NULL   # remove nearest SP
 temp_data_FPpres$nearest_W <- NULL   # remove nearest W
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-<<<<<<< HEAD
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-=======
-=======
-temp_data_FPpres$nearest_LM <- NULL  # remove nearest LM
-temp_data_FPpres$nearest_SP <- NULL   # remove nearest SP
-temp_data_FPpres$nearest_W <- NULL   # remove nearest W
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
->>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 colnames(temp_data_FPpres)
 
 # make formula 
 formula_FPpres <- as.formula(paste("FPpres ~ ", paste(colnames(temp_data_FPpres), collapse= "+")))
-<<<<<<< HEAD
 temp_data_FPpres$FPpres <- as.numeric(data$FP_presence) # add FP ppresence 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-temp_data_FPpres$FPpres <- as.numeric(data$FP_presence) # add FP ppresence 
-=======
-temp_data_FPpres$FPpres <- as.numeric(data$FP_presence)-1 # add FP ppresence 
->>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
-=======
-temp_data_FPpres$FPpres <- data$FP_presence # add FP ppresence 
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-<<<<<<< HEAD
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-=======
-=======
-temp_data_FPpres$FPpres <- data$FP_presence # add FP ppresence 
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
->>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 formula_FPpres # view the formula 
 
 # GLM for full model 
@@ -196,8 +109,6 @@ summary(glm_FPpres_trans)
 glm_FPpres_trans_null <- glm(FPpres ~ 1, family=binomial, data=temp_data_FPpres, na.action = "na.fail")
 summary(glm_FPpres_trans_null)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ###############
 # FP richness # 
 # Full & Null #
@@ -240,11 +151,6 @@ AIC(glm_W_trans_null)
 AIC(glm_FPpres_trans_null)
 AIC(glm_FPrich_trans_null)
 
-
-=======
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-=======
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
 #########################
 # Run all nested models #
 #########################
@@ -265,22 +171,6 @@ all_glm_W_trans <- dredge(glm_W_trans)
 numb_models <- nrow(all_glm_W_trans)
 write.csv(all_glm_W_trans[1:numb_models],file="all_glm_W_trans_2.csv",na="NA")
 save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
-<<<<<<< HEAD
-=======
-=======
-all_glm_FPpres_trans <- dredge(glm_FPpres_trans)
-<<<<<<< HEAD
-<<<<<<< HEAD
-all_glm_FPrich_trans <- dredge(glm_FPrich_trans)
->>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
-=======
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-<<<<<<< HEAD
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-=======
-=======
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
->>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 
 all_glm_FPpres_trans <- dredge(glm_FPpres_trans)
 numb_models <- nrow(all_glm_FPpres_trans)
@@ -303,8 +193,6 @@ clusterExport(clust, "temp_data_LM")
 # run the model in parallel
 all_glm_LM_trans <- pdredge(glm_LM_trans, cluster=clust)
 numb_models <- nrow(all_glm_LM_trans)
-<<<<<<< HEAD
-<<<<<<< HEAD
 write.csv(all_glm_LM_trans[1:numb_models],file="all_glm_LM_trans_2.csv",na="NA")
 save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
 
@@ -380,32 +268,17 @@ stopCluster(clust)
 
 
 
-
-
-<<<<<<< HEAD
-=======
-=======
-=======
 write.csv(all_glm_LM_trans[1:numb_models],file="all_glm_LM_trans.csv",na="NA")
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
 numb_models <- nrow(all_glm_SP_trans)
 write.csv(all_glm_SP_trans[1:numb_models],file="all_glm_SP_trans.csv",na="NA")
 numb_models <- nrow(all_glm_W_trans)
 write.csv(all_glm_W_trans[1:numb_models],file="all_glm_W_trans.csv",na="NA")
 numb_models <- nrow(all_glm_FPpres_trans)
-<<<<<<< HEAD
 write.csv(all_glm_FPpres_trans[1:numb_models],file="all_glm_FPpres_trans_2.csv",na="NA")
 numb_models <- nrow(all_glm_FPrich_trans)
 write.csv(all_glm_FPrich_trans[1:numb_models],file="all_glm_FPrich_trans_2.csv",na="NA")
->>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
-=======
 write.csv(all_glm_FPpres_trans[1:numb_models],file="all_glm_FPpres_trans.csv",na="NA")
 
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-<<<<<<< HEAD
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-=======
-=======
 write.csv(all_glm_LM_trans[1:numb_models],file="all_glm_LM_trans.csv",na="NA")
 numb_models <- nrow(all_glm_SP_trans)
 write.csv(all_glm_SP_trans[1:numb_models],file="all_glm_SP_trans.csv",na="NA")
@@ -413,9 +286,6 @@ numb_models <- nrow(all_glm_W_trans)
 write.csv(all_glm_W_trans[1:numb_models],file="all_glm_W_trans.csv",na="NA")
 numb_models <- nrow(all_glm_FPpres_trans)
 write.csv(all_glm_FPpres_trans[1:numb_models],file="all_glm_FPpres_trans.csv",na="NA")
-
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
->>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 
 ##############
 # Best model #  
@@ -444,39 +314,11 @@ best_glm_W_trans <- glm(W ~ boatlaunch + COND_avg + depth_max_m + latitude + wat
                         family = binomial, 
                         data = temp_data_W, na.action = "na.fail")
 
-<<<<<<< HEAD
-best_glm_FPpres_trans <- glm(FPpres ~ ALK_avg + secchi_avg + TOTP_avg,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-best_glm_FPpres_trans <- glm(FPpres ~ ALK_avg + secchi_avg + TOTP_avg,
-=======
 best_glm_FPpres_trans <- glm(FPpres ~ COND_avg + latitude + nearest_LM + nearest_SP + secchi_avg + TOTP_avg,
->>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
-=======
-best_glm_FPpres_trans <- glm(FPpres ~ COND_avg + longitude + secchi_avg + TOTP_avg, 
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-<<<<<<< HEAD
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-=======
-=======
-best_glm_FPpres_trans <- glm(FPpres ~ COND_avg + longitude + secchi_avg + TOTP_avg, 
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
->>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
                              family = binomial, 
                              data = temp_data_FPpres, 
                              na.action = "na.fail")
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-=======
-<<<<<<< HEAD
->>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 best_glm_FPrich_trans <- glm(FPrich ~ ALK_avg + boatlaunch + COND_avg + depth_max_m + dist_waterfowl + latitude + nearest_LM + TOTP_avg,
                              family = poisson, 
                              data = temp_data_FPrich, 
@@ -494,10 +336,6 @@ AIC(best_glm_W_trans)
 AIC(best_glm_FPpres_trans)
 AIC(best_glm_FPrich_trans)
 
-=======
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-=======
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
 ###################
 # Model Averaging # 
 ###################
@@ -508,7 +346,6 @@ avg_LM_trans <- model.avg(all_glm_LM_trans, subset = delta < 2)
 avg_SP_trans <- model.avg(all_glm_SP_trans, subset = delta < 2)
 avg_W_trans <- model.avg(all_glm_W_trans, subset = delta < 2)
 avg_FPpres_trans <- model.avg(all_glm_FPpres_trans, subset = delta < 2)
-<<<<<<< HEAD
 
 # Re-do the model averaging based on explicity specifying a model list 
 # this is so I can use predict() with the model average object 
@@ -523,8 +360,6 @@ avg_SP_trans <- model.avg(model_list_SP)
 avg_W_trans <- model.avg(model_list_W)
 avg_FPpres_trans <- model.avg(model_list_FPpress)
 avg_FPrich_trans <- model.avg(model_list_FPrich)
-=======
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
 
 # get the table for with the coefficient and p-value for each variable 
 summary(avg_LM_trans)
@@ -546,10 +381,6 @@ confint(avg_LM_trans)
 confint(avg_SP_trans)
 confint(avg_W_trans)
 confint(avg_FPpres_trans)
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
 
 ######################
 # pseudo-R-squared   #
@@ -845,14 +676,7 @@ sp.correlogram()
 
 ####################
 # Confusion matrix #
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Best model       #
-=======
->>>>>>> 66da6cb... added confusion matrices for logistic regressions
-=======
-# Best model       #
->>>>>>> d4f2a63... model averaging
 ####################
 # define the function to calculate a confusion matrix 
 # https://gist.github.com/ryanwitt/2911560
@@ -870,10 +694,6 @@ confusion.glm <- function(data, model) {
   confusion
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d4f2a63... model averaging
 # try with real data 
 prediction <- ifelse(predict(best_glm_LM_trans, temp_data_LM, type='response') > 0.5, "present", "absent")
 # this makes the table of the predictions vs. the observed  
@@ -885,11 +705,6 @@ names(confusion) <- c('absent', 'present')
 #names(confusion) <- c('FALSE', 'TRUE', 'class.error')
 confusion
 
-<<<<<<< HEAD
-=======
->>>>>>> 66da6cb... added confusion matrices for logistic regressions
-=======
->>>>>>> d4f2a63... model averaging
 confusion.glm(temp_data_LM,best_glm_LM_trans)
 confusion.glm(temp_data_SP,best_glm_SP_trans) # the model only predicts absences 
 confusion.glm(temp_data_W,best_glm_W_trans)
@@ -898,10 +713,6 @@ confusion.glm(temp_data_FPpres,best_glm_FPpres_trans)
 # cannot do it for FP richness - only works for logistic regression 
 confusion.glm(temp_data_FPrich,best_glm_FPrich_trans)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d4f2a63... model averaging
 ####################
 # Confusion matrix #
 # Model average    #
@@ -933,11 +744,6 @@ confusion  <- table(prediction, ifelse(best_glm_FPpres_trans$y==1, "present", "a
 names(confusion) <- c('absent', 'present')
 confusion
 
-<<<<<<< HEAD
-=======
->>>>>>> 66da6cb... added confusion matrices for logistic regressions
-=======
->>>>>>> d4f2a63... model averaging
 ###############################
 # Generating predicted values #
 ###############################
