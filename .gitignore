@@ -16,3 +16,20 @@ workspace - descriptive statistics.RData
 workspace - inter-lake distances.RData
 workspace - permutations.RData
 workspace - variance partitioning.RData
+<<<<<<< HEAD
+=======
+workspace - new glm variations.RData
+"workspace for mapping glm predictions.RData"
+"workspace for model averaging glms.RData"
+"workspace for ordinations NMDS.RData"
+"workspace with functional group permutation results.RData"
+workspace for mapping glm predictions.RData
+workspace for model averaging glms.RData
+workspace for ordinations NMDS.RData
+workspace for plotting other regions - lit.RData
+workspace for spatial correlogram.RData
+workspace with all CT data - not a lot of clutter.RData
+workspace with functional group permutation results.RData
+workspace with giant glms - transformed - take2.RData
+workspace with transformed variables for glms.RData
+>>>>>>> f440037... stashing changes before rebase
