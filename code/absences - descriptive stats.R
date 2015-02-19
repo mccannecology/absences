@@ -246,6 +246,7 @@ sp_freq_plot_CT
 
 ggsave("sp_freq_plot_CT - with_func_group_labels - B&W.jpg",sp_freq_plot_CT,height=8,width=11)
 
+<<<<<<< HEAD
 
 sp_freq_plot_CT <- ggplot(dataSPECIES_freq3,aes(x=reorder(species, -frequency),y=frequency,fill=group))
 sp_freq_plot_CT <- sp_freq_plot_CT + geom_bar(aes(fill=group),stat="identity",colour="black")
@@ -351,7 +352,12 @@ ggsave("sp_freq_plot_CT - with_func_group_labels - B&W.jpg",sp_freq_plot_CT,heig
 
 =======
 >>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
+<<<<<<< HEAD
 >>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
+=======
+=======
+>>>>>>> parent of 11cc488... lots of glms and spatial correlograms
+>>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 ############################
 # Table of FP compositions # 
 ############################

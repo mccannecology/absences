@@ -2,7 +2,11 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
+=======
+<<<<<<< HEAD
+>>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
 "species","frequency"
 "nymphaea_odor",109
 "nuphar",94
@@ -257,6 +261,8 @@ zannichellia,3,,notFP,SAV
 zosterella,5,,notFP,SAV 
 >>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
 =======
+=======
+>>>>>>> parent of 11cc488... lots of glms and spatial correlograms
 species,frequency,Label,FP?
 alisma,12,,notFP
 alisma_subcordatum,1,,notFP
@@ -381,5 +387,11 @@ vallisneria,44,,notFP
 wolffia,23,*,FP
 zannichellia,3,,notFP
 zosterella,5,,notFP
+<<<<<<< HEAD
 >>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
+<<<<<<< HEAD
 >>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
+=======
+=======
+>>>>>>> parent of 11cc488... lots of glms and spatial correlograms
+>>>>>>> 05829a9... Revert "lots of glms and spatial correlograms"
