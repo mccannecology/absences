@@ -159,8 +159,8 @@ clusterExport(clust, "temp_data_LM")
 # run the model in parallel
 all_glm_LM_trans_reduc <- pdredge(glm_LM_trans, cluster=clust)
 numb_models <- nrow(all_glm_LM_trans_reduc)
-write.csv(all_glm_LM_trans_reduc[1:numb_models],file="all_glm_LM_trans_reduc_2.csv",na="NA")
-save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+write.csv(all_glm_LM_trans_reduc[1:numb_models],file="all_glm_LM_trans_reduc.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed - reduced.RData")
 
 # stop the cluster 
 stopCluster(clust)
@@ -176,8 +176,8 @@ clusterExport(clust, "temp_data_SP")
 # run the model in parallel
 all_glm_SP_trans_reduc <- pdredge(glm_SP_trans, cluster=clust)
 numb_models <- nrow(all_glm_SP_trans_reduc)
-write.csv(all_glm_SP_trans_reduc[1:numb_models],file="all_glm_SP_trans_reduc_2.csv",na="NA")
-save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+write.csv(all_glm_SP_trans_reduc[1:numb_models],file="all_glm_SP_trans_reduc.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed - reduced.RData")
 
 # stop the cluster 
 stopCluster(clust)
@@ -192,8 +192,8 @@ clusterExport(clust, "temp_data_W")
 # run the model in parallel
 all_glm_W_trans_reduc <- pdredge(glm_W_trans, cluster=clust)
 numb_models <- nrow(all_glm_W_trans_reduc)
-write.csv(all_glm_W_trans_reduc[1:numb_models],file="all_glm_W_trans_reduc_2.csv",na="NA")
-save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+write.csv(all_glm_W_trans_reduc[1:numb_models],file="all_glm_W_trans_reduc.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed - reduced.RData")
 
 # stop the cluster 
 stopCluster(clust)
@@ -209,8 +209,8 @@ clusterExport(clust, "temp_data_FPpres")
 # run the model in parallel
 all_glm_FPpres_trans_reduc <- pdredge(glm_FPpres_trans, cluster=clust)
 numb_models <- nrow(all_glm_FPpres_trans_reduc)
-write.csv(all_glm_FPpres_trans_reduc[1:numb_models],file="all_glm_FPpres_trans_reduc_2.csv",na="NA")
-save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+write.csv(all_glm_FPpres_trans_reduc[1:numb_models],file="all_glm_FPpres_trans_reduc.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed - reduced.RData")
 
 # stop the cluster 
 stopCluster(clust)
@@ -224,10 +224,10 @@ clust <- makeCluster(4,"SOCK")
 clusterExport(clust, "temp_data_FPrich")
 
 # run the model in parallel
-all_glm_FPrich_trans_reduc <- pdredge(all_glm_FPrich_trans_reduc, cluster=clust)
+all_glm_FPrich_trans_reduc <- pdredge(glm_FPrich_trans, cluster=clust)
 numb_models <- nrow(all_glm_FPrich_trans_reduc)
-write.csv(all_glm_FPrich_trans_reduc[1:numb_models],file="all_glm_FPrich_trans_reduc_2.csv",na="NA")
-save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed.RData")
+write.csv(all_glm_FPrich_trans_reduc[1:numb_models],file="all_glm_FPrich_trans_reduc.csv",na="NA")
+save(list = ls(all = TRUE), file = "workspace - all glms dredge - transformed - reduced.RData")
 
 # stop the cluster 
 stopCluster(clust)
@@ -253,18 +253,19 @@ write.csv(all_glm_FPrich_trans_reduc[1:numb_models],file="all_glm_FPrich_trans_r
 library(MuMIn)
 
 # Model average models with delta AICc < 2
-avg_LM_trans_reduc <- model.avg(all_glm_LM_trans, subset = delta < 2)
-avg_SP_trans_reduc <- model.avg(all_glm_SP_trans, subset = delta < 2)
-avg_W_trans_reduc <- model.avg(all_glm_W_trans, subset = delta < 2)
-avg_FPpres_trans_reduc <- model.avg(all_glm_FPpres_trans, subset = delta < 2)
+avg_LM_trans_reduc <- model.avg(all_glm_LM_trans_reduc, subset = delta < 2)
+avg_SP_trans_reduc <- model.avg(all_glm_SP_trans_reduc, subset = delta < 2)
+avg_W_trans_reduc <- model.avg(all_glm_W_trans_reduc, subset = delta < 2)
+avg_FPpres_trans_reduc <- model.avg(all_glm_FPpres_trans_reduc, subset = delta < 2)
+avg_FPrich_trans_reduc <- model.avg(all_glm_FPrich_trans_reduc, subset = delta < 2)
 
 # Re-do the model averaging based on explicity specifying a model list 
 # this is so I can use predict() with the model average object 
-model_list_LM <- get.models(all_glm_LM_trans, subset = delta < 2) # specify the list of models whose delta AIC < 2
-model_list_SP <- get.models(all_glm_SP_trans, subset = delta < 2)
-model_list_W <- get.models(all_glm_W_trans, subset = delta < 2)
-model_list_FPpress <- get.models(all_glm_FPpres_trans, subset = delta < 2)
-model_list_FPrich <- get.models(all_glm_FPrich_trans, subset = delta < 2)
+model_list_LM <- get.models(all_glm_LM_trans_reduc, subset = delta < 2) # specify the list of models whose delta AIC < 2
+model_list_SP <- get.models(all_glm_SP_trans_reduc, subset = delta < 2)
+model_list_W <- get.models(all_glm_W_trans_reduc, subset = delta < 2)
+model_list_FPpress <- get.models(all_glm_FPpres_trans_reduc, subset = delta < 2)
+model_list_FPrich <- get.models(all_glm_FPrich_trans_reduc, subset = delta < 2)
 
 avg_LM_trans_reduc <- model.avg(model_list_LM) # use that list to do the model averaging 
 avg_SP_trans_reduc <- model.avg(model_list_SP)
@@ -277,6 +278,7 @@ summary(avg_LM_trans_reduc)
 summary(avg_SP_trans_reduc)
 summary(avg_W_trans_reduc)
 summary(avg_FPpres_trans_reduc)
+summary(avg_FPrich_trans_reduc)
 
 # importance 
 # Sum of ‘Akaike weights’ over all models including the explanatory variable 
@@ -297,4 +299,4 @@ confint(avg_FPpres_trans_reduc)
 ############### 
 # Save things # 
 ############### 
-save.image("C:/Users/Mike/Desktop/Dropbox/absences/workspace - all glms - dredge - transformed - reduced.RData")
+#save.image("C:/Users/Mike/Desktop/Dropbox/absences/workspace - all glms - dredge - transformed - reduced.RData")
