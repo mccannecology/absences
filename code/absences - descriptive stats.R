@@ -272,9 +272,6 @@ sp_freq_plot_CT
 
 ggsave("sp_freq_plot_CT - with_func_group_labels - colour_v2.jpg",sp_freq_plot_CT,height=6,width=12)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 #################################
 # Histogram of # of waterbodies #
