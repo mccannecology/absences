@@ -95,10 +95,7 @@ summary(glm_W_scaled_null)
 
 colnames(dataENV_scaled)
 temp_data_FPpres <- dataENV_scaled
-temp_data_FPpres$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-temp_data_FPpres$nearest_LM <- NULL  # remove nearest LM
-temp_data_FPpres$nearest_SP <- NULL   # remove nearest SP
-temp_data_FPpres$nearest_W <- NULL   # remove nearest W
+temp_data_FPpres$nearest_any_FP <- NULL
 temp_data_FPpres$ALK_avg <- NULL   # remove ALK_avg 
 temp_data_FPpres$COND_avg <- NULL   # remove conductivity 
 temp_data_FPpres$secchi_avg <- NULL   # remove secchi_avg 

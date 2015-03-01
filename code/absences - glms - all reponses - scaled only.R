@@ -91,9 +91,6 @@ summary(glm_W_scaled_null)
 colnames(dataENV_scaled)
 temp_data_FPpres <- dataENV_scaled
 temp_data_FPpres$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
-temp_data_FPpres$nearest_LM <- NULL  # remove nearest LM
-temp_data_FPpres$nearest_SP <- NULL   # remove nearest SP
-temp_data_FPpres$nearest_W <- NULL   # remove nearest W
 colnames(temp_data_FPpres)
 
 # make formula 
@@ -258,7 +255,7 @@ clust <- makeCluster(4,"SOCK")
 clusterExport(clust, "temp_data_FPrich")
 
 # run the model in parallel
-all_glm_FPrich_scaled <- pdredge(all_glm_FPrich_scaled, cluster=clust)
+all_glm_FPrich_scaled <- pdredge(glm_FPrich_scaled, cluster=clust)
 numb_models <- nrow(all_glm_FPrich_scaled)
 write.csv(all_glm_FPrich_scaled[1:numb_models],file="all_glm_FPrich_scaled_2.csv",na="NA")
 save(list = ls(all = TRUE), file = "workspace - all glms dredge - scaled.RData")
