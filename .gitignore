@@ -35,3 +35,22 @@ workspace with transformed variables for glms.RData
 >>>>>>> f440037... stashing changes before rebase
 workspace - avg glm - opt_threshold.RData
 workspace - all glms dredge - transformed - reduced2.RData
+workspace - all glms dredge - scaled - reduced.RData
+workspace - all glms dredge - scaled - reduced2.RData
+workspace - all glms dredge - scaled.RData
+"workspace - all glms dredge - scaled - reduced.RData"
+all_glm_FPpres_scaled_2.csv
+all_glm_FPpres_scaled_reduc.csv
+all_glm_FPpres_scaled_reduc2.csv
+all_glm_FPrich_scaled_2.csv
+all_glm_FPrich_scaled_reduc.csv
+all_glm_FPrich_scaled_reduc2.csv
+all_glm_LM_scaled_2.csv
+all_glm_LM_scaled_reduc.csv
+all_glm_LM_scaled_reduc2.csv
+all_glm_SP_scaled_2.csv
+all_glm_SP_scaled_reduc.csv
+all_glm_SP_scaled_reduc2.csv
+all_glm_W_scaled_2.csv
+all_glm_W_scaled_reduc.csv
+all_glm_W_scaled_reduc2.csv
