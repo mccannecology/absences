@@ -51,8 +51,7 @@ pairs.panels(dataENV_trans,density=F,pch=".",gap=0)
 # Histogram along diagonal       #
 # correlation above diagonal     #   
 ##################################
-panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...)
-{
+panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...){
   usr <- par("usr"); on.exit(par(usr))
   par(usr = c(0, 1, 0, 1))
   r <- abs(cor(x, y))
@@ -61,8 +60,7 @@ panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...)
   if(missing(cex.cor)) cex.cor <- 0.8/strwidth(txt)
   text(0.5, 0.5, txt)
 }
-panel.hist <- function(x, ...)
-{
+panel.hist <- function(x, ...){
   usr <- par("usr"); on.exit(par(usr))
   par(usr = c(usr[1:2], 0, 1.5) )
   h <- hist(x, plot = FALSE)

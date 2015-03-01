@@ -88,8 +88,9 @@ dataENV_trans <- cbind(log(dataPREDICTORS$surfacearea_ha + 1),
                        log(dataPREDICTORS$nonFP_species_richness+1)
 )
 
-
-# Range the variables from 0-1
+################################
+# Range the variables from 0-1 # (data transformed for skewness)
+################################
 # make sure boatlaunch is the last column
 # I don't want to "range" (transform to 0-1) this variable
 
@@ -124,30 +125,32 @@ colnames(dataENV_trans) <- c("surfacearea_ha",
 
 dataENV_trans <- as.data.frame(dataENV_trans)
 
+################################
+# Range the variables from 0-1 # (data NOT transformed for skewness)
+################################
+# make sure boatlaunch is the last column
+# I don't want to "range" (transform to 0-1) this variable
+
+library(scales)
+
+dataPREDICTORS$waterbodies_5km <- NULL 
+
+dataENV_scaled <- dataPREDICTORS
+
+for (i in 1:ncol(dataPREDICTORS)){
+  #print(i)
+  dataENV_scaled[,i] <- rescale(dataPREDICTORS[,i])
+}
+
+
 ######################################
 # Remove highly correlated variables #
 ######################################
 dataENV_trans["waterbodies_5km"] <- NULL 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-# dataENV_trans["nearest_LMSPW"] <- NULL 
-=======
-dataENV_trans["nearest_LMSPW"] <- NULL 
->>>>>>> parent of 786d4ba... lots of glms and spatial correlograms
-=======
-dataENV_trans["nearest_LMSPW"] <- NULL 
->>>>>>> parent of 11cc488... lots of glms and spatial correlograms
-dataENV_trans["depth_max_m"] <- NULL 
->>>>>>> 5efe0848dafedfd50ffb68bab10cd9745ed8a43f
->>>>>>> 375bdf9... Revert "lots of glms and spatial correlograms"
-  
-colnames(dataENV_trans)
+dataENV_scaled["waterbodies_5km"] <- NULL 
 
 write.csv(dataENV_trans,"dataENV_trans.csv",row.names=FALSE)
+write.csv(dataENV_scaled,"dataENV_scaled.csv",row.names=FALSE)
 
 #############################
 # clean up when you're done #
