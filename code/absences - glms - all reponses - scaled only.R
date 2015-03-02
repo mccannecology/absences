@@ -263,27 +263,6 @@ save(list = ls(all = TRUE), file = "workspace - all glms dredge - scaled.RData")
 # stop the cluster 
 stopCluster(clust)
 
-
-
-write.csv(all_glm_LM_scaled[1:numb_models],file="all_glm_LM_scaled.csv",na="NA")
-numb_models <- nrow(all_glm_SP_scaled)
-write.csv(all_glm_SP_scaled[1:numb_models],file="all_glm_SP_scaled.csv",na="NA")
-numb_models <- nrow(all_glm_W_scaled)
-write.csv(all_glm_W_scaled[1:numb_models],file="all_glm_W_scaled.csv",na="NA")
-numb_models <- nrow(all_glm_FPpres_scaled)
-write.csv(all_glm_FPpres_scaled[1:numb_models],file="all_glm_FPpres_scaled_2.csv",na="NA")
-numb_models <- nrow(all_glm_FPrich_scaled)
-write.csv(all_glm_FPrich_scaled[1:numb_models],file="all_glm_FPrich_scaled_2.csv",na="NA")
-write.csv(all_glm_FPpres_scaled[1:numb_models],file="all_glm_FPpres_scaled.csv",na="NA")
-
-write.csv(all_glm_LM_scaled[1:numb_models],file="all_glm_LM_scaled.csv",na="NA")
-numb_models <- nrow(all_glm_SP_scaled)
-write.csv(all_glm_SP_scaled[1:numb_models],file="all_glm_SP_scaled.csv",na="NA")
-numb_models <- nrow(all_glm_W_scaled)
-write.csv(all_glm_W_scaled[1:numb_models],file="all_glm_W_scaled.csv",na="NA")
-numb_models <- nrow(all_glm_FPpres_scaled)
-write.csv(all_glm_FPpres_scaled[1:numb_models],file="all_glm_FPpres_scaled.csv",na="NA")
-
 ##############
 # Best model #  
 ##############
