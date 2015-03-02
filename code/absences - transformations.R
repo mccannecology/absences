@@ -1,3 +1,5 @@
+load("C:/Users/Mike/Desktop/Dropbox/absences/workspace - data imported.RData")
+
 ####################################
 # Transforming predictor variables #
 # Goals: 0 skewness, range 0-1     #
@@ -125,6 +127,24 @@ colnames(dataENV_trans) <- c("surfacearea_ha",
 
 dataENV_trans <- as.data.frame(dataENV_trans)
 
+##############################
+# Remove outlier, then range #
+##############################
+library(scales)
+
+dataPREDICTORS$waterbodies_5km <- NULL 
+
+# remove outlier
+dataPREDICTORS2 <- dataPREDICTORS[-129,]
+
+# This will hold th results of re-scaling 
+dataENV_scaled_out <- dataPREDICTORS2
+
+# scale each column of the data frame  
+for (i in 1:ncol(dataPREDICTORS)){
+  dataENV_scaled_out[,i] <- rescale(dataPREDICTORS2[,i])
+}
+
 ################################
 # Range the variables from 0-1 # (data NOT transformed for skewness)
 ################################
@@ -151,6 +171,7 @@ dataENV_scaled["waterbodies_5km"] <- NULL
 
 write.csv(dataENV_trans,"dataENV_trans.csv",row.names=FALSE)
 write.csv(dataENV_scaled,"dataENV_scaled.csv",row.names=FALSE)
+write.csv(dataENV_scaled,"dataENV_scaled_out.csv",row.names=FALSE)
 
 #############################
 # clean up when you're done #

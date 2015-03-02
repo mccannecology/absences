@@ -3,6 +3,8 @@
 # Y = species presence #
 ########################
 load("C:/Users/Mike/Desktop/Dropbox/absences/workspace - data imported.RData")
+# or 
+load("C:/Users/Mike/Desktop/Dropbox/absences/workspace - all glms dredge - scaled.RData")
 
 ###############
 # Lemna minor #
