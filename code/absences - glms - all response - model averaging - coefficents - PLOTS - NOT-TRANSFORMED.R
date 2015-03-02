@@ -56,7 +56,7 @@ LM_coeff <- LM_coeff + theme(axis.text.x = element_text(angle = 90, hjust = 1, v
 LM_coeff <- LM_coeff + ggtitle("Lemna minor")
 LM_coeff <- LM_coeff + geom_hline(yintercept=0)
 LM_coeff
-ggsave("model_avg_LM_coeff.jpg",LM_coeff,height=8,width=11)
+ggsave("model_avg_LM_raw_coeff.jpg",LM_coeff,height=8,width=11)
 
 #######################
 # Model Average       #
@@ -103,7 +103,7 @@ SP_coeff <- SP_coeff + theme(axis.text.x = element_text(angle = 90, hjust = 1, v
 SP_coeff <- SP_coeff + ggtitle("Spirodela polyrhiza")
 SP_coeff <- SP_coeff + geom_hline(yintercept=0)
 SP_coeff
-ggsave("model_avg_SP_coeff.jpg",SP_coeff,height=8,width=11)
+ggsave("model_avg_SP_raw_coeff.jpg",SP_coeff,height=8,width=11)
 
 #######################
 # Model Average       #
@@ -152,7 +152,7 @@ W_coeff <- W_coeff + theme(axis.text.x = element_text(angle = 90, hjust = 1, vju
 W_coeff <- W_coeff + ggtitle("Wolffia sp.")
 W_coeff <- W_coeff + geom_hline(yintercept=0)
 W_coeff
-ggsave("model_avg_W_coeff.jpg",W_coeff,height=8,width=11)
+ggsave("model_avg_W_raw_coeff.jpg",W_coeff,height=8,width=11)
 
 #######################
 # Model Average       #
@@ -200,14 +200,14 @@ FPpres_coeff <- FPpres_coeff + geom_hline(yintercept=0)
 #FPpres_coeff <- FPpres_coeff + annotate("text", label = "*", x=7, y=7, size=8) 
 #FPpres_coeff <- FPpres_coeff + annotate("text", label = "*", x=4, y=5.95, size=8)  
 FPpres_coeff
-ggsave("model_avg_FPpres_coeff.jpg",FPpres_coeff,height=8,width=11)
+ggsave("model_avg_FPpres_raw_coeff.jpg",FPpres_coeff,height=8,width=11)
 
 # re-save without a legend 
 temp <- FPpres_coeff
 temp <- temp + theme(legend.position="none")
 temp <- temp + ggtitle("")
 temp 
-ggsave("model_avg_FPpres_coeff-no_legend.jpg",temp,height=8,width=11)
+ggsave("model_avg_FPpres_raw_coeff-no_legend.jpg",temp,height=8,width=11)
 
 
 #######################
@@ -251,7 +251,7 @@ FPrich_coeff <- FPrich_coeff + geom_hline(yintercept=0)
 #FPrich_coeff <- FPrich_coeff + annotate("text", label = "*", x=3, y=-2.7, size=8) 
 #FPrich_coeff <- FPrich_coeff + annotate("text", label = "*", x=17, y=-1.95, size=8)  
 FPrich_coeff
-ggsave("model_avg_FPrich_coeff.jpg",FPrich_coeff,height=8,width=11)
+ggsave("model_avg_FPrich_raw_coeff.jpg",FPrich_coeff,height=8,width=11)
 
 
 ############################
@@ -314,61 +314,7 @@ FPpres_coeff2
 
 combined_coeff <- arrangeGrob(LM_coeff2,SP_coeff2,W_coeff2,FPpres_coeff2)
 
-ggsave("model_avg_combined_coeff.jpg",combined_coeff,height=8,width=16)
+ggsave("model_avg_combined_raw_coeff.jpg",combined_coeff,height=8,width=16)
 
 
 
-#######################################
-# Combined plot for the three species # 
-#######################################
-LM_coeff2 <- ggplot(avg_LM_coeff, aes(x=predictors,y=coefficient,fill=predictor_type))
-LM_coeff2 <- LM_coeff2 + geom_bar(colour="black",stat="identity")
-LM_coeff2 <- LM_coeff2 + geom_errorbar(aes(ymin=coefficient-stand_err,ymax=coefficient+stand_err), width=0.2, position=position_dodge(0.9))
-LM_coeff2 <- LM_coeff2 + scale_fill_manual(values=c("grey95","grey75","grey25","black"),name="Predictor type")
-LM_coeff2 <- LM_coeff2 + xlab("Predictor")
-LM_coeff2 <- LM_coeff2 + ylab("Coefficient")
-LM_coeff2 <- LM_coeff2 + theme_classic(base_size=18)
-LM_coeff2 <- LM_coeff2 + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
-LM_coeff2 <- LM_coeff2 + geom_hline(yintercept=0)
-LM_coeff2 <- LM_coeff2 + geom_text(aes(1.25,5,label="a)"),fontface="bold")
-LM_coeff2
-
-SP_coeff2 <- ggplot(avg_SP_coeff, aes(x=predictors,y=coefficient,fill=predictor_type))
-SP_coeff2 <- SP_coeff2 + geom_bar(colour="black",stat="identity")
-SP_coeff2 <- SP_coeff2 + geom_errorbar(aes(ymin=coefficient-stand_err,ymax=coefficient+stand_err), width=0.2, position=position_dodge(0.9))
-SP_coeff2 <- SP_coeff2 + scale_fill_manual(values=c("grey95","grey75","grey25","black"),name="Predictor type")
-SP_coeff2 <- SP_coeff2 + xlab("Predictor")
-SP_coeff2 <- SP_coeff2 + ylab("Coefficient")
-SP_coeff2 <- SP_coeff2 + theme_classic(base_size=18)
-SP_coeff2 <- SP_coeff2 + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
-SP_coeff2 <- SP_coeff2 + geom_hline(yintercept=0)
-SP_coeff2 <- SP_coeff2 + geom_text(aes(1.25,3.9,label="b)"),fontface="bold")
-SP_coeff2
-
-W_coeff2 <- ggplot(avg_W_coeff, aes(x=predictors,y=coefficient,fill=predictor_type))
-W_coeff2 <- W_coeff2 + geom_bar(colour="black",stat="identity")
-W_coeff2 <- W_coeff2 + geom_errorbar(aes(ymin=coefficient-stand_err,ymax=coefficient+stand_err), width=0.2, position=position_dodge(0.9))
-W_coeff2 <- W_coeff2 + scale_fill_manual(values=c("grey95","grey75","grey25","black"),name="Predictor type")
-W_coeff2 <- W_coeff2 + xlab("Predictor")
-W_coeff2 <- W_coeff2 + ylab("Coefficient")
-W_coeff2 <- W_coeff2 + theme_classic(base_size=18)
-W_coeff2 <- W_coeff2 + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
-W_coeff2 <- W_coeff2 + geom_hline(yintercept=0)
-W_coeff2 <- W_coeff2 + geom_text(aes(1.25,4.75,label="c)"),fontface="bold")
-W_coeff2
-
-FPpres_coeff2 <- ggplot(avg_FPpres_coeff, aes(x=predictors,y=coefficient,fill=predictor_type))
-FPpres_coeff2 <- FPpres_coeff2 + geom_bar(colour="black",stat="identity")
-FPpres_coeff2 <- FPpres_coeff2 + geom_errorbar(aes(ymin=coefficient-stand_err,ymax=coefficient+stand_err), width=0.2, position=position_dodge(0.9))
-FPpres_coeff2 <- FPpres_coeff2 + scale_fill_manual(values=c("grey95","grey75","grey25","black"),name="Predictor type")
-FPpres_coeff2 <- FPpres_coeff2 + xlab("Predictor")
-FPpres_coeff2 <- FPpres_coeff2 + ylab("Coefficient")
-FPpres_coeff2 <- FPpres_coeff2 + theme_classic(base_size=18)
-FPpres_coeff2 <- FPpres_coeff2 + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
-FPpres_coeff2 <- FPpres_coeff2 + geom_hline(yintercept=0)
-#FPpres_coeff2 <- FPpres_coeff2 + annotate("text", label = "*", x=7, y=7.9, size=8) 
-#FPpres_coeff2 <- FPpres_coeff2 + annotate("text", label = "*", x=4, y=5.8, size=8)  
-#FPpres_coeff2 <- FPpres_coeff2 + annotate("text", label = "*", x=15, y=4, size=8) 
-FPpres_coeff2
-
-coeff_plot_combined <- arrangeGrob(LM_coeff2,SP_coeff2,W_coeff2)
