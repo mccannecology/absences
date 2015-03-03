@@ -18,7 +18,7 @@ temp_data_LM$depth_max_m <- NULL   # remove depth_max_m
 
 # make the formula 
 formula_LM <- as.formula(paste("LM ~ ", paste(colnames(temp_data_LM), collapse= "+")))
-temp_data_LM$LM <- data$lemna_minor # add LM presence 
+temp_data_LM$LM <- data$lemna_minor[-129] # add LM presence 
 formula_LM # check out the formula 
 
 # GLM for full model 
@@ -47,7 +47,7 @@ temp_data_SP$depth_max_m <- NULL   # remove depth_max_m
 
 # make formula 
 formula_SP <- as.formula(paste("SP ~ ", paste(colnames(temp_data_SP), collapse= "+")))
-temp_data_SP$SP <- data$spirodela_polyrhiza # add SP presence 
+temp_data_SP$SP <- data$spirodela_polyrhiza[-129] # add SP presence 
 formula_SP # check out the formula 
 
 # GLM for full model 
@@ -76,7 +76,7 @@ temp_data_W$depth_max_m <- NULL   # remove depth_max_m
 
 # make formula 
 formula_W <- as.formula(paste("W ~ ", paste(colnames(temp_data_W), collapse= "+")))
-temp_data_W$W <- data$wolffia_sp # add W presence 
+temp_data_W$W <- data$wolffia_sp[-129] # add W presence 
 formula_W # view the formula 
 
 # GLM for full model 
@@ -103,7 +103,7 @@ colnames(temp_data_FPpres)
 
 # make formula 
 formula_FPpres <- as.formula(paste("FPpres ~ ", paste(colnames(temp_data_FPpres), collapse= "+")))
-temp_data_FPpres$FPpres <- as.numeric(data$FP_presence) # add FP ppresence 
+temp_data_FPpres$FPpres <- as.numeric(data$FP_presence)[-129] # add FP ppresence 
 formula_FPpres # view the formula 
 
 # GLM for full model 
@@ -130,7 +130,7 @@ colnames(temp_data_FPrich)
 
 # make formula 
 formula_FPrich <- as.formula(paste("FPrich ~ ", paste(colnames(temp_data_FPrich), collapse= "+")))
-temp_data_FPrich$FPrich <- data$FP_species_richness # add FP ppresence 
+temp_data_FPrich$FPrich <- data$FP_species_richness[-129] # add FP ppresence 
 formula_FPrich # view the formula 
 
 # GLM for full model 

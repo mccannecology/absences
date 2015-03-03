@@ -5,8 +5,6 @@ load("C:/Users/Mike/Desktop/Dropbox/absences/workspace - data imported.RData")
 # Full & Null #
 ###############
 # Build full and null models
-
-colnames(dataENV_scaled_out)
 temp_data_LM <- dataENV_scaled_out
 temp_data_LM$nearest_SP <- NULL  # remove nearest SP
 temp_data_LM$nearest_W <- NULL   # remove nearest W
@@ -18,7 +16,7 @@ temp_data_LM$secchi_avg <- NULL   # remove secchi_avg
 
 # make the formula 
 formula_LM <- as.formula(paste("LM ~ ", paste(colnames(temp_data_LM), collapse= "+")))
-temp_data_LM$LM <- data$lemna_minor # add LM presence 
+temp_data_LM$LM <- data$lemna_minor[-129] # add LM presence 
 formula_LM # check out the formula 
 
 # GLM for full model 
@@ -34,8 +32,6 @@ summary(glm_LM_scaled_out_null)
 # Full & Null         #
 #######################
 # Build full and null models
-
-colnames(dataENV_scaled_out)
 temp_data_SP <- dataENV_scaled_out
 temp_data_SP$nearest_LM <- NULL  # remove nearest LM
 temp_data_SP$nearest_W <- NULL   # remove nearest W
@@ -47,7 +43,7 @@ temp_data_SP$secchi_avg <- NULL   # remove secchi_avg
 
 # make formula 
 formula_SP <- as.formula(paste("SP ~ ", paste(colnames(temp_data_SP), collapse= "+")))
-temp_data_SP$SP <- data$spirodela_polyrhiza # add SP presence 
+temp_data_SP$SP <- data$spirodela_polyrhiza[-129] # add SP presence 
 formula_SP # check out the formula 
 
 # GLM for full model 
@@ -63,8 +59,6 @@ summary(glm_SP_scaled_out_null)
 # Full & Null #
 ###############
 # Build full and null models
-
-colnames(dataENV_scaled_out)
 temp_data_W <- dataENV_scaled_out
 temp_data_W$nearest_LM <- NULL  # remove nearest LM
 temp_data_W$nearest_SP <- NULL   # remove nearest SP
@@ -76,7 +70,7 @@ temp_data_W$secchi_avg <- NULL   # remove secchi_avg
 
 # make formula 
 formula_W <- as.formula(paste("W ~ ", paste(colnames(temp_data_W), collapse= "+")))
-temp_data_W$W <- data$wolffia_sp # add W presence 
+temp_data_W$W <- data$wolffia_sp[-129] # add W presence 
 formula_W # view the formula 
 
 # GLM for full model 
@@ -92,8 +86,6 @@ summary(glm_W_scaled_out_null)
 # Full & Null #
 ###############
 # Build full and null models
-
-colnames(dataENV_scaled_out)
 temp_data_FPpres <- dataENV_scaled_out
 temp_data_FPpres$nearest_any_FP <- NULL
 temp_data_FPpres$ALK_avg <- NULL   # remove ALK_avg 
@@ -103,7 +95,7 @@ colnames(temp_data_FPpres)
 
 # make formula 
 formula_FPpres <- as.formula(paste("FPpres ~ ", paste(colnames(temp_data_FPpres), collapse= "+")))
-temp_data_FPpres$FPpres <- as.numeric(data$FP_presence) # add FP ppresence 
+temp_data_FPpres$FPpres <- as.numeric(data$FP_presence)[-129] # add FP ppresence 
 formula_FPpres # view the formula 
 
 # GLM for full model 
@@ -119,8 +111,6 @@ summary(glm_FPpres_scaled_out_null)
 # Full & Null #
 ###############
 # Build full and null models
-
-colnames(dataENV_scaled_out)
 temp_data_FPrich <- dataENV_scaled_out
 temp_data_FPrich$nearest_any_FP <- NULL   # remove nearest LM,SP,or W
 temp_data_FPrich$ALK_avg <- NULL   # remove ALK_avg 
@@ -130,7 +120,7 @@ colnames(temp_data_FPrich)
 
 # make formula 
 formula_FPrich <- as.formula(paste("FPrich ~ ", paste(colnames(temp_data_FPrich), collapse= "+")))
-temp_data_FPrich$FPrich <- data$FP_species_richness # add FP ppresence 
+temp_data_FPrich$FPrich <- data$FP_species_richness[-129] # add FP ppresence 
 formula_FPrich # view the formula 
 
 # GLM for full model 
