@@ -16,8 +16,6 @@ workspace - descriptive statistics.RData
 workspace - inter-lake distances.RData
 workspace - permutations.RData
 workspace - variance partitioning.RData
-<<<<<<< HEAD
-=======
 workspace - new glm variations.RData
 "workspace for mapping glm predictions.RData"
 "workspace for model averaging glms.RData"
@@ -72,3 +70,16 @@ all_glm_W_scaled_out_reduc2.csv
 workspace - all glms dredge - scaled_out - reduced.RData
 workspace - all glms dredge - scaled_out - reduced2.RData
 workspace - all glms dredge - scaled_out.RData
+all_glm_FPpres_scaled_out_reduc3.csv
+all_glm_FPpres_scaled_out_reduc4.csv
+all_glm_FPrich_scaled_out_reduc3.csv
+all_glm_FPrich_scaled_out_reduc4.csv
+all_glm_LM_scaled_out_reduc3.csv
+all_glm_LM_scaled_out_reduc4.csv
+all_glm_SP_scaled_out_reduc3.csv
+all_glm_SP_scaled_out_reduc4.csv
+all_glm_W_scaled_out_reduc3.csv
+all_glm_W_scaled_out_reduc4.csv
+workspace - all glms dredge - scaled_out - reduced3.RData
+workspace - all glms dredge - scaled_out - reduced4.RData
+workspace - correlation heatmaps.RData
