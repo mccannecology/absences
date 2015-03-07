@@ -84,3 +84,7 @@ workspace - all glms dredge - scaled_out - reduced3.RData
 workspace - all glms dredge - scaled_out - reduced4.RData
 workspace - correlation heatmaps.RData
 workspace - all glms dredge - scaled_out - reduced4 - coeff_plots.RData
+workspace - all glms dredge - scaled_out - reduced5 - coeff_plots.RData
+workspace - all glms dredge - scaled_out - reduced5 - mapping.RData
+workspace - all glms dredge - scaled_out - reduced5.RData
+workspace - avg glm - scaled_out - reduced5 - opt_threshold.RData

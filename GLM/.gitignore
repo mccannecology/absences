@@ -13,3 +13,8 @@ average_glm_W_trans.csv
 avg_glm_FPpres_trans.csv
 avg_glm_FPrich_trans.csv
 avg_glm_W_trans.csv
+all_glm_FPpres_scaled_out_reduc5.csv
+all_glm_FPrich_scaled_out_reduc5.csv
+all_glm_LM_scaled_out_reduc5.csv
+all_glm_SP_scaled_out_reduc5.csv
+all_glm_W_scaled_out_reduc5.csv
