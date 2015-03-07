@@ -282,3 +282,18 @@ hist_without_combined <- arrangeGrob(hist_without_1,hist_without_6,hist_without_
 hist_without_combined
 ggsave(paste("permutation_hist_without - diff_numb_species.jpg",sep=""),hist_without_combined,height=4,width=16)
 
+
+#####################
+# Calculate 95% CIs #
+#####################
+sort(permutation_results_1_species[,1])[0.05*length(permutation_results_1_species[,1])]
+sort(permutation_results_1_species[,1])[0.95*length(permutation_results_1_species[,1])]
+
+sort(permutation_results_6_species[,1])[0.05*length(permutation_results_6_species[,1])]
+sort(permutation_results_6_species[,1])[0.95*length(permutation_results_6_species[,1])]
+
+sort(permutation_results_12_species[,1])[0.05*length(permutation_results_12_species[,1])]
+sort(permutation_results_12_species[,1])[0.95*length(permutation_results_12_species[,1])]
+
+sort(permutation_results_24_species[,1])[0.05*length(permutation_results_24_species[,1])]
+sort(permutation_results_24_species[,1])[0.95*length(permutation_results_24_species[,1])]
