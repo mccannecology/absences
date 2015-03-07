@@ -4,6 +4,9 @@
 # CT Agricultural Exp. Station data #
 # MJM 9/17/2014                     #
 #####################################
+load("C:/Users/Mike/Desktop/Dropbox/absences/workspace - permutations.RData")
+
+
 # Question: 
 # Is the freq. of occurence/absence of a functional group different than expected based on species richness of the functional group in the region? 
 # More specificially: 

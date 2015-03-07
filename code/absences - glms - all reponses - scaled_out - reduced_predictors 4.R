@@ -276,6 +276,72 @@ nrow(summary(avg_W_scaled_out_reduc)[1]$summary)
 nrow(summary(avg_FPpres_scaled_out_reduc)[1]$summary)
 nrow(summary(avg_FPrich_scaled_out_reduc)[1]$summary)
 
+##############
+# Best model #  
+##############
+library(MuMIn)
+
+# assign the best model to an object 
+best_glm_LM_scaled_out_reduc <- get.models(all_glm_LM_scaled_out_reduc, 1)[1]
+best_glm_SP_scaled_out_reduc <- get.models(all_glm_SP_scaled_out_reduc, 1)[1]
+best_glm_W_scaled_out_reduc <- get.models(all_glm_W_scaled_out_reduc, 1)[1]
+best_glm_FPpres_scaled_out_reduc <- get.models(all_glm_FPpres_scaled_out_reduc, 1)[1]
+best_glm_FPrich_scaled_out_reduc <- get.models(all_glm_FPrich_scaled_out_reduc, 1)[1]
+
+# but we actually want this to be the fitted model 
+# I deleted a "+ 1" from the end of each of these formulas - not sure why it was there (MJM 8/27/2014) 
+best_glm_LM_scaled_out_reduc <- glm(LM ~ COND_avg + latitude + secchi_avg + TOTP_avg, 
+                         family = binomial, 
+                         data = temp_data_LM, 
+                         na.action = "na.fail")
+
+best_glm_SP_scaled_out_reduc <- glm(SP ~ COND_avg + secchi_avg, 
+                         family = binomial, 
+                         data = temp_data_SP, 
+                         na.action = "na.fail")
+
+best_glm_W_scaled_out_reduc <- glm(W ~ boatlaunch + COND_avg + depth_max_m + surfacearea_ha + TOTP_avg + waterbodies_10km, 
+                        family = binomial, 
+                        data = temp_data_W, na.action = "na.fail")
+
+best_glm_FPpres_scaled_out_reduc <- glm(FPpres ~ COND_avg  + nearest_SP + secchi_avg + TOTP_avg,
+                             family = binomial, 
+                             data = temp_data_FPpres, 
+                             na.action = "na.fail")
+
+best_glm_FPrich_scaled_out_reduc <- glm(FPrich ~  COND_avg + latitude + nearest_SP + secchi_avg + TOTP_avg,
+                             family = poisson, 
+                             data = temp_data_FPrich, 
+                             na.action = "na.fail")
+
+######################
+# pseudo-R-squared   #
+# Variance explained #
+# Full model         #
+######################
+# statistic based on improvment from null model - compares likelihood of both 
+# adj.r.squared is base on Nagelkerke 1991
+library(MuMIn)
+
+r.squaredLR(best_glm_LM_scaled_out_reduc, null = glm_LM_scaled_out_null)
+r.squaredLR(best_glm_SP_scaled_out_reduc, null = glm_SP_scaled_out_null)
+r.squaredLR(best_glm_W_scaled_out_reduc, null = glm_W_scaled_out_null)
+r.squaredLR(best_glm_FPpres_scaled_out_reduc, null = glm_FPpres_scaled_out_null)
+
+######################
+# pseudo-R-squared   #
+# Variance explained #
+# Best model         #
+######################
+# statistic based on improvment from null model - compares likelihood of both 
+# adj.r.squared is base on Nagelkerke 1991
+library(MuMIn)
+
+r.squaredLR(glm_LM_scaled_out, null = glm_LM_scaled_out_null)
+r.squaredLR(glm_SP_scaled_out, null = glm_SP_scaled_out_null)
+r.squaredLR(glm_W_scaled_out, null = glm_W_scaled_out_null)
+r.squaredLR(glm_FPpres_scaled_out, null = glm_FPpres_scaled_out_null)
+
 ############### 
 # Save things # 
 ############### 

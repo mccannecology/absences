@@ -1,4 +1,4 @@
-"The role of stochastic and deterministic processes in the occurrence of an uncommon functional group"
+The role of stochastic and deterministic processes in the occurrence of an uncommon functional group
 ========
 
 Statistical analyses for dissertation chapter on the factors explaining the presence/absence of aquatic plant species in lakes and ponds in Connecticut, USA. 

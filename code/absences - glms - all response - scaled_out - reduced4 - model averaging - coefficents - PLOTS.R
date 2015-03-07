@@ -279,7 +279,7 @@ predictors <- c("size","shoreline","depth","totalP","pH",
 # a column for the variable type
 predictor_type <- c("Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic",
                     "Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
-                    "Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - dispersal",
+                    "Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - dispersal",
                     "Regional - dispersal","Regional - other","Regional - other") 
 
 # combine 'em
