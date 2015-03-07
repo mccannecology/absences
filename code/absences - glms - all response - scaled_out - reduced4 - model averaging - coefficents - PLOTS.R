@@ -19,13 +19,13 @@ summary(avg_FPrich_scaled_out_reduc)
 ###########################################################
 # set up the data frame that contains all predictors (this gets merged with the data from each model)
 predictors <- c("size","shoreline","depth","totalP","pH",
-                                 "cond","alk","secchi","nonFP","lakes1km",
+                                 "cond","secchi","nonFP","lakes1km",
                                  "lakes10km","distLM","boatlaunch","latitude",
                                  "longitude")
 
 # a column for the variable type
 predictor_type <- c("Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic",
-                    "Local - abiotic","Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
+                    "Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
                     "Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - other",
                     "Regional - other") 
 
@@ -54,7 +54,6 @@ avg_LM_scaled_out_reduc_coeff$predictors[avg_LM_scaled_out_reduc_coeff$predictor
 avg_LM_scaled_out_reduc_coeff$predictors[avg_LM_scaled_out_reduc_coeff$predictors == "TOTP_avg"] <- "totalP"
 avg_LM_scaled_out_reduc_coeff$predictors[avg_LM_scaled_out_reduc_coeff$predictors == "PH_avg"] <- "pH"
 avg_LM_scaled_out_reduc_coeff$predictors[avg_LM_scaled_out_reduc_coeff$predictors == "COND_avg"] <- "cond"
-avg_LM_scaled_out_reduc_coeff$predictors[avg_LM_scaled_out_reduc_coeff$predictors == "ALK_avg"] <- "alk"
 avg_LM_scaled_out_reduc_coeff$predictors[avg_LM_scaled_out_reduc_coeff$predictors == "secchi_avg"] <- "secchi"
 avg_LM_scaled_out_reduc_coeff$predictors[avg_LM_scaled_out_reduc_coeff$predictors == "waterbodies_1km"] <- "lakes1km"
 avg_LM_scaled_out_reduc_coeff$predictors[avg_LM_scaled_out_reduc_coeff$predictors == "waterbodies_10km"] <- "lakes10km"
@@ -71,7 +70,7 @@ avg_LM_scaled_out_reduc_coeff <- merge(coeff_df_temp,avg_LM_scaled_out_reduc_coe
 
 # Re-order the variables 
 avg_LM_scaled_out_reduc_coeff$predictors <- factor(avg_LM_scaled_out_reduc_coeff$predictors, levels=c("size","shoreline","depth","totalP","pH",
-                                                                                                      "cond","alk","secchi","nonFP","lakes1km",
+                                                                                                      "cond","secchi","nonFP","lakes1km",
                                                                                                       "lakes10km","distLM","boatlaunch","latitude",
                                                                                                       "longitude") ) 
 # add an asterisk (*) label for significant coefficients 
@@ -96,7 +95,7 @@ LM_coeff <- LM_coeff + geom_text(data=avg_LM_scaled_out_reduc_coeff,size=8,aes(x
 LM_coeff <- LM_coeff + theme(axis.text.x = element_text(angle=45, hjust=1))
 LM_coeff <- LM_coeff + geom_hline(yintercept=0)
 LM_coeff
-ggsave("model_avg_LM_coeff_dataENV_scaled_out.jpg",LM_coeff,height=8,width=11)
+ggsave("model_avg_LM_coeff_dataENV_scaled_out_reduc4.jpg",LM_coeff,height=8,width=11)
 
 ###########################################################
 # Extract coefficients @ set-up data frames for plotting  #
@@ -104,13 +103,13 @@ ggsave("model_avg_LM_coeff_dataENV_scaled_out.jpg",LM_coeff,height=8,width=11)
 ###########################################################
 # set up the data frame that contains all predictors (this gets merged with the data from each model)
 predictors <- c("size","shoreline","depth","totalP","pH",
-                "cond","alk","secchi","nonFP","lakes1km",
+                "cond","secchi","nonFP","lakes1km",
                 "lakes10km","distSP","boatlaunch","latitude",
                 "longitude")
 
 # a column for the variable type
 predictor_type <- c("Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic",
-                    "Local - abiotic","Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
+                    "Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
                     "Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - other",
                     "Regional - other") 
 
@@ -139,7 +138,6 @@ avg_SP_scaled_out_reduc_coeff$predictors[avg_SP_scaled_out_reduc_coeff$predictor
 avg_SP_scaled_out_reduc_coeff$predictors[avg_SP_scaled_out_reduc_coeff$predictors == "TOTP_avg"] <- "totalP"
 avg_SP_scaled_out_reduc_coeff$predictors[avg_SP_scaled_out_reduc_coeff$predictors == "PH_avg"] <- "pH"
 avg_SP_scaled_out_reduc_coeff$predictors[avg_SP_scaled_out_reduc_coeff$predictors == "COND_avg"] <- "cond"
-avg_SP_scaled_out_reduc_coeff$predictors[avg_SP_scaled_out_reduc_coeff$predictors == "ALK_avg"] <- "alk"
 avg_SP_scaled_out_reduc_coeff$predictors[avg_SP_scaled_out_reduc_coeff$predictors == "secchi_avg"] <- "secchi"
 avg_SP_scaled_out_reduc_coeff$predictors[avg_SP_scaled_out_reduc_coeff$predictors == "waterbodies_1km"] <- "lakes1km"
 avg_SP_scaled_out_reduc_coeff$predictors[avg_SP_scaled_out_reduc_coeff$predictors == "waterbodies_10km"] <- "lakes10km"
@@ -156,7 +154,7 @@ avg_SP_scaled_out_reduc_coeff <- merge(coeff_df_temp,avg_SP_scaled_out_reduc_coe
 
 # Re-order the variables 
 avg_SP_scaled_out_reduc_coeff$predictors <- factor(avg_SP_scaled_out_reduc_coeff$predictors, levels=c("size","shoreline","depth","totalP","pH",
-                                                                                                      "cond","alk","secchi","nonFP","lakes1km",
+                                                                                                      "cond","secchi","nonFP","lakes1km",
                                                                                                       "lakes10km","distSP","boatlaunch","latitude",
                                                                                                       "longitude") ) 
 # add an asterisk (*) label for significant coefficients 
@@ -181,7 +179,7 @@ SP_coeff <- SP_coeff + theme(axis.text.x = element_text(angle=45, hjust=1))
 SP_coeff <- SP_coeff + geom_text(aes(1,4,label="b)"))
 SP_coeff <- SP_coeff + geom_hline(yintercept=0)
 SP_coeff
-ggsave("model_avg_SP_coeff_dataENV_scaled_out.jpg",SP_coeff,height=8,width=11)
+ggsave("model_avg_SP_coeff_dataENV_scaled_out_reduc4.jpg",SP_coeff,height=8,width=11)
 
 
 ###########################################################
@@ -190,13 +188,13 @@ ggsave("model_avg_SP_coeff_dataENV_scaled_out.jpg",SP_coeff,height=8,width=11)
 ###########################################################
 # set up the data frame that contains all predictors (this gets merged with the data from each model)
 predictors <- c("size","shoreline","depth","totalP","pH",
-                "cond","alk","secchi","nonFP","lakes1km",
+                "cond","secchi","nonFP","lakes1km",
                 "lakes10km","distW","boatlaunch","latitude",
                 "longitude")
 
 # a column for the variable type
 predictor_type <- c("Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic",
-                    "Local - abiotic","Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
+                    "Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
                     "Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - other",
                     "Regional - other") 
 
@@ -225,7 +223,6 @@ avg_W_scaled_out_reduc_coeff$predictors[avg_W_scaled_out_reduc_coeff$predictors 
 avg_W_scaled_out_reduc_coeff$predictors[avg_W_scaled_out_reduc_coeff$predictors == "TOTP_avg"] <- "totalP"
 avg_W_scaled_out_reduc_coeff$predictors[avg_W_scaled_out_reduc_coeff$predictors == "PH_avg"] <- "pH"
 avg_W_scaled_out_reduc_coeff$predictors[avg_W_scaled_out_reduc_coeff$predictors == "COND_avg"] <- "cond"
-avg_W_scaled_out_reduc_coeff$predictors[avg_W_scaled_out_reduc_coeff$predictors == "ALK_avg"] <- "alk"
 avg_W_scaled_out_reduc_coeff$predictors[avg_W_scaled_out_reduc_coeff$predictors == "secchi_avg"] <- "secchi"
 avg_W_scaled_out_reduc_coeff$predictors[avg_W_scaled_out_reduc_coeff$predictors == "waterbodies_1km"] <- "lakes1km"
 avg_W_scaled_out_reduc_coeff$predictors[avg_W_scaled_out_reduc_coeff$predictors == "waterbodies_10km"] <- "lakes10km"
@@ -242,7 +239,7 @@ avg_W_scaled_out_reduc_coeff <- merge(coeff_df_temp,avg_W_scaled_out_reduc_coeff
 
 # Re-order the variables 
 avg_W_scaled_out_reduc_coeff$predictors <- factor(avg_W_scaled_out_reduc_coeff$predictors, levels=c("size","shoreline","depth","totalP","pH",
-                                                                                                      "cond","alk","secchi","nonFP","lakes1km",
+                                                                                                      "cond","secchi","nonFP","lakes1km",
                                                                                                       "lakes10km","distW","boatlaunch","latitude",
                                                                                                       "longitude") ) 
 # add an asterisk (*) label for significant coefficients 
@@ -267,7 +264,7 @@ W_coeff <- W_coeff + theme(axis.text.x = element_text(angle=45, hjust=1))
 W_coeff <- W_coeff + geom_text(aes(1,6.5,label="c)"))
 W_coeff <- W_coeff + geom_hline(yintercept=0)
 W_coeff
-ggsave("model_avg_W_coeff_dataENV_scaled_out.jpg",W_coeff,height=8,width=11)
+ggsave("model_avg_W_coeff_dataENV_scaled_out_reduc4.jpg",W_coeff,height=8,width=11)
 
 ###########################################################
 # Extract coefficients @ set-up data frames for plotting  #
@@ -275,13 +272,13 @@ ggsave("model_avg_W_coeff_dataENV_scaled_out.jpg",W_coeff,height=8,width=11)
 ###########################################################
 # set up the data frame that contains all predictors (this gets merged with the data from each model)
 predictors <- c("size","shoreline","depth","totalP","pH",
-                "cond","alk","secchi","nonFP","lakes1km",
+                "cond","secchi","nonFP","lakes1km",
                 "lakes10km","distLM","distSP","distW","boatlaunch","latitude",
                 "longitude")
 
 # a column for the variable type
 predictor_type <- c("Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic",
-                    "Local - abiotic","Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
+                    "Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
                     "Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - dispersal",
                     "Regional - dispersal","Regional - other","Regional - other") 
 
@@ -310,7 +307,6 @@ avg_FPpres_scaled_out_reduc_coeff$predictors[avg_FPpres_scaled_out_reduc_coeff$p
 avg_FPpres_scaled_out_reduc_coeff$predictors[avg_FPpres_scaled_out_reduc_coeff$predictors == "TOTP_avg"] <- "totalP"
 avg_FPpres_scaled_out_reduc_coeff$predictors[avg_FPpres_scaled_out_reduc_coeff$predictors == "PH_avg"] <- "pH"
 avg_FPpres_scaled_out_reduc_coeff$predictors[avg_FPpres_scaled_out_reduc_coeff$predictors == "COND_avg"] <- "cond"
-avg_FPpres_scaled_out_reduc_coeff$predictors[avg_FPpres_scaled_out_reduc_coeff$predictors == "ALK_avg"] <- "alk"
 avg_FPpres_scaled_out_reduc_coeff$predictors[avg_FPpres_scaled_out_reduc_coeff$predictors == "secchi_avg"] <- "secchi"
 avg_FPpres_scaled_out_reduc_coeff$predictors[avg_FPpres_scaled_out_reduc_coeff$predictors == "waterbodies_1km"] <- "lakes1km"
 avg_FPpres_scaled_out_reduc_coeff$predictors[avg_FPpres_scaled_out_reduc_coeff$predictors == "waterbodies_10km"] <- "lakes10km"
@@ -329,7 +325,7 @@ avg_FPpres_scaled_out_reduc_coeff <- merge(coeff_df_temp,avg_FPpres_scaled_out_r
 
 # Re-order the variables 
 avg_FPpres_scaled_out_reduc_coeff$predictors <- factor(avg_FPpres_scaled_out_reduc_coeff$predictors, levels=c("size","shoreline","depth","totalP","pH",
-                                                                                                      "cond","alk","secchi","nonFP","lakes1km",
+                                                                                                      "cond","secchi","nonFP","lakes1km",
                                                                                                       "lakes10km","distLM","distSP","distW",
                                                                                                       "boatlaunch","latitude",
                                                                                                       "longitude") ) 
@@ -355,7 +351,7 @@ FPpres_coeff <- FPpres_coeff + theme(axis.text.x = element_text(angle=45, hjust=
 FPpres_coeff <- FPpres_coeff + geom_text(aes(1,10,label="d)"))
 FPpres_coeff <- FPpres_coeff + geom_hline(yintercept=0)
 FPpres_coeff
-ggsave("model_avg_FPpres_coeff_dataENV_scaled_out.jpg",FPpres_coeff,height=8,width=11)
+ggsave("model_avg_FPpres_coeff_dataENV_scaled_out_reduc4.jpg",FPpres_coeff,height=8,width=11)
 
 ###########################################################
 # Extract coefficients @ set-up data frames for plotting  #
@@ -363,13 +359,13 @@ ggsave("model_avg_FPpres_coeff_dataENV_scaled_out.jpg",FPpres_coeff,height=8,wid
 ###########################################################
 # set up the data frame that contains all predictors (this gets merged with the data from each model)
 predictors <- c("size","shoreline","depth","totalP","pH",
-                "cond","alk","secchi","nonFP","lakes1km",
+                "cond","secchi","nonFP","lakes1km",
                 "lakes10km","distLM","distSP","distW","boatlaunch","latitude",
                 "longitude")
 
 # a column for the variable type
 predictor_type <- c("Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic","Local - abiotic",
-                    "Local - abiotic","Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
+                    "Local - abiotic","Local - abiotic","Local - biotic","Regional - dispersal",
                     "Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - dispersal","Regional - dispersal",
                     "Regional - dispersal","Regional - other","Regional - other") 
 
@@ -398,7 +394,6 @@ avg_FPrich_scaled_out_reduc_coeff$predictors[avg_FPrich_scaled_out_reduc_coeff$p
 avg_FPrich_scaled_out_reduc_coeff$predictors[avg_FPrich_scaled_out_reduc_coeff$predictors == "TOTP_avg"] <- "totalP"
 avg_FPrich_scaled_out_reduc_coeff$predictors[avg_FPrich_scaled_out_reduc_coeff$predictors == "PH_avg"] <- "pH"
 avg_FPrich_scaled_out_reduc_coeff$predictors[avg_FPrich_scaled_out_reduc_coeff$predictors == "COND_avg"] <- "cond"
-avg_FPrich_scaled_out_reduc_coeff$predictors[avg_FPrich_scaled_out_reduc_coeff$predictors == "ALK_avg"] <- "alk"
 avg_FPrich_scaled_out_reduc_coeff$predictors[avg_FPrich_scaled_out_reduc_coeff$predictors == "secchi_avg"] <- "secchi"
 avg_FPrich_scaled_out_reduc_coeff$predictors[avg_FPrich_scaled_out_reduc_coeff$predictors == "waterbodies_1km"] <- "lakes1km"
 avg_FPrich_scaled_out_reduc_coeff$predictors[avg_FPrich_scaled_out_reduc_coeff$predictors == "waterbodies_10km"] <- "lakes10km"
@@ -417,7 +412,7 @@ avg_FPrich_scaled_out_reduc_coeff <- merge(coeff_df_temp,avg_FPrich_scaled_out_r
 
 # Re-order the variables 
 avg_FPrich_scaled_out_reduc_coeff$predictors <- factor(avg_FPrich_scaled_out_reduc_coeff$predictors, levels=c("size","shoreline","depth","totalP","pH",
-                                                                                                              "cond","alk","secchi","nonFP","lakes1km",
+                                                                                                              "cond","secchi","nonFP","lakes1km",
                                                                                                               "lakes10km","distLM","distSP","distW",
                                                                                                               "boatlaunch","latitude",
                                                                                                               "longitude") ) 
@@ -442,7 +437,7 @@ FPrich_coeff <- FPrich_coeff + geom_text(data=avg_FPrich_scaled_out_reduc_coeff,
 FPrich_coeff <- FPrich_coeff + theme(axis.text.x = element_text(angle=45, hjust=1))
 FPrich_coeff <- FPrich_coeff + geom_hline(yintercept=0)
 FPrich_coeff
-ggsave("model_avg_FPrich_coeff_dataENV_scaled_out.jpg",FPrich_coeff,height=8,width=11)
+ggsave("model_avg_FPrich_coeff_dataENV_scaled_out_reduc4.jpg",FPrich_coeff,height=8,width=11)
 
 
 
@@ -460,7 +455,7 @@ SP_coeff <- SP_coeff + xlab("")
 
 combined_coeff <- arrangeGrob(LM_coeff,SP_coeff,W_coeff,FPpres_coeff)
 combined_coeff
-ggsave("model_avg_combined_coeff_dataENV_scaled_out.jpg",combined_coeff,height=8,width=16)
+ggsave("model_avg_combined_coeff_dataENV_scaled_out_reduc4.jpg",combined_coeff,height=8,width=16)
 
 
 
