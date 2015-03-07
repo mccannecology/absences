@@ -1,4 +1,6 @@
 load("C:/Users/Mike/Desktop/Dropbox/absences/workspace - data imported.RData")
+# or 
+load("C:/Users/Mike/Desktop/Dropbox/absences/workspace - all glms dredge - scaled_out - reduced4.RData")
 
 ###############
 # Lemna minor #
@@ -265,6 +267,14 @@ confint(avg_SP_scaled_out_reduc)
 confint(avg_W_scaled_out_reduc)
 confint(avg_FPpres_scaled_out_reduc)
 
+##############################
+# number of component models #
+##############################
+nrow(summary(avg_LM_scaled_out_reduc)[1]$summary)
+nrow(summary(avg_SP_scaled_out_reduc)[1]$summary)
+nrow(summary(avg_W_scaled_out_reduc)[1]$summary)
+nrow(summary(avg_FPpres_scaled_out_reduc)[1]$summary)
+nrow(summary(avg_FPrich_scaled_out_reduc)[1]$summary)
 
 ############### 
 # Save things # 
