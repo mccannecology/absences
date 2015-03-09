@@ -346,6 +346,7 @@ r.squaredLR(glm_LM_scaled_out, null = glm_LM_scaled_out_null)
 r.squaredLR(glm_SP_scaled_out, null = glm_SP_scaled_out_null)
 r.squaredLR(glm_W_scaled_out, null = glm_W_scaled_out_null)
 r.squaredLR(glm_FPpres_scaled_out, null = glm_FPpres_scaled_out_null)
+r.squaredLR(glm_FPrich_scaled_out, null = glm_FPrich_scaled_out_null)
 
 ###################
 # Model residuals # 

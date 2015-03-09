@@ -301,7 +301,8 @@ corr_plot <- ggplot(corrl_dataENV_scaled_out_cors, aes(row, variable))
 corr_plot <- corr_plot + geom_tile(aes(fill=value),colour="black") 
 corr_plot <- corr_plot + scale_fill_brewer(palette = "RdYlBu", name="Correlation")  # here comes the RColorBrewer package
 corr_plot <- corr_plot + theme_grey(base_size=18)
-corr_plot <- corr_plot + ylab("")
+corr_plot <- corr_plot + ylab(NULL)
+corr_plot <- corr_plot + xlab(NULL)
 corr_plot <- corr_plot + theme(axis.text.x=element_text(angle=315,hjust=0))
 corr_plot <- corr_plot + po.nopanel
 corr_plot
