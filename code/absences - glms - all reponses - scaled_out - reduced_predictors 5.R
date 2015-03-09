@@ -347,6 +347,24 @@ r.squaredLR(glm_SP_scaled_out, null = glm_SP_scaled_out_null)
 r.squaredLR(glm_W_scaled_out, null = glm_W_scaled_out_null)
 r.squaredLR(glm_FPpres_scaled_out, null = glm_FPpres_scaled_out_null)
 
+###################
+# Model residuals # 
+# Best model      #
+################### 
+# get model residuals from the single best model 
+
+best_glm_LM_scaled_out_reduc5_resid <- resid(best_glm_LM_scaled_out_reduc)
+best_glm_LM_scaled_out_reduc5_resid <- as.vector(best_glm_LM_scaled_out_reduc5_resid)
+
+best_glm_SP_scaled_out_reduc5_resid <- resid(best_glm_SP_scaled_out_reduc)
+best_glm_SP_scaled_out_reduc5_resid <- as.vector(best_glm_SP_scaled_out_reduc5_resid)
+
+best_glm_W_scaled_out_reduc5_resid <- resid(best_glm_W_scaled_out_reduc)
+best_glm_W_scaled_out_reduc5_resid <- as.vector(best_glm_W_scaled_out_reduc5_resid)
+
+best_glm_FPpres_scaled_out_reduc5_resid <- resid(best_glm_FPpres_scaled_out_reduc)
+best_glm_FPpres_scaled_out_reduc5_resid <- as.vector(best_glm_FPpres_scaled_out_reduc5_resid)
+
 ############### 
 # Save things # 
 ############### 

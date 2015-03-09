@@ -1,9 +1,7 @@
 library(ncf)
 library(ggplot2)
 
-head(data)
-colnames(data)
-dist(dataSPACE) # not sure if I actually need this 
+load("C:/Users/Mike/Desktop/Dropbox/absences/workspace - all glms dredge - scaled_out - reduced5.RData")
 
 #######################
 # Moran's I           #

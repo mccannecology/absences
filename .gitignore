@@ -88,3 +88,4 @@ workspace - all glms dredge - scaled_out - reduced5 - coeff_plots.RData
 workspace - all glms dredge - scaled_out - reduced5 - mapping.RData
 workspace - all glms dredge - scaled_out - reduced5.RData
 workspace - avg glm - scaled_out - reduced5 - opt_threshold.RData
+workspace - morans i - scaled_out - reduced5.RData
